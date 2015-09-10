@@ -48,7 +48,7 @@ public class RegisterMe {
         for (String arg : args) {
             String[] parts = arg.split("/");
             final String username = parts[0];
-            final String password = parts[2];
+            final String password = parts[1];
             Thread t = new Thread(new Runnable() {
                 public void run() {
                     try {
@@ -58,6 +58,7 @@ public class RegisterMe {
                     }
                 }
             });
+            t.start();
         }
     }
 
@@ -77,7 +78,6 @@ public class RegisterMe {
                 if (desc.contains("Cardio Kickboxing")
                         || desc.contains("Body Sculpt")
                         || desc.contains("Power Fitness")
-                        || desc.contains("Cardio Kickboxing & Sculpt")
                         || desc.contains("Cardio Kickboxing & Sculpt")
 //                        || desc.contains("Indoor Cycling")
                         ) {
