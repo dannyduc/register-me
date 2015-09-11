@@ -308,10 +308,10 @@ public class RegisterMe {
                 inTd = false;
                 col = 0;
 
-                // convert ascii 160 (&nbsp;) to spaces
-                reservedCount = reservedCount.replaceAll("[\\u00A0]", " ");
+                // &nbsp; gets converted to ascii 160 (\u00A0)
+                boolean roomAvail = !reservedCount.endsWith("\u00A00\u00A0Open)");
 
-                if (link != null && !reservedCount.endsWith("0 Open)")) {
+                if (link != null && roomAvail) {
                     links.add(new SignupLink(link, desc, teacher, reservedCount));
                 }
 
