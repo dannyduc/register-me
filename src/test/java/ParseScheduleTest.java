@@ -1,9 +1,6 @@
 import org.apache.commons.io.FileUtils;
-import org.apache.tika.exception.TikaException;
-import org.xml.sax.SAXException;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.List;
 
 public class ParseScheduleTest {

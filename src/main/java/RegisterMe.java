@@ -75,10 +75,10 @@ public class RegisterMe {
             String desc = link.desc;
             boolean requiresPayment = desc.endsWith("$");
             if (!requiresPayment) {
-                if (desc.startsWith("Cardio Kickboxing")
-                        || desc.startsWith("Body Sculpt")
-                        || desc.startsWith("Power Fitness")
-//                        || desc.startsWith("Cardio Kickboxing & Sculpt")
+                if (desc.contains("Cardio Kickboxing")
+                        || desc.contains("Body Sculpt")
+                        || desc.contains("Power Fitness")
+                        || desc.contains("Cardio Kickboxing & Sculpt")
 //                        || desc.startsWith("Indoor Cycling")
                         ) {
 
@@ -308,7 +308,10 @@ public class RegisterMe {
                 inTd = false;
                 col = 0;
 
-                if (link != null && !reservedCount.endsWith("0 Open)")) {
+                // convert ascii 160 (&nbsp;) to spaces
+                reservedCount = reservedCount.replaceAll("[\\u00A0]", " ");
+
+                if (link != null && !reservedCount.endsWith("0 Open)")) {
                     links.add(new SignupLink(link, desc, teacher, reservedCount));
                 }
 
