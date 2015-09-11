@@ -1,0 +1,2230 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- IRV-WEB-CLI-038 -->
+
+
+
+
+
+
+
+
+<style type="text/css">
+	.userHTML ul {list-style: disc outside none !important;}
+	.userHTML ol {list-style: decimal  !important;}
+	.userHTML li {margin-left:30px;}
+	.userHTML em {font-style: italic;}
+	.userHTML blockquote
+	{
+		display: block;
+		margin: 1em 40px;
+	}
+	.userHTML big 
+	{
+		font-size: larger;
+	}
+	.userHTML small
+	{
+		font-size: smaller;
+	}
+	.userHTML kbd, .userHTML code
+	{
+		font-family: monospace;
+	}
+	.userHTML pre
+	{
+		margin: 1em 0px;
+		display: block;
+		white-space: pre;
+	}
+	.userHTML sup
+	{
+		vertical-align: super;
+		font-size: smaller;
+	}
+	.userHTML sub
+	{
+		vertical-align: sub;
+		font-size: smaller;
+	}
+</style>
+<script type="text/javascript">
+	if (typeof ($) != "undefined") {
+		$(function () {
+			// Puts focus inside a tinyMCE box when it's corresponding <label> tag is clicked
+			$(".for-tinymce").live("click", function (e) {
+				if (typeof (tinyMCE) != "undefined") {
+					e.preventDefault();
+					tinyMCE.get($(this).prop('for')).focus();
+				}
+			});
+			var $userTables = $(".userHTML table");
+			
+			if ($userTables.attr("border") != "") {
+				$userTables.find("td, th").css("border", "1px solid black");
+			}
+		});
+	}
+</script>
+
+<html>
+<head>
+<title>PJCC Online</title>
+<meta http-equiv="Content-Type" content="text/html"/>
+
+<!-- MB google analytics code--><!-- Get user role -->
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+
+	//consumer mode tracking
+		_gaq.push(['_setAccount', 'UA-31442-18']);
+
+	//_gaq.push(['_setDomainName', 'mindbodyonline.com']);
+	_gaq.push(['_setCustomVar', 1, 'Vertical', 'FT', 2]);
+
+		_gaq.push(['_setCustomVar', 3, 'User Role', 'Consumer Login', 2]);
+
+	_gaq.push(['_setCustomVar', 4, 'StudioID', '41273', 2]);
+
+            _gaq.push(['_setCustomVar', 5, 'MB_SOLO', 'MB_SOLO_Disabled', 2]);
+
+            _gaq.push(['_setCustomVar', 5, 'MB_GROW', 'MB_GROW_Disabled', 2]);
+
+            _gaq.push(['_setCustomVar', 5, 'MB_PRO', 'MB_PRO_Disabled', 2]);
+
+            _gaq.push(['_setCustomVar', 5, 'MB_ACCELERATE', 'MB_ACCELERATE_Disabled', 2]);
+
+	_gaq.push(['_trackPageview']);
+	//Re Adding GA
+    _gaq.push(['b._setAccount', 'UA-31442-3']);
+	_gaq.push(['b._setDomainName', 'mindbodyonline.com']);
+    _gaq.push(['b._setCustomVar', 1, 'Vertical', 'FT', 2]);
+	_gaq.push(['b._trackPageview']);
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+	// fraction of seconds delay to track events, which avoids the async aborted errors in firebug console
+	function recordOutboundLink(linkAction, eventCategory, eventAction, eventLabel) {
+		_gaq.push(['_trackEvent', eventCategory, eventAction, eventLabel]);
+		setTimeout(linkAction, 200); 
+	}
+	function recordLink(eventCategory, eventAction, eventLabel) {
+		_gaq.push(['_trackEvent', eventCategory, eventAction, eventLabel]);
+		//added for QA debugging: in console setting window.DebugMode = true prior to firing recordLink() will log the event label.
+		//mostly for QA to prove that tracking is installed in the dev enviornment.
+		if(window.DebugMode && window.DebugMode == true) {
+			console.log(eventLabel);
+		}
+	}
+</script>
+
+
+<link rel="stylesheet" type="text/css" href="https://static.mindbodyonline.com/v76979/styles/reset.css"  /><link rel="stylesheet" type="text/css" href="https://static.mindbodyonline.com/v76979/styles/site.css"  /><link rel="stylesheet" type="text/css" href="https://static.mindbodyonline.com/v76979/styles/grid.css"  /><link rel="stylesheet" type="text/css" href="https://static.mindbodyonline.com/v76979/styles/calendar.css"  /><link rel="stylesheet" type="text/css" href="https://static.mindbodyonline.com/v76979/styles/menu.css"  /><link rel="stylesheet" type="text/css" href="https://static.mindbodyonline.com/v76979/styles/lightbox.css"  /><link rel="stylesheet" type="text/css" href="https://static.mindbodyonline.com/v76979/styles/print.css" media=print /><link rel="stylesheet" type="text/css" href="/studios/PeninsulaJewishCommunityCenter/css/site.60491.css?v=52"  /><link rel="stylesheet" type="text/css" href="https://static.mindbodyonline.com/v76979/styles/buttons.css"  /><link rel="stylesheet" type="text/css" href="https://static.mindbodyonline.com/v76979/styles/cm_site.css"  />
+<link rel="stylesheet" type="text/css" href="https://static.mindbodyonline.com/v76979/styles/modernButtons.css"  />
+<!--[if IE]>
+<link rel="stylesheet" type="text/css" href="https://static.mindbodyonline.com/v76979/styles/siteIe.css"  />
+<![endif]-->
+<!--[if lte IE 7]>
+<link rel="stylesheet" type="text/css" href="https://static.mindbodyonline.com/v76979/styles/siteLteIe7.css"  />
+<![endif]-->
+
+
+<link rel="stylesheet" type="text/css" href="https://static.mindbodyonline.com/v76979/styles/jquery.tooltip.css"  /><link rel="stylesheet" type="text/css" href="https://static.mindbodyonline.com/v76979/styles/base/jquery.ui.all.css"  /><script type="text/javascript" src="https://static.mindbodyonline.com/v76979/scripts/jquery-1.8.2.js" ></script><script type="text/javascript" src="https://static.mindbodyonline.com/v76979/scripts/plugins/jquery.cookie-1.0.js" ></script><script type="text/javascript" src="https://static.mindbodyonline.com/v76979/scripts/plugins/jquery.mb.js" ></script><script type="text/javascript" src="https://static.mindbodyonline.com/v76979/scripts/plugins/jquery.libasync.js" ></script>
+<script type="text/javascript" src="https://static.mindbodyonline.com/v76979/scripts/jquery-ui-1.8.23/jquery.ui.core.js" ></script><script type="text/javascript" src="https://static.mindbodyonline.com/v76979/scripts/jquery-ui-1.8.23/jquery.ui.widget.js" ></script><script type="text/javascript" src="https://static.mindbodyonline.com/v76979/scripts/jquery-ui-1.8.23/jquery.ui.mouse.js" ></script><script type="text/javascript" src="https://static.mindbodyonline.com/v76979/scripts/jquery-ui-1.8.23/jquery.ui.draggable.js" ></script><script type="text/javascript" src="https://static.mindbodyonline.com/v76979/scripts/jquery-ui-1.8.23/jquery.ui.droppable.js" ></script><script type="text/javascript" src="https://static.mindbodyonline.com/v76979/scripts/jquery-ui-1.8.23/jquery.ui.resizable.js" ></script><script type="text/javascript" src="https://static.mindbodyonline.com/v76979/scripts/jquery-ui-1.8.23/jquery.ui.dialog.js" ></script><script type="text/javascript" src="https://static.mindbodyonline.com/v76979/scripts/jquery-ui-1.8.23/jquery.ui.autocomplete.js" ></script><script type="text/javascript" src="https://static.mindbodyonline.com/v76979/scripts/jquery-ui-1.8.23/jquery.ui.position.js" ></script><script type="text/javascript" src="https://static.mindbodyonline.com/v76979/scripts/jquery-ui-1.8.23/jquery.effects.core.js" ></script><script type="text/javascript" src="https://static.mindbodyonline.com/v76979/scripts/jquery-ui-1.8.23/jquery.effects.highlight.js" ></script><script type="text/javascript" src="https://static.mindbodyonline.com/v76979/scripts/jquery-ui-1.8.23/jquery.ui.datepicker.js" ></script><script type="text/javascript" src="https://static.mindbodyonline.com/v76979/scripts/plugins/jquery.tooltip.js" ></script><script type="text/javascript" src="https://static.mindbodyonline.com/v76979/scripts/plugins/jquery.ba-resize.js" ></script><script type="text/javascript" src="https://static.mindbodyonline.com/v76979/scripts/plugins/jquery.lightboxLib.js" ></script><script type="text/javascript" src="https://static.mindbodyonline.com/v76979/scripts/plugins/jquery.hoverIntent.js" ></script><script type="text/javascript" src="https://static.mindbodyonline.com/v76979/scripts/plugins/jquery.smartFocus-0.1.js" ></script>
+<script type="text/javascript">
+// filePath must be absolute with leading slash
+function contentUrl(filePath) {
+    return "https://static.mindbodyonline.com/v76979" + filePath;
+}
+(function ($) {
+    //$.fn.extend({
+    $.contentUrl = function (filePath) {
+        return contentUrl(filePath);
+    };
+})(jQuery);
+$(function() {
+
+        // init tooltips
+        $("img[title],span[title],select[title],input[title],legend[title]").tooltip({
+            track: true,
+            showURL: false,
+            fade: 250
+        });
+
+    
+    $('fieldset.collapsible').setCollapseEvents();
+    
+});
+</script>
+
+<script type="text/javascript" src="https://static.mindbodyonline.com/v76979/scripts/inc_tabs.js" ></script>
+<link rel="stylesheet" type="text/css" href="https://static.mindbodyonline.com/v76979/styles/cm_tabs.css"  />
+
+
+<script type="text/javascript">
+	function implementationSwitchIsEnabled(implementationSwitch) {
+	    return implementationSwitch == 'AppointmentMultipleCancel' || implementationSwitch == 'BookMultipleAppointmentConfirmationAutoEmail' || implementationSwitch == 'Salon_AATServiceSearchStaticLink' || implementationSwitch == 'ShrimpOnTheBarbie' || implementationSwitch == 'UseReportLogging' || implementationSwitch == 'Bug45267NoEnrollmentsInGetClasses' || implementationSwitch == 'MobileNotificationForExpressApp' || implementationSwitch == 'Marketing_ReferAndEarn' || implementationSwitch == 'Android_Bug_57654' || implementationSwitch == 'Android_Bug_43965' || implementationSwitch == 'PDA_API_GoogleAnalyticsTracking' || implementationSwitch == 'NewDefaultLanguageSupport' || implementationSwitch == 'PDA_WaitlistSourceID' || implementationSwitch == 'PDA_RetentionManagementExpDate' || implementationSwitch == 'Bug_69130_EnrollmentsLettingYouOverbookAResource' || implementationSwitch == 'SalonFiltersStyling' || implementationSwitch == 'ConnectSplashNotificationV2Android' || implementationSwitch == 'ExpressAndroidSplash' || implementationSwitch == 'ConnectSplashNotificationV2' || implementationSwitch == 'NavigationRedesignOptInBanner2' || implementationSwitch == 'SalonRefreshApptSchedule' || implementationSwitch == 'SalonAppointmentChangeNotificationEmail' || implementationSwitch == 'Bug61721AutoEmailAndAustralianTime' || implementationSwitch == 'ClientReferralLink' || implementationSwitch == 'PDA_Hotfix_AlteredSplashScreenText' || implementationSwitch == 'PDA_GiftCard_Shoppingcart_Hotfix' || implementationSwitch == 'PDA_ConsumerSignupButtonGATracking' || implementationSwitch == 'PDA_RetentionMgmtReport_MemberSinceFix' || implementationSwitch == 'OptimalDirectDebit' || implementationSwitch == 'NavigationRedesignOptInBanner3' || implementationSwitch == 'PDA_AppointmentsClasses_BrowserSize' || implementationSwitch == 'NavigationRedesignOptInBanner4' || implementationSwitch == 'TransfirstPOSAPI' || implementationSwitch == 'OptimalCreditCard' || implementationSwitch == 'TranslationSwimlane_01' || implementationSwitch == 'SalonCMBM' || implementationSwitch == 'PDA_ConnectFooter' || implementationSwitch == 'IntroduceCriticalError' || implementationSwitch == 'PayconexACHPOSAPI' || implementationSwitch == 'UniversalSearchFeedbackInQuickClientLookup' || implementationSwitch == 'TranslationSwimlane_04' || implementationSwitch == 'TranslationSwimlane_05' || implementationSwitch == 'TranslationSwimlane_06' || implementationSwitch == 'PDA_receiptTracking' || implementationSwitch == 'TranslationSwimlane_02' || implementationSwitch == 'XM_Bug49925_LocalizationSA' || implementationSwitch == 'XM_Bug77117' || implementationSwitch == 'API_Bug87327_AddSaleIDToGetClientPurchases' || implementationSwitch == 'API_Bug91118_DuplicateSourcenameCreationAttempts' || implementationSwitch == 'TranslationReportsStyles' || implementationSwitch == 'EnableAntiForgeryOnGSOGenToken' || implementationSwitch == 'EnableAntiForgeryOnGSOValidation' || implementationSwitch == 'PDA_TipSlipTracking' || implementationSwitch == 'Salon_NewNightlyScriptForApptReminderEmail' || implementationSwitch == 'XM_Task93009_Update_Community_Forum_link' || implementationSwitch == 'EnableAntiForgeryValidationChunk1' || implementationSwitch == 'EnableAntiForgeryGenTokenChunk1' || implementationSwitch == 'SalonCMBM_Responsive' || implementationSwitch == 'MAP_ElavonApplicationLightbox' || implementationSwitch == 'AdyenCCPOSAPI' || implementationSwitch == 'TranslationSwimlane_07' || implementationSwitch == 'PDS_MakeStepsSundayClassPDFIncludeEnrollments' || implementationSwitch == 'FTU_MergeStaffScheduleAndServiceFiles' || implementationSwitch == 'Mobile_Task_99722_GetLocationsByStudioId' || implementationSwitch == 'MAP_AdyenACHPOSAPI' || implementationSwitch == 'MoveLogoutButtonAndTimeclock' || implementationSwitch == 'PDA_Hotfix_CrossRegTool' || implementationSwitch == 'PDA_MB_GO_GATracking' || implementationSwitch == 'PDS_AddAPILoginsForFMAHealcode' || implementationSwitch == 'SaaGShowDateBannerEveryDay' || implementationSwitch == 'ZuoraPaymentAlerts' || implementationSwitch == 'Mobile_Bug_21487_ContractIncorrectlySellingNextSessionCountAutoPay' || implementationSwitch == 'Mobile_Task62672_HathwaySelect' || implementationSwitch == 'API_Bug83241_OnlyRunQueryPermissionForPortalTool' || implementationSwitch == 'PDS_APIAuthorizeSourceWithStudios' || implementationSwitch == 'PDS_FunctionXMLUserCredsRemoval' || implementationSwitch == 'EnableAntiForgeryGenTokenChunk2' || implementationSwitch == 'FTU_NewWelcomePage' || implementationSwitch == 'Salon_LinksWarningMessage_109609' || implementationSwitch == 'PayMeNowPOSAPI' || implementationSwitch == 'HookupTransfirstCCToSoap' || implementationSwitch == 'DB_CacheABTestsForScripts' || implementationSwitch == 'MonerisPOSAPI' || implementationSwitch == 'TransfirstACHPOSAPI' || implementationSwitch == 'W113299_FIX_A' || implementationSwitch == 'W113299_FIX_B' || implementationSwitch == 'APIBug109555' || implementationSwitch == 'Express_GetStaffAppointmentsFilterByIDBug' || implementationSwitch == 'Mobile_Bug_87791_SeriesNameReplaceSessionTypeName' || implementationSwitch == 'Express_FDataProgramListFix' || implementationSwitch == 'FTU_OwnerFirstLogin' || implementationSwitch == 'Salon_Q2AdoptionGoogleAnalytics_102857' || implementationSwitch == 'APIPOS_Bug96595_AdminLoginsMbSites' || implementationSwitch == 'APIPositive_53009_OverLappingResourcesOnUndoCancel' || implementationSwitch == 'PreventNegativePurchaseTxtQty' || implementationSwitch == 'NavigationRedesignOptInBanner5' || implementationSwitch == 'FTU_MINDBODYAnnouncements' || implementationSwitch == 'PDA_Bronzalicious_MobileEmailOptIn' || implementationSwitch == 'PDS_AutoOptOutFMAClientsFromABTest1037' || implementationSwitch == 'FTU_MarketingAdBanner' || implementationSwitch == 'EnableAntiForgeryGenTokenChunk3' || implementationSwitch == 'VULN_53940_FIX' || implementationSwitch == 'Salon_AddMembershipRestrictionToServiceCategoriesRestCall' || implementationSwitch == 'SalonDatepickerImprovements' || implementationSwitch == 'Salon_DragAndDropAppointmentInCartFix_122616' || implementationSwitch == 'EnableAntiForgeryGenTokenChunk4' || implementationSwitch == 'DCA_Bug77531_AddRefundPermissionToManageSalesCowpath' || implementationSwitch == 'DCA_Bug120084_StaffProfileHitEnter' || implementationSwitch == 'CYBERSEC_BUG_122557_FIX' || implementationSwitch == 'APIPositive_95202_FacebookLoginKeyConflict' || implementationSwitch == 'Express_ClientSearchToMatchCore' || implementationSwitch == 'Express_ReturnVATFromGetSites' || implementationSwitch == 'AndroidConnectBookedWithConnectLogo' || implementationSwitch == 'Salon_OpenSidebarForAvailabilityBugFix_125193' || implementationSwitch == 'APIPositive_125828_SoapActivityUpdateDataType' || implementationSwitch == 'SwitchAdminEntryLogSource' || implementationSwitch == 'BUG_76895_FIX' || implementationSwitch == 'DCA_TwilioShowNearbyAvailableAreaCodes' || implementationSwitch == 'ClientDocumentUpdatedUrlPattern' || implementationSwitch == 'DCA_Bug119195_MakeTaskPlayNicelyWithSwitches' || implementationSwitch == 'DCA_MakeAddClientPhoneTextMoreSpecific' || implementationSwitch == 'DCA_Bug127944_FixMarketingDasbhoardContactMethodStats' || implementationSwitch == 'DCA_FixLostEmailCopy' || implementationSwitch == 'APIPOS_EnsureMbUserIsCreatedWithIdentityLogin' || implementationSwitch == 'API_Bug83945_HidePastWaitlistEntries' || implementationSwitch == 'Express_AllowSelfBookingWhenNotAllowedForAllStaff' || implementationSwitch == 'Express_AllowBookingOnNonBoldTimesWhenStaff' || implementationSwitch == 'Express_CalculateSubtotalWithoutDiscounts' || implementationSwitch == 'PDS_NoShowChangeForMBReach' || implementationSwitch == 'DCA_UpdateTwilioStopCopy' || implementationSwitch == 'PDS_EarlyConnectOptIn' || implementationSwitch == 'ServerSideUploadWL' || implementationSwitch == 'CYBER_SEC_127424' || implementationSwitch == 'FTU_PricingOptionPageReupBugs' || implementationSwitch == 'PDS_MBReachForecast' || implementationSwitch == 'PDS_NoShowRptServiceCatSelection' || implementationSwitch == 'Express_CheckProperResourceScheduleInAllTimeZones' || implementationSwitch == 'Express_RespectSchedulingRestrictionsOnServices' || implementationSwitch == 'Express_CheckoutAppointmentWithoutResourceDisappearing' || implementationSwitch == 'Express_AllowModifiedBookingWhenStaffWithPermission' || implementationSwitch == 'EnableAntiForgeryGenTokenChunk5' || implementationSwitch == 'EnableAntiForgeryGenTokenChunk6' || implementationSwitch == 'FTU_MINDBODYAnnouncementsSiteSetting' || implementationSwitch == 'PortAdmClsList' || implementationSwitch == 'CYBERSEC_66685_RemoveClassicAspFromMVC' || implementationSwitch == 'APIPositive_130731_RemoveGCPaymentDataRequirement' || implementationSwitch == 'CYBERSEC_91554_BlockConsumersViewingReciepts' || implementationSwitch == 'Express_135641_UpdateResourceScheduleOnApptEdit' || implementationSwitch == 'Express_GetCorrectSaleDateAndTime' || implementationSwitch == 'API_Bug92510_MaxSessionsRollingMonthsCalculationFix' || implementationSwitch == 'Salon_FixCMBMResponsiveForIOS_125738' || implementationSwitch == 'CYBERSEC_91554_NewBlockConsumersViewingReciepts' || implementationSwitch == 'FTU_SetupChecklist' || implementationSwitch == 'Mobile_Task_138826_AddOnlineBookingFlagToLocations' || implementationSwitch == 'Express_137656_FixCoreApptEdit' || implementationSwitch == 'PDA_ExpressProductsandServices' || implementationSwitch == 'Express_138612_ShowServicesOnLastBookingDay' || implementationSwitch == 'EnableAntiForgeryGenTokenChunk7' || implementationSwitch == 'PDS_LiabilityWaiverReset' || implementationSwitch == 'Salon_SchedulingSwitchOverREST' || implementationSwitch == 'API_Bug99112_UsersNotAddedToClassFromWaitListAfterCancellationFromAPI' || implementationSwitch == 'Salon_UnavailabilityInContextMenu' || implementationSwitch == 'MAP_UseCustomLightboxForNotification' || implementationSwitch == 'Salon_IntuitiveBookingV1' || implementationSwitch == 'MAP_AddPCXACHVoidRefund' || implementationSwitch == 'Salon_PixieTemplate' || implementationSwitch == 'MAP_BatchCloseErrorForPOSIntegration' || implementationSwitch == 'PagePhraseDashboard' || implementationSwitch == 'MAP_Bug152619' || implementationSwitch == 'API_Bug99611_MissingCheckBoxOnWaitlistEntryMissingWhenAPIUsed' || implementationSwitch == 'API_Feature143574_AddNewPromoEmailOptInField' || implementationSwitch == 'CYBERSEC_W156605_ChangeLinkforStatusPage' || implementationSwitch == 'Salon_SidebarHeightCalculatedByKO_121928' || implementationSwitch == 'EnableAntiForgeryGenTokenChunk9' || implementationSwitch == 'EnableAntiForgeryGenTokenChunk8' || implementationSwitch == 'TXPPOSAPI' || implementationSwitch == 'Express_StopOurDDOS' || implementationSwitch == 'Salon_FixFirstTimeGuestTokenProcessing' || implementationSwitch == 'PDS_ReturnReportExcludeEasyUpgrades' || implementationSwitch == 'NewTimeZoneOffset' || implementationSwitch == 'Mobile_113975_RemoveUserVisits' || implementationSwitch == 'Mobile_103121_DontReturnIntroOffersThatBeginMoreThanTwoWeeksInTheFuture' || implementationSwitch == 'Mobile_105515_InsertApplicationUserIfNoneFound' || implementationSwitch == 'Mobile_103272_AddCorporationNamesToUser' || implementationSwitch == 'Mobile_103278_SyncUserLocationsWithAppointmentVisits' || implementationSwitch == 'Bug_69599_ProfileImage' || implementationSwitch == 'AddDetailIDToReviews' || implementationSwitch == 'TrackRestSourceCredentialsForClientCreationAndClassVisits' || implementationSwitch == 'Mobile_Bug_78912_CheckoutWithTemporaryCreditCardFailsValidation' || implementationSwitch == 'Mobile_Bug_79999_NotUpdatingStateForCountriesWithNoProvinces' || implementationSwitch == 'IOS_Task78767' || implementationSwitch == 'IOS_Task78363' || implementationSwitch == 'IOS_Task78360' || implementationSwitch == 'Bug_70469_SearchOutsideUS' || implementationSwitch == 'IOS_Bug77054' || implementationSwitch == 'API_ResendVerificationModifications' || implementationSwitch == 'Salon_FixedPositionSidebarWorkflowButtons' || implementationSwitch == 'Salon_SidebarAnalyticsUsePreviousButton' || implementationSwitch == 'Salon_IntuitiveBookingV2' || implementationSwitch == 'Salon_FixedPositionSidebarWorkflowButtons_163018' || implementationSwitch == 'MAP_RefundHideCCForTXP' || implementationSwitch == 'CyberSecurityAdminIPWhiteList' || implementationSwitch == 'CYBERSEC_137166_LogCSRFnoBlock' || implementationSwitch == 'FTU_DisplayNuggetsAfterBeta' || implementationSwitch == 'FTU_stopRedirectConnect' || implementationSwitch == 'Express_FunctionData_SalesReport_Cash_Accrual_Bug_165919' || implementationSwitch == 'Express_FunctionData_SalesReport_Tip_Bug_165826' || implementationSwitch == 'ApiPos_160339_CrossRegionImportRedo' || implementationSwitch == 'API_Bug91699_CultureCurrencyNotCorrectlySentInEmailReceipt' || implementationSwitch == 'MAP_PullCCProcessorFromTransactionInPOS' || implementationSwitch == 'Salon_W_KillContextMenuAfterClientLoad_166972' || implementationSwitch == 'FTU_SetupChecklistDisplayCustomTasks' || implementationSwitch == 'Express_StaffPoopSortOrder' || implementationSwitch == 'CyberSecurityAdminIPWhiteListEnforce' || implementationSwitch == 'Salon_M_PrebookingButton_ACR' || implementationSwitch == 'Salon_M_PrebookingButton_ContextMenu' || implementationSwitch == 'Salon_W_UpdateDateWidthOnDateChange_121475' || implementationSwitch == 'FTU_OwnerFirstLoginHipaaFix' || implementationSwitch == 'SetSubscriptionLevelFromCreateSite' || implementationSwitch == 'Salon_W_RefactorWorkflows' || implementationSwitch == 'FTU_UpdateCreateSiteToolForSetupChecklist' || implementationSwitch == 'FTU_SiteSetupPermissionFilter' || implementationSwitch == 'Salon_W_RefactorAppointmentHTML' || implementationSwitch == 'Salon_W_AddPixieTextToVisitHistory' || implementationSwitch == 'FTU_SiteSetupEventTracking' || implementationSwitch == 'FTU_HipaaSiteCreationFixForSoloSites' || implementationSwitch == 'Salon_W_Bug172033' || implementationSwitch == 'CYBERSEC_61981_FIX' || implementationSwitch == 'Salon_W_ProceedToCheckoutUSCLoop_172103' || implementationSwitch == 'Salon_W_AutoFocusOnValidation_171642' || implementationSwitch == 'Salon_W_ClearValidator' || implementationSwitch == 'UseCryptoPRNGForPasswordChangeKeys' || implementationSwitch == 'Salon_W_RevealICDCodesInEditMode_175713' || implementationSwitch == 'FTU_GeneralSiteSetupTourEnhancements' || implementationSwitch == 'Salon_UpdateAvailabilityServiceCategoryDropDown' || implementationSwitch == 'Salon_W_AvailabilityPrototypeRefactor' || implementationSwitch == 'APIPos_171692_CrossRegionalAdd' || implementationSwitch == 'SignInSelectedLocationOnly' || implementationSwitch == 'Buzz_TwilioNumberProvisioning' || implementationSwitch == 'FTU_SiteSetupSubscriptionLevelsFilter' || implementationSwitch == 'Salon_W_AllowMemberToBookWithoutPaying_181480' || implementationSwitch == 'Salon_w_DontUsePreviousLinkInPrebooking' || implementationSwitch == 'APISupport_Bug181920_SqlConnectionFixForUpdateContactLogs' || implementationSwitch == 'Salon_W_BoldTimesCorrection' || implementationSwitch == 'Buzz_TwilioNumberProvisioningForAdmin' || implementationSwitch == 'PrevotyIsOn' || implementationSwitch == 'Salon_W_UpdateAppointmentPayrateInNightlyScript' || implementationSwitch == 'FTU_UpdateTransmogrifierToEnableSiteSetupPermissionForSoloAndGrowOwner' || implementationSwitch == 'ReportsUseHttpAndGetLocalhostString' || implementationSwitch == 'CYBERSEC_184425_AdminSSO' || implementationSwitch == 'FTU_Bug121910' || implementationSwitch == 'APISupport_Bug184713_PrepFinishTimesNotUpdatingToPerTrainerSettingWhenMoved' || implementationSwitch == 'CYBERSEC_128632_BREACHToken' || implementationSwitch == 'MAP_Bug_180518' || implementationSwitch == 'Express_IncludeCancelledClasses' || implementationSwitch == 'RemoveReferencesToDevMod' || implementationSwitch == 'MAP_Bug_186911' || implementationSwitch == 'FTU_UpdateGetConnectLink' || implementationSwitch == 'FTU_UpdateCreateSiteToolForCustomTasks' || implementationSwitch == 'MAP_TXPBlindCreditUseStoredCard' || implementationSwitch == 'PortPrintGiftCard' || implementationSwitch == 'CR_SubscriberImport' || implementationSwitch == 'Buzz_OverlayNumbersOptimized' || implementationSwitch == 'APISupport_Bug188667_RemoveStaffPermissionsReqForRemoveFromWaitlist' || implementationSwitch == 'Salon_W_MaximizedPOSBecomesLastActive' || implementationSwitch == 'MAP_Bug_188431' || implementationSwitch == 'Buzz_OverlayNumbersOptimized2' || implementationSwitch == 'APISupport_Bug189743_CheckoutAndBookUseNewestPricingOption' || implementationSwitch == 'FTU_FunctionalRuleEvaluation' || implementationSwitch == 'ApiPositive_153995_FixGiftCardQuantityOnDailyCloseoutReport' || implementationSwitch == 'MAP_WriteBlindCreditBillingInfo' || implementationSwitch == 'Buzz_ReachLocalization' || implementationSwitch == 'Buzz_AppointmentForSMSLocationNameFix' || implementationSwitch == 'Salon_W_VisitHistoryAnalytics' || implementationSwitch == 'MAP_iDEALsupportForConsumerMode' || implementationSwitch == 'Salon_W_VisitHistoryAnalyticsR2' || implementationSwitch == 'MAP_AddPreAuthTipForTXP' || implementationSwitch == 'FTU_UpdatedQuickTourVisibilityRules' || implementationSwitch == 'SKI_CorpLoginRedo' || implementationSwitch == 'ProperlyDeserializeDateTimesForAppointmentConfirmLink' || implementationSwitch == 'CR_MasterConsumerAddSoap' || implementationSwitch == 'Buzz_LocalizeAccelerateMarketingSettings' || implementationSwitch == 'FTU_MigrateQuickTours' || implementationSwitch == 'FTU_FixCustomTaskLinksVerbose' || implementationSwitch == 'FTU_FixAddCustomTaskValidation' || implementationSwitch == 'APISupport_Bug190408_FunctionDataRequiresFloats' || implementationSwitch == 'APISupport_Bug192833_AddVisitRefNoFieldToGetBookableItems' || implementationSwitch == 'GetSatisfaction_SSO' || implementationSwitch == 'MAP_AddBankCityAndNameToApp' || implementationSwitch == 'FTU_ShowSecurityInfoQuickTourForGrolowners' || implementationSwitch == 'MAP_Bug_198060' || implementationSwitch == 'FTU_BusinessLocationsRedesign' || implementationSwitch == 'DCA_WelcomeSMS' || implementationSwitch == 'APISupport_Task199620_ImprovedBadParamErrorHandling' || implementationSwitch == 'SKI_Bug78797AddNewClientProspect' || implementationSwitch == 'FTU_ChangeHomeTabDefaultFromSetupChecklist' || implementationSwitch == 'MBX_ReportScrollingSafari71' || implementationSwitch == 'FTU_Bug171938' || implementationSwitch == 'MAP_Bug_199820' || implementationSwitch == 'FTU_UpdateCreateSiteToolForQuickTours' || implementationSwitch == 'MainClassBookingString' || implementationSwitch == 'APISupport_Bug200471_GetClientsSqlRefinement_NoLock' || implementationSwitch == 'GP_AdyenDocumentUXChanges' || implementationSwitch == 'Express_RemoveFromWaitlistNotUpdatingWaitlistNumber' || implementationSwitch == 'CR_ProfileUpdate' || implementationSwitch == 'Salon_W_IntuitiveBookingV2_ColumnStyleUpdates' || implementationSwitch == 'SKI_UpdateMBLevelsOnNotifications' || implementationSwitch == 'FTU_Bug172628' || implementationSwitch == 'Buzz_usp_AddOrganization' || implementationSwitch == 'FTU_OwnerFirstLoginCheckActiveOwnerAndStaff' || implementationSwitch == 'SKI_CorpLoginSearch' || implementationSwitch == 'FTU_Bug190661' || implementationSwitch == 'MAP_OnBoardingAPIDataReset' || implementationSwitch == 'SKI_Bug20782SalesSummaryAccuralFix' || implementationSwitch == 'Buzz_ReachFooterLocalization' || implementationSwitch == 'SKI_FilterByDbServersInNotifications' || implementationSwitch == 'CR_MasterListLightBoxFix' || implementationSwitch == 'FTU_ShowSetupChecklistDefaultPageSwitchForSolo' || implementationSwitch == 'Salon_CMBMHideAnyStaffForSSP' || implementationSwitch == 'SKI_FixDepositForReturns' || implementationSwitch == 'SKI_ConvertTotalToSalesTotalAddGrandTotal' || implementationSwitch == 'MAP_Bug_208889' || implementationSwitch == 'Buzz_UnsubscribeLocalization' || implementationSwitch == 'SoapAuth_UserCreds' || implementationSwitch == 'SoapAuth_StaffCreds' || implementationSwitch == 'SoapAuth_SourceCreds' || implementationSwitch == 'FTU_AddMapCustomSystemTask' || implementationSwitch == 'OptimizeMembershipQueryInDailyMaintenance' || implementationSwitch == 'FTU_ExternalOwnerFirstLogin' || implementationSwitch == 'MOD_RemoveIrritatingChromeAutocompleteFromClientSearch' || implementationSwitch == 'Buzz_FlyingSolo' || implementationSwitch == 'SKI_EnableNotificationsPermission' || implementationSwitch == 'Buzz_212275_ConstantContactCopyUpdates' || implementationSwitch == 'MOD_AddClientSearchFontAwesomeIcons' || implementationSwitch == 'MOD_ClientSearchFixes' || implementationSwitch == 'SKI_UserGroupAudiencesInWeb' || implementationSwitch == 'SKI_CorpDashNewSkin' || implementationSwitch == 'PDS_unMaskClientTechTool' || implementationSwitch == 'APISupport_SecurityOptIn' || implementationSwitch == 'XM_ContractV2_5AdvancedOptions' || implementationSwitch == 'Express_AlwaysSendWaitlistEmail' || implementationSwitch == 'APISupport_Bug195433_NeedExtraCheckingBeforeFillingMultiLocationsField' || implementationSwitch == 'Salon_W_ApplyPaymentFix_195473' || implementationSwitch == 'APISupport_Bug195433_ReturnWhetherUserCanLoginMultiLocations' || implementationSwitch == 'UseNewLanguageSettingsPage' || implementationSwitch == 'DCA_MailPopover' || implementationSwitch == 'TPH_RollingWindowTwoAndFive' || implementationSwitch == 'APISupport_Feature216343_AdditionalResultsForGetStaff' || implementationSwitch == 'FTU_UseConnectEarlyOptIn' || implementationSwitch == 'Buzz_SplashPageLeadAssignment' || implementationSwitch == 'Buzz_Bug217562_FixMarketingSidebarLink' || implementationSwitch == 'CR_Bug129130_FixMainSignInHiccups' || implementationSwitch == 'SKI_MessageTypeRegionId' || implementationSwitch == 'APISupport_EmptySOAPUserHasAccessLevelNone' || implementationSwitch == 'XM_ContractV2_5AllowDepositForMonthToMonth' || implementationSwitch == 'APISupport_Bug218192_AddOrUpdateClientsRSSIDCollision' || implementationSwitch == 'CR_PopulateConsumerMasterList' || implementationSwitch == 'FTU_globalStyles' || implementationSwitch == 'XM_Bug213035_ContractPriceIsInScientificNotation' || implementationSwitch == 'MAP_SubmitOwnerAsShareHolderInApi' || implementationSwitch == 'XM_AddBannerToClassicContracts' || implementationSwitch == 'Buzz_KiwiTimestampModifications' || implementationSwitch == 'APISupport_Bug148518_LateCancellingCreatesBadCancellationData' || implementationSwitch == 'SKI_RegionIdInMessages' || implementationSwitch == 'MAP_AddChargebackSepaToApp' || implementationSwitch == 'FTU_BundleMultiDayClassSchedules' || implementationSwitch == 'SKI_CorpDashNewSkinReports' || implementationSwitch == 'FTU_Bugfix_222877' || implementationSwitch == 'AnalyticsYoyChanges' || implementationSwitch == 'SKI_Corp_W_NotificationsUXR1' || implementationSwitch == 'FTU_BusinessLocationsRedesignUpdates' || implementationSwitch == 'Buzz_PurchaseSoloLevel' || implementationSwitch == 'XM_ContractV2_5Refactor' || implementationSwitch == 'Salon_W_DynamicallyChangeRetailOnClicksToTouchForIOSSafari' || implementationSwitch == 'SKI_RemoveApiUserGroupsFromAudiences' || implementationSwitch == 'SKI_RefactorRepoGetUserGroupUserIds' || implementationSwitch == 'SKI_RemoveCorpMessagesFromAdmin' || implementationSwitch == 'FTU_ServicesAndPricingDataTracking' || implementationSwitch == 'XM_ContractV2_5MediaRooms' || implementationSwitch == 'APISupport_Bug218316_GrabTrainerDefaultRateInsteadOfApptWhenSubbingClassTeacher' || implementationSwitch == 'FTU_FixForConnectCoordinates' || implementationSwitch == 'API_Bug78562_FilterActivityLogSearchByColumn' || implementationSwitch == 'SKI_ReturnMessageIdFromCreateMessageForCorporation' || implementationSwitch == 'APISupport_DC220354_has_been_run' || implementationSwitch == 'DCA_AddConnectEnrollmentReviews' || implementationSwitch == 'MAP_UpdateMerchantAppFeeDisplay' || implementationSwitch == 'SKI_CorporateRebrandToEnterpriseSolutions' || implementationSwitch == 'XM_Bug188735_ChangesToToDash' || implementationSwitch == 'WriteLanguageResourcesDualEntry' || implementationSwitch == 'UseMBLanguageInCreateSite' || implementationSwitch == 'FTU_Bug227017' || implementationSwitch == 'SKI_Bug227403_FixIsSelectedBoolForUserGroups' || implementationSwitch == 'Buzz_FixScheduleHeaderFormat' || implementationSwitch == 'SKI_PopulateCorpMessageIcons' || implementationSwitch == 'FTU_WelcomeCallInformation' || implementationSwitch == 'XM_Bug189831_DateLocalizationFixForClientAlertMessage' || implementationSwitch == 'APISupport_Task224356_AddClientServiceIDForAddClientsToClasses' || implementationSwitch == 'APISupport_Task226132_DefaultPayRateTo1' || implementationSwitch == 'APISupport_Bug214184_Receive2EmailsWhenAddingFromWaitlistToClass' || implementationSwitch == 'XM_Bug207800_Bug192742_ExportingExcelReportFix' || implementationSwitch == 'APISupport_Bug228138_ValidateLoginFailsToValidateUserCredentials' || implementationSwitch == 'FTU_Bug207906' || implementationSwitch == 'XM_Bug214079_PreserveRoomChangesWhenCancelingAClassInstance' || implementationSwitch == 'DCA_Bug228445_AddMediaAnalyticsEventLabel' || implementationSwitch == 'XM_Bug42752_TerminatedMembershipReportFix' || implementationSwitch == 'XM_Bug153288_CheckRoomConflictsWhileDoubleBooking' || implementationSwitch == 'DCA_Bug56420_DefaultStateSettingRemovesStateMenu' || implementationSwitch == 'WaitlistRestriction220523' || implementationSwitch == 'XM_Bug161199_CheckStaffScheduleOnClassUnCancel' || implementationSwitch == 'MBLanguageInQueryAllSites' || implementationSwitch == 'MAP_Bug228407' || implementationSwitch == 'SKI_Corp_W_NotificationsButtonText_227567' || implementationSwitch == 'MAP_DisableRewardsForAdyenClients' || implementationSwitch == 'APISupport_AdminTool_SecurityOptIn' || implementationSwitch == 'DCA_Bug217278_SafariEmailValidationLoop' || implementationSwitch == 'FTU_ClassEnrollmentLinkUpdates' || implementationSwitch == 'DCA_RemoveAB1034' || implementationSwitch == 'APISupport_Bug186416_GetClientScheduleReturnDuplicateEntries' || implementationSwitch == 'XM_Bug212061_EmptyRecordSetCheck' || implementationSwitch == 'UseNewLanguageLibraryForTours' || implementationSwitch == 'Buzz_MBFDumpFile' || implementationSwitch == 'UseDualEntryForMerchantAccountLocalization' || implementationSwitch == 'MAP_Bug_231228' || implementationSwitch == 'MAP_iDealSupportForContracts' || implementationSwitch == 'XM_RemoveClassicContractToolsMenuOptionOnContractsTab' || implementationSwitch == 'DCA_AddProviderIDsToReceipts' || implementationSwitch == 'LanguageProviderIsoName' || implementationSwitch == 'Buzz_AutoPublishInConnect' || implementationSwitch == 'APISupport_Bug223750_ReceiptAutoEmailShowLocalCurrency' || implementationSwitch == 'FTU_Bug221865' || implementationSwitch == 'Buzz_Bug193566_SpacesAreOK' || implementationSwitch == 'SKI_Corp_W_AddNotificationToList' || implementationSwitch == 'FTU_BusinessLocationsRedesignMoreUpdates' || implementationSwitch == 'NewRoyaltyRegion' || implementationSwitch == 'FTU_GoogleAnalyticsLinkTargetTest' || implementationSwitch == 'XM_Bug232568_HandleFloatingPointPrecisionInBankersRounding' || implementationSwitch == 'APISupport_Bug229752_SubstituteClassTeacherAutoEmailBeingSentToOptedOutClient' || implementationSwitch == 'APISupport_Feature232475_ValidateStaffLogin' || implementationSwitch == 'Buzz_HandleTwilioPurchaseFailures' || implementationSwitch == 'BadApples_UndoClassCancellationHideClassColumnReset' || implementationSwitch == 'XM_Bug228496_DisplayEditInDepositLightbox' || implementationSwitch == 'APISupport_Bug217200_SubstituteClassTeacherShouldNotAllowInactiveTeachersToSubForClass' || implementationSwitch == 'Buzz_CreateSectionsLESSfile' || implementationSwitch == 'FTU_FixBug213667' || implementationSwitch == 'APISupport_Bug217197_SubtituteClassTeacherShouldNotAllowNonTeacherStaffToSubForClass' || implementationSwitch == 'GDayPI_tblWaitlist_RESTSource_Fix_224403' || implementationSwitch == 'APISupport_Bug233905_ResultsCountNotAccurate' || implementationSwitch == 'MAP_OnboardingApplicationPermissions' || implementationSwitch == 'FTU_Bug217312' || implementationSwitch == 'XM_Bug209072_Bug233707_LeadingZerosInNumbersCutOffByExcel' || implementationSwitch == 'XM_Bug227202_Bug232976_HideLightboxBeforeReopen' || implementationSwitch == 'MAP_Bug_212128' || implementationSwitch == 'MAP_Bug_232799' || implementationSwitch == 'MAP_Bug_187013' || implementationSwitch == 'XM_bugfix_199979' || implementationSwitch == 'FTU_Bug211502' || implementationSwitch == 'XM_fixLabelAlignment' || implementationSwitch == 'XM_Bug208866_AP_ChargingCreditPriceInContract' || implementationSwitch == 'DCA_Bug196025_FixForReferralSources' || implementationSwitch == 'APISupport_Bug226635_SubstituteClassTeacherCanSubTBDClass' || implementationSwitch == 'Buzz_Bug231591_PromoCodesWithPerSessionPricing' || implementationSwitch == 'XM_Bug226770_AllowNegativeZeroPrice' || implementationSwitch == 'Salon_W_EditUnavailabilityWithPermission_211536' || implementationSwitch == 'ClsListProductId' || implementationSwitch == 'Cybersec_235469_getsatisfactionname' || implementationSwitch == 'MAP_SofortAndGiroPayForConsumerMode' || implementationSwitch == 'SKI_Corp_W_NotificationCenterLightboxes' || implementationSwitch == 'Buzz_DisableSMSForUnsupportedCountries' || implementationSwitch == 'CYBERSECURITY_AccessPrivAttribute_LogicalOrPrivileges' || implementationSwitch == 'Buzz_MapLocPermBug' || implementationSwitch == 'Buzz_Bug182900_FixMissingGiftCardIDOnReport' || implementationSwitch == 'API_Bug_GetBookableItemsMultiCapsMultiStaffStartTimeFix' || implementationSwitch == 'APISupport_Bug229325_CannotCancelClassWhenSMSPackageFeatureIsDisabled' || implementationSwitch == 'DCA_Bug222771_EditingStaffPermissionsGroupsTab' || implementationSwitch == 'DCA_Bug57690_AutoEmailTeacherWhenEmptyClassCancelled' || implementationSwitch == 'FTU_Bug228575' || implementationSwitch == 'XM_Bug225635_POSummaryNotPullingHotwordsForServiceTypes' || implementationSwitch == 'APISupport_Bug231764_GetClientScheduleNotDisplayingLateCancelledBitCorrectly' || implementationSwitch == 'DCA_Bug211458_FixForBeingAbleToEditReceiptMessages' || implementationSwitch == 'DCA_Bug25029_AttendanceAnalysisShowsLateCancels' || implementationSwitch == 'DCA_Bug194792_SoloCanReactivateOtherStaff' || implementationSwitch == 'APiSupport_Bug238320_CurrentUserIsNullInGCAB' || implementationSwitch == 'MAP_FixRefundAuthCodeTooLong' || implementationSwitch == 'CyberSec_237924_302dev_list' || implementationSwitch == 'Buzz_WsTrust_Clients' || implementationSwitch == 'CYBERSEC_234838_DeleteSiteNewView' || implementationSwitch == 'APISupport_Bug239461_GetCLientAccountBalanceReturningZero' || implementationSwitch == 'Salon_W_GenderFilterHotwordFix_238732' || implementationSwitch == 'DCA_Bug217402_SendEmailToTeachersClients' || implementationSwitch == 'MAP_DisableEZIVoids' || implementationSwitch == 'DCA_Bug239983_SaaGWidgetNotShowingClassesPastStartTime' || implementationSwitch == 'BestPicture2015' || implementationSwitch == 'XM_Bug189284_FixesHiccupWhenAddingFromWaitlist' || implementationSwitch == 'APISupport_Bug233906_UpdatePayRateForSubstituteTeacher' || implementationSwitch == 'Buzz_CommentOutMAPOpportunityCode' || implementationSwitch == 'AllowExpressSingleSignOn' || implementationSwitch == 'CYBERSEC_234791_FindSiteNewView' || implementationSwitch == 'FTU_CheckServicesAndPricingPermission' || implementationSwitch == 'APISupport_Task240743_ConnectUserAccessToSOAP' || implementationSwitch == 'Buzz_Bug243480DefaultZuora' || implementationSwitch == 'APISupport_Bug243055_CartTotalCanBeNegative' || implementationSwitch == 'NoNbspOnExport' || implementationSwitch == 'MAP_RefactorIdealBankCall' || implementationSwitch == 'APISupport_Bug227047_StaffWithNoPermissionToBookAppointmentsForAllStaff' || implementationSwitch == 'Buzz_FlyingNimbus2000' || implementationSwitch == 'MAP_UpdateAutoPayDateCheckForAUS' || implementationSwitch == 'XM_Bug221805_TwoItemMonthToMonthContracts' || implementationSwitch == 'API_Bug226941_GetClientsDoesNotRespectAbilityToViewAllClients' || implementationSwitch == 'MAP_Bug_53168' || implementationSwitch == 'DCA_Bug238749_BlankWelcomeEmailSentBizMode' || implementationSwitch == 'MAP_FixSessionDataForIdeal' || implementationSwitch == 'XM_Bug88310_SendOneBirthdayEmail' || implementationSwitch == 'DCA_Bug217377_SuppressSaagStaffFilterError' || implementationSwitch == 'FTU_ActiveOwnerOnSiteCreation' || implementationSwitch == 'Buzz_SubscriberBillingInvoicesAndPDF' || implementationSwitch == 'WaitlistAddToClassName' || implementationSwitch == 'DCA_Bug243857_FormatClientPhoneCorrectly' || implementationSwitch == 'DCA_Bug238182_MBPopoverFixForScaledRoomSchedulePDF' || implementationSwitch == 'DCA_Bug238164_MBPopoverFixForEmailReceipt' || implementationSwitch == 'DCA_Bug224191_InventoryLevelDoubleOnReportUpdate' || implementationSwitch == 'StaffManagementDescriptionPhrase' || implementationSwitch == 'DCA_Bug194135_ApptsAndRatingsPermisNotExpanding' || implementationSwitch == 'XM_Bug195572_FixIEContractOnlineDescriptionIssue' || implementationSwitch == 'RI_229654_IE9ClientProfile' || implementationSwitch == 'Buzz_Bug231408TwilioErrorLog' || implementationSwitch == 'DCA_MBPopoverMoveLoadingIntoJs' || implementationSwitch == 'DCA_MBPopoverFixForMailOnNonEnvelopeLinks' || implementationSwitch == 'APISupport_Bug248497_GetBookableAvailabilityThrowsExceptionDueToFacebookWidget' || implementationSwitch == 'MAP_ReportFixesForEURedirects' || implementationSwitch == 'MergeDuplicateFilename' || implementationSwitch == 'ScheduleHolidayChanges' || implementationSwitch == 'Buzz_PurchaseCCExpDate' || implementationSwitch == 'NewClientEmailPasswordChangeKey' || implementationSwitch == 'Buzz_PurchaseServiceTypeRadioButtons' || implementationSwitch == 'MAP_AdyenMerchantAppShopperInteraction' || implementationSwitch == 'Buzz_ReachDashboardSQLEnhancement' || implementationSwitch == 'MAP_Bug245535_FixGSO' || implementationSwitch == 'APISupport_Bug249086_StaffLoginReturnsStaffAccessLevelForGrowOwner' || implementationSwitch == 'MAP_Bug246909_OptimalRBCReportFix' || implementationSwitch == 'DCA_Bug249386FixASPFormatIntlNumber' || implementationSwitch == 'APISupport_Bug58806_NoShowEmail' || implementationSwitch == 'APISupport_Bug249171_GetStaffReturnsErrorWithGrowOwnerCredentials' || implementationSwitch == 'Buzz_Bug242506_ImproveLocalization' || implementationSwitch == 'FTU_OneMonthPricingOptionDuration' || implementationSwitch == 'MAP_Bug248662_CashDrawerReport' || implementationSwitch == 'DCA_LinksConnectButtonCopyChange' || implementationSwitch == 'APISupport_Bug250455_FailsToAddClientDueToDuplicationOfClientID' || implementationSwitch == 'MAP_Bug250162_AddLoggingForIdeal' || implementationSwitch == 'APISupport_Bug249838_ClassesIsAvailableThrowingNullException' || implementationSwitch == 'APISupport_Task249916_GetClientsReturnClientStatus' || implementationSwitch == 'Buzz_NimbusLoco' || implementationSwitch == 'API_Bug154171_UnLateCancelNotAllowingOverCapacity' || implementationSwitch == 'Buzz_AutoZIN' || implementationSwitch == 'FTU_UseNameAsLine1WhenGeocodingLandmarks' || implementationSwitch == 'APISupport_Bug222482_LiveEditIgnorePricingOptionPriority' || implementationSwitch == 'MAP_Bug252808' || implementationSwitch == 'MAP_Bug252807_SettledACHLast4Search' || implementationSwitch == 'MAP_Bug247128' || implementationSwitch == 'MAP_Bug245530' || implementationSwitch == 'MAP_Bug251801' || implementationSwitch == 'MAP_Bug250454' || implementationSwitch == 'DCA_Bug250282_FailedSMSCreatesContactLog' || implementationSwitch == 'FTU_Bug187296' || implementationSwitch == 'Buzz_L360Logging' || implementationSwitch == 'Buzz_AddSubscriberBillingFilterForInvoices' || implementationSwitch == 'Buzz_Bug161065EnforceHttpsInProd' || implementationSwitch == 'XM_Bug246566_CancelClassTagHoverText' || implementationSwitch == 'XM_Bug250668_ContractsXSS' || implementationSwitch == 'APISupport_Bug256352_GetClientAccountBalanceUsingIncorrectDate' || implementationSwitch == 'Buzz_Bug251928TemplateTransmogError' || implementationSwitch == 'FTU_UpdateSessionForResourcesResv' || implementationSwitch == 'DCA_Bug250988_ErrorWithOtherReferralType' || implementationSwitch == 'DCA_ChangeWelcomeSMSCopy' || implementationSwitch == 'MAP_Bug258479_CopyUpdateForRedirectPurchPage' || implementationSwitch == 'DCA_Bug258881_ICDIconIsWeird' || implementationSwitch == 'DTT_162934_ChromeAutoCompleteBugFix';
+		}
+	
+	// Emit the AB tests right here.
+	//Parse ABTests from the session into an array
+	var abTests = ",5,7,6,1004,1001,1008,1009,1013,1006,1012,1015,1016,1011,1017,1027,1026,1025,1024,1029,1035,1033,1038,1030,1040,1037,1044,1039,1032,1048,1043,1052,1054,1055,".split(',');
+	window.ABTests = {};
+	
+	//Put the array of AB tests into a dictionary object
+	for(var i=0; i<abTests.length ; i++)
+	{
+		var item = abTests[i];
+		if(item!='' && item != ' ' && item != null)
+			window.ABTests[item] = true;
+	}
+	
+	function ABTestIsEnabled(abtest){
+		//Make sure 'abtest' is an integer
+		if(typeof abtest != 'number' || abtest % 1 != 0)
+			return false;
+		//Check if 'abtest' exists in the ABTest dictionary object
+		if(window.ABTests[abtest])
+			return true;
+		return false;
+	}
+</script>
+
+
+
+<script type="text/javascript">
+	function NavigationRedesignIsEnabled() {
+		return false;
+	}
+</script>
+<script type="text/javascript">
+	function SynchronousNavigationRedesignIsEnabled() {
+		if ('false' == 'false')
+			return false;
+	    return ABTestIsEnabled(1030);
+	}
+</script>
+
+
+<style type="text/css">
+table.transForm { border: 0 !important; }
+/* * { margin: 0; padding: 0; } */
+#memoryticker{
+font: bold 11px Arial;
+color: #E56B00;
+border:;
+padding: 3px;
+}
+#memoryticker a:link {color: #E56B00; text-decoration: none;}
+#memoryticker a:active {color: #E56B00; text-decoration: none;}
+#memoryticker a:visited {color: #E56B00; text-decoration: none;}
+#memoryticker a:hover {color: #003F87; text-decoration: none;}
+.tinytableopacity22    {
+background: transparent;
+background:url("https://clients.mindbodyonline.com/asp/images/columnbg22.gif");
+}
+.tinytableopacity22 TD {
+filter:alpha(opacity=85);
+-moz-opacity:.85;
+opacity:.85;
+}
+
+#pageWrapper #wrapper-minhieght 
+{
+	min-height: 0;
+}
+BODY #footer {
+	visibility: visible;
+}
+
+</style>
+<script type="text/javascript">
+function subForm() {
+	document.search2.submit();
+
+	parent.mainFrame.focus();
+
+}
+function addToFavorites(sType) {
+    var favoritesURL = "https://clients.mindbodyonline.com/classic/ws?studio=PeninsulaJewishCommunityCenter";
+    if (sType!=0) {
+        favoritesURL += "&sType=" + sType;
+    }
+    var favoritesName = "PJCC Online";
+	if (window.sidebar) { // firefox
+		window.sidebar.addPanel(favoritesName, favoritesURL, "");
+	} else if(window.opera && window.print) { // opera
+		var elem = document.createElement('class-schedule-with-ampersand');
+		elem.setAttribute('href',favoritesURL);
+		elem.setAttribute('title',favoritesName);
+		elem.setAttribute('rel','sidebar');
+		elem.click();
+	} else if(document.all) {	// ie
+		window.external.AddFavorite(favoritesURL, favoritesName);
+	}
+}
+function goTo(top_loc,tabID,qstrParam, botPage) {
+	var clientId = "";
+	if (document.getElementById("optSelectedClients") != null) {
+		if (document.getElementById("optSelectedClients").selectedIndex >= 0) {
+			clientId = "&fcltid=" + document.getElementById("optSelectedClients").options[document.getElementById("optSelectedClients").selectedIndex].value;
+		}
+	} 
+	if (botPage!="" && botPage!=null) {
+		parent.mainFrame.location = "/asp/adm/" + botPage + "?fl=true&tabID=" + tabID + "&qParam=" + qstrParam + clientId;
+	} else {
+	    if (top_loc == "class") {
+	        parent.mainFrame.location = "/classic/admmainclass?fl=true&tabID=" + tabID + "&qParam=" + qstrParam + clientId;
+        } else if (top_loc == "appts") {
+         parent.mainFrame.location = "/MainAppointments/Index?fl=true&tabID=" + tabID + "&qParam=" + qstrParam + clientId; 
+		} else {
+			parent.mainFrame.location = "/asp/adm/main_" + top_loc + ".asp?fl=true&tabID=" + tabID + "&qParam=" + qstrParam + clientId;
+		}
+	}
+}
+function isPdf() {
+	return false;
+}
+	// To handle client-side dates, we need to include some JS. I've picked Moment.js to do the client-side date manipulation,
+	// but it needs some information like our time offset. All client-side date and time manipulation should be in UTC.
+	window.MomentJSDateFormatString = 'MM/DD/YYYY';
+	// UTCOffset is PST (-8) + Site Offset Time
+		window.UTCOffsetMinutes = -420;
+</script>
+<script type="text/javascript" src="https://static.mindbodyonline.com/v76979/scripts/site.js" ></script><script type="text/javascript" src="https://static.mindbodyonline.com/v76979/scripts/inc_login_content.js" ></script>
+<script type="text/javascript" src="https://static.mindbodyonline.com/v76979/scripts/cm_site.js" ></script>
+
+</head>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"169e250927","applicationID":"1900576","transactionName":"NVBRNRZZXUdYARILDgwafjcnF35VUAwlDgARRnAOCkxBW1UOAxBOK1tXBBw=","queueTime":0,"applicationTime":199,"ttGuid":"D5349CE338182628","agent":"js-agent.newrelic.com/nr-686.min.js"}</script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"XAIDV1FACQoAVFRVAQ=="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:23,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(f){"stack"in f&&(t(1),t(2),"addEventListener"in window&&t(3),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&t(4),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:10,2:9,3:7,4:11,5:3,6:24,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],6:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3),n.on("fn-start",function(t){var e=t[0];e instanceof Event&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof Event&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:10,2:9,3:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],7:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=t("ee").create(),i=t(1)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t){if(t[1]){var e=t[1];"function"==typeof e?this.wrapped=t[1]=a(e,"nr@wrapped",function(){return i(e,"fn-",null,e.name||"anonymous")}):"function"==typeof e.handleEvent&&i.inPlace(e,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:25,ee:"QJf3ax",gos:"7eSDFh"}],8:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState"],"-")},{1:25,ee:"QJf3ax"}],9:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:25,ee:"QJf3ax"}],10:[function(t,e){function n(t,e,n){t[0]=o(t[0],"fn-",null,n)}var r=t("ee").create(),o=t(1)(r);e.exports=r,o.inPlace(window,["setTimeout","setInterval","setImmediate"],"setTimer-"),r.on("setTimer-start",n)},{1:25,ee:"QJf3ax"}],11:[function(t,e){function n(){f.inPlace(this,p,"fn-")}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:7,2:25,ee:"QJf3ax"}],12:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=n(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1);t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=n(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var u=0;c>u;u++)e.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof XMLHttpRequest&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof XMLHttpRequest&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:13,3:11,4:7,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],13:[function(t,e){e.exports=function(t){var e=document.createElement("class-schedule-with-ampersand"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],14:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:23,2:24,handle:"D5DuLP"}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,f=c.document;t(2);var u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-686.min.js"},p=e.exports={offset:i(),origin:u,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:23,2:14,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],23:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],24:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],25:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@wrapper",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=!0,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:24,ee:"QJf3ax"}]},{},["G9z0Bl",4,12,6,5]);</script><body class="Enabled_AppointmentMultipleCancel Enabled_BookMultipleAppointmentConfirmationAutoEmail Enabled_Salon_AATServiceSearchStaticLink Enabled_ShrimpOnTheBarbie Enabled_UseReportLogging Enabled_Bug45267NoEnrollmentsInGetClasses Enabled_MobileNotificationForExpressApp Enabled_Marketing_ReferAndEarn Enabled_Android_Bug_57654 Enabled_Android_Bug_43965 Enabled_PDA_API_GoogleAnalyticsTracking Enabled_NewDefaultLanguageSupport Enabled_PDA_WaitlistSourceID Enabled_PDA_RetentionManagementExpDate Enabled_Bug_69130_EnrollmentsLettingYouOverbookAResource Enabled_SalonFiltersStyling Enabled_ConnectSplashNotificationV2Android Enabled_ExpressAndroidSplash Enabled_ConnectSplashNotificationV2 Enabled_NavigationRedesignOptInBanner2 Enabled_SalonRefreshApptSchedule Enabled_SalonAppointmentChangeNotificationEmail Enabled_Bug61721AutoEmailAndAustralianTime Enabled_ClientReferralLink Enabled_PDA_Hotfix_AlteredSplashScreenText Enabled_PDA_GiftCard_Shoppingcart_Hotfix Enabled_PDA_ConsumerSignupButtonGATracking Enabled_PDA_RetentionMgmtReport_MemberSinceFix Enabled_OptimalDirectDebit Enabled_NavigationRedesignOptInBanner3 Enabled_PDA_AppointmentsClasses_BrowserSize Enabled_NavigationRedesignOptInBanner4 Enabled_TransfirstPOSAPI Enabled_OptimalCreditCard Enabled_TranslationSwimlane_01 Enabled_SalonCMBM Enabled_PDA_ConnectFooter Enabled_IntroduceCriticalError Enabled_PayconexACHPOSAPI Enabled_UniversalSearchFeedbackInQuickClientLookup Enabled_TranslationSwimlane_04 Enabled_TranslationSwimlane_05 Enabled_TranslationSwimlane_06 Enabled_PDA_receiptTracking Enabled_TranslationSwimlane_02 Enabled_XM_Bug49925_LocalizationSA Enabled_XM_Bug77117 Enabled_API_Bug87327_AddSaleIDToGetClientPurchases Enabled_API_Bug91118_DuplicateSourcenameCreationAttempts Enabled_TranslationReportsStyles Enabled_EnableAntiForgeryOnGSOGenToken Enabled_EnableAntiForgeryOnGSOValidation Enabled_PDA_TipSlipTracking Enabled_Salon_NewNightlyScriptForApptReminderEmail Enabled_XM_Task93009_Update_Community_Forum_link Enabled_EnableAntiForgeryValidationChunk1 Enabled_EnableAntiForgeryGenTokenChunk1 Enabled_SalonCMBM_Responsive Enabled_MAP_ElavonApplicationLightbox Enabled_AdyenCCPOSAPI Enabled_TranslationSwimlane_07 Enabled_PDS_MakeStepsSundayClassPDFIncludeEnrollments Enabled_FTU_MergeStaffScheduleAndServiceFiles Enabled_Mobile_Task_99722_GetLocationsByStudioId Enabled_MAP_AdyenACHPOSAPI Enabled_MoveLogoutButtonAndTimeclock Enabled_PDA_Hotfix_CrossRegTool Enabled_PDA_MB_GO_GATracking Enabled_PDS_AddAPILoginsForFMAHealcode Enabled_SaaGShowDateBannerEveryDay Enabled_ZuoraPaymentAlerts Enabled_Mobile_Bug_21487_ContractIncorrectlySellingNextSessionCountAutoPay Enabled_Mobile_Task62672_HathwaySelect Enabled_API_Bug83241_OnlyRunQueryPermissionForPortalTool Enabled_PDS_APIAuthorizeSourceWithStudios Enabled_PDS_FunctionXMLUserCredsRemoval Enabled_EnableAntiForgeryGenTokenChunk2 Enabled_FTU_NewWelcomePage Enabled_Salon_LinksWarningMessage_109609 Enabled_PayMeNowPOSAPI Enabled_HookupTransfirstCCToSoap Enabled_DB_CacheABTestsForScripts Enabled_MonerisPOSAPI Enabled_TransfirstACHPOSAPI Enabled_W113299_FIX_A Enabled_W113299_FIX_B Enabled_APIBug109555 Enabled_Express_GetStaffAppointmentsFilterByIDBug Enabled_Mobile_Bug_87791_SeriesNameReplaceSessionTypeName Enabled_Express_FDataProgramListFix Enabled_FTU_OwnerFirstLogin Enabled_Salon_Q2AdoptionGoogleAnalytics_102857 Enabled_APIPOS_Bug96595_AdminLoginsMbSites Enabled_APIPositive_53009_OverLappingResourcesOnUndoCancel Enabled_PreventNegativePurchaseTxtQty Enabled_NavigationRedesignOptInBanner5 Enabled_FTU_MINDBODYAnnouncements Enabled_PDA_Bronzalicious_MobileEmailOptIn Enabled_PDS_AutoOptOutFMAClientsFromABTest1037 Enabled_FTU_MarketingAdBanner Enabled_EnableAntiForgeryGenTokenChunk3 Enabled_VULN_53940_FIX Enabled_Salon_AddMembershipRestrictionToServiceCategoriesRestCall Enabled_SalonDatepickerImprovements Enabled_Salon_DragAndDropAppointmentInCartFix_122616 Enabled_EnableAntiForgeryGenTokenChunk4 Enabled_DCA_Bug77531_AddRefundPermissionToManageSalesCowpath Enabled_DCA_Bug120084_StaffProfileHitEnter Enabled_CYBERSEC_BUG_122557_FIX Enabled_APIPositive_95202_FacebookLoginKeyConflict Enabled_Express_ClientSearchToMatchCore Enabled_Express_ReturnVATFromGetSites Enabled_AndroidConnectBookedWithConnectLogo Enabled_Salon_OpenSidebarForAvailabilityBugFix_125193 Enabled_APIPositive_125828_SoapActivityUpdateDataType Enabled_SwitchAdminEntryLogSource Enabled_BUG_76895_FIX Enabled_DCA_TwilioShowNearbyAvailableAreaCodes Enabled_ClientDocumentUpdatedUrlPattern Enabled_DCA_Bug119195_MakeTaskPlayNicelyWithSwitches Enabled_DCA_MakeAddClientPhoneTextMoreSpecific Enabled_DCA_Bug127944_FixMarketingDasbhoardContactMethodStats Enabled_DCA_FixLostEmailCopy Enabled_APIPOS_EnsureMbUserIsCreatedWithIdentityLogin Enabled_API_Bug83945_HidePastWaitlistEntries Enabled_Express_AllowSelfBookingWhenNotAllowedForAllStaff Enabled_Express_AllowBookingOnNonBoldTimesWhenStaff Enabled_Express_CalculateSubtotalWithoutDiscounts Enabled_PDS_NoShowChangeForMBReach Enabled_DCA_UpdateTwilioStopCopy Enabled_PDS_EarlyConnectOptIn Enabled_ServerSideUploadWL Enabled_CYBER_SEC_127424 Enabled_FTU_PricingOptionPageReupBugs Enabled_PDS_MBReachForecast Enabled_PDS_NoShowRptServiceCatSelection Enabled_Express_CheckProperResourceScheduleInAllTimeZones Enabled_Express_RespectSchedulingRestrictionsOnServices Enabled_Express_CheckoutAppointmentWithoutResourceDisappearing Enabled_Express_AllowModifiedBookingWhenStaffWithPermission Enabled_EnableAntiForgeryGenTokenChunk5 Enabled_EnableAntiForgeryGenTokenChunk6 Enabled_FTU_MINDBODYAnnouncementsSiteSetting Enabled_PortAdmClsList Enabled_CYBERSEC_66685_RemoveClassicAspFromMVC Enabled_APIPositive_130731_RemoveGCPaymentDataRequirement Enabled_CYBERSEC_91554_BlockConsumersViewingReciepts Enabled_Express_135641_UpdateResourceScheduleOnApptEdit Enabled_Express_GetCorrectSaleDateAndTime Enabled_API_Bug92510_MaxSessionsRollingMonthsCalculationFix Enabled_Salon_FixCMBMResponsiveForIOS_125738 Enabled_CYBERSEC_91554_NewBlockConsumersViewingReciepts Enabled_FTU_SetupChecklist Enabled_Mobile_Task_138826_AddOnlineBookingFlagToLocations Enabled_Express_137656_FixCoreApptEdit Enabled_PDA_ExpressProductsandServices Enabled_Express_138612_ShowServicesOnLastBookingDay Enabled_EnableAntiForgeryGenTokenChunk7 Enabled_PDS_LiabilityWaiverReset Enabled_Salon_SchedulingSwitchOverREST Enabled_API_Bug99112_UsersNotAddedToClassFromWaitListAfterCancellationFromAPI Enabled_Salon_UnavailabilityInContextMenu Enabled_MAP_UseCustomLightboxForNotification Enabled_Salon_IntuitiveBookingV1 Enabled_MAP_AddPCXACHVoidRefund Enabled_Salon_PixieTemplate Enabled_MAP_BatchCloseErrorForPOSIntegration Enabled_PagePhraseDashboard Enabled_MAP_Bug152619 Enabled_API_Bug99611_MissingCheckBoxOnWaitlistEntryMissingWhenAPIUsed Enabled_API_Feature143574_AddNewPromoEmailOptInField Enabled_CYBERSEC_W156605_ChangeLinkforStatusPage Enabled_Salon_SidebarHeightCalculatedByKO_121928 Enabled_EnableAntiForgeryGenTokenChunk9 Enabled_EnableAntiForgeryGenTokenChunk8 Enabled_TXPPOSAPI Enabled_Express_StopOurDDOS Enabled_Salon_FixFirstTimeGuestTokenProcessing Enabled_PDS_ReturnReportExcludeEasyUpgrades Enabled_NewTimeZoneOffset Enabled_Mobile_113975_RemoveUserVisits Enabled_Mobile_103121_DontReturnIntroOffersThatBeginMoreThanTwoWeeksInTheFuture Enabled_Mobile_105515_InsertApplicationUserIfNoneFound Enabled_Mobile_103272_AddCorporationNamesToUser Enabled_Mobile_103278_SyncUserLocationsWithAppointmentVisits Enabled_Bug_69599_ProfileImage Enabled_AddDetailIDToReviews Enabled_TrackRestSourceCredentialsForClientCreationAndClassVisits Enabled_Mobile_Bug_78912_CheckoutWithTemporaryCreditCardFailsValidation Enabled_Mobile_Bug_79999_NotUpdatingStateForCountriesWithNoProvinces Enabled_IOS_Task78767 Enabled_IOS_Task78363 Enabled_IOS_Task78360 Enabled_Bug_70469_SearchOutsideUS Enabled_IOS_Bug77054 Enabled_API_ResendVerificationModifications Enabled_Salon_FixedPositionSidebarWorkflowButtons Enabled_Salon_SidebarAnalyticsUsePreviousButton Enabled_Salon_IntuitiveBookingV2 Enabled_Salon_FixedPositionSidebarWorkflowButtons_163018 Enabled_MAP_RefundHideCCForTXP Enabled_CyberSecurityAdminIPWhiteList Enabled_CYBERSEC_137166_LogCSRFnoBlock Enabled_FTU_DisplayNuggetsAfterBeta Enabled_FTU_stopRedirectConnect Enabled_Express_FunctionData_SalesReport_Cash_Accrual_Bug_165919 Enabled_Express_FunctionData_SalesReport_Tip_Bug_165826 Enabled_ApiPos_160339_CrossRegionImportRedo Enabled_API_Bug91699_CultureCurrencyNotCorrectlySentInEmailReceipt Enabled_MAP_PullCCProcessorFromTransactionInPOS Enabled_Salon_W_KillContextMenuAfterClientLoad_166972 Enabled_FTU_SetupChecklistDisplayCustomTasks Enabled_Express_StaffPoopSortOrder Enabled_CyberSecurityAdminIPWhiteListEnforce Enabled_Salon_M_PrebookingButton_ACR Enabled_Salon_M_PrebookingButton_ContextMenu Enabled_Salon_W_UpdateDateWidthOnDateChange_121475 Enabled_FTU_OwnerFirstLoginHipaaFix Enabled_SetSubscriptionLevelFromCreateSite Enabled_Salon_W_RefactorWorkflows Enabled_FTU_UpdateCreateSiteToolForSetupChecklist Enabled_FTU_SiteSetupPermissionFilter Enabled_Salon_W_RefactorAppointmentHTML Enabled_Salon_W_AddPixieTextToVisitHistory Enabled_FTU_SiteSetupEventTracking Enabled_FTU_HipaaSiteCreationFixForSoloSites Enabled_Salon_W_Bug172033 Enabled_CYBERSEC_61981_FIX Enabled_Salon_W_ProceedToCheckoutUSCLoop_172103 Enabled_Salon_W_AutoFocusOnValidation_171642 Enabled_Salon_W_ClearValidator Enabled_UseCryptoPRNGForPasswordChangeKeys Enabled_Salon_W_RevealICDCodesInEditMode_175713 Enabled_FTU_GeneralSiteSetupTourEnhancements Enabled_Salon_UpdateAvailabilityServiceCategoryDropDown Enabled_Salon_W_AvailabilityPrototypeRefactor Enabled_APIPos_171692_CrossRegionalAdd Enabled_SignInSelectedLocationOnly Enabled_Buzz_TwilioNumberProvisioning Enabled_FTU_SiteSetupSubscriptionLevelsFilter Enabled_Salon_W_AllowMemberToBookWithoutPaying_181480 Enabled_Salon_w_DontUsePreviousLinkInPrebooking Enabled_APISupport_Bug181920_SqlConnectionFixForUpdateContactLogs Enabled_Salon_W_BoldTimesCorrection Enabled_Buzz_TwilioNumberProvisioningForAdmin Enabled_PrevotyIsOn Enabled_Salon_W_UpdateAppointmentPayrateInNightlyScript Enabled_FTU_UpdateTransmogrifierToEnableSiteSetupPermissionForSoloAndGrowOwner Enabled_ReportsUseHttpAndGetLocalhostString Enabled_CYBERSEC_184425_AdminSSO Enabled_FTU_Bug121910 Enabled_APISupport_Bug184713_PrepFinishTimesNotUpdatingToPerTrainerSettingWhenMoved Enabled_CYBERSEC_128632_BREACHToken Enabled_MAP_Bug_180518 Enabled_Express_IncludeCancelledClasses Enabled_RemoveReferencesToDevMod Enabled_MAP_Bug_186911 Enabled_FTU_UpdateGetConnectLink Enabled_FTU_UpdateCreateSiteToolForCustomTasks Enabled_MAP_TXPBlindCreditUseStoredCard Enabled_PortPrintGiftCard Enabled_CR_SubscriberImport Enabled_Buzz_OverlayNumbersOptimized Enabled_APISupport_Bug188667_RemoveStaffPermissionsReqForRemoveFromWaitlist Enabled_Salon_W_MaximizedPOSBecomesLastActive Enabled_MAP_Bug_188431 Enabled_Buzz_OverlayNumbersOptimized2 Enabled_APISupport_Bug189743_CheckoutAndBookUseNewestPricingOption Enabled_FTU_FunctionalRuleEvaluation Enabled_ApiPositive_153995_FixGiftCardQuantityOnDailyCloseoutReport Enabled_MAP_WriteBlindCreditBillingInfo Enabled_Buzz_ReachLocalization Enabled_Buzz_AppointmentForSMSLocationNameFix Enabled_Salon_W_VisitHistoryAnalytics Enabled_MAP_iDEALsupportForConsumerMode Enabled_Salon_W_VisitHistoryAnalyticsR2 Enabled_MAP_AddPreAuthTipForTXP Enabled_FTU_UpdatedQuickTourVisibilityRules Enabled_SKI_CorpLoginRedo Enabled_ProperlyDeserializeDateTimesForAppointmentConfirmLink Enabled_CR_MasterConsumerAddSoap Enabled_Buzz_LocalizeAccelerateMarketingSettings Enabled_FTU_MigrateQuickTours Enabled_FTU_FixCustomTaskLinksVerbose Enabled_FTU_FixAddCustomTaskValidation Enabled_APISupport_Bug190408_FunctionDataRequiresFloats Enabled_APISupport_Bug192833_AddVisitRefNoFieldToGetBookableItems Enabled_GetSatisfaction_SSO Enabled_MAP_AddBankCityAndNameToApp Enabled_FTU_ShowSecurityInfoQuickTourForGrolowners Enabled_MAP_Bug_198060 Enabled_FTU_BusinessLocationsRedesign Enabled_DCA_WelcomeSMS Enabled_APISupport_Task199620_ImprovedBadParamErrorHandling Enabled_SKI_Bug78797AddNewClientProspect Enabled_FTU_ChangeHomeTabDefaultFromSetupChecklist Enabled_MBX_ReportScrollingSafari71 Enabled_FTU_Bug171938 Enabled_MAP_Bug_199820 Enabled_FTU_UpdateCreateSiteToolForQuickTours Enabled_MainClassBookingString Enabled_APISupport_Bug200471_GetClientsSqlRefinement_NoLock Enabled_GP_AdyenDocumentUXChanges Enabled_Express_RemoveFromWaitlistNotUpdatingWaitlistNumber Enabled_CR_ProfileUpdate Enabled_Salon_W_IntuitiveBookingV2_ColumnStyleUpdates Enabled_SKI_UpdateMBLevelsOnNotifications Enabled_FTU_Bug172628 Enabled_Buzz_usp_AddOrganization Enabled_FTU_OwnerFirstLoginCheckActiveOwnerAndStaff Enabled_SKI_CorpLoginSearch Enabled_FTU_Bug190661 Enabled_MAP_OnBoardingAPIDataReset Enabled_SKI_Bug20782SalesSummaryAccuralFix Enabled_Buzz_ReachFooterLocalization Enabled_SKI_FilterByDbServersInNotifications Enabled_CR_MasterListLightBoxFix Enabled_FTU_ShowSetupChecklistDefaultPageSwitchForSolo Enabled_Salon_CMBMHideAnyStaffForSSP Enabled_SKI_FixDepositForReturns Enabled_SKI_ConvertTotalToSalesTotalAddGrandTotal Enabled_MAP_Bug_208889 Enabled_Buzz_UnsubscribeLocalization Enabled_SoapAuth_UserCreds Enabled_SoapAuth_StaffCreds Enabled_SoapAuth_SourceCreds Enabled_FTU_AddMapCustomSystemTask Enabled_OptimizeMembershipQueryInDailyMaintenance Enabled_FTU_ExternalOwnerFirstLogin Enabled_MOD_RemoveIrritatingChromeAutocompleteFromClientSearch Enabled_Buzz_FlyingSolo Enabled_SKI_EnableNotificationsPermission Enabled_Buzz_212275_ConstantContactCopyUpdates Enabled_MOD_AddClientSearchFontAwesomeIcons Enabled_MOD_ClientSearchFixes Enabled_SKI_UserGroupAudiencesInWeb Enabled_SKI_CorpDashNewSkin Enabled_PDS_unMaskClientTechTool Enabled_APISupport_SecurityOptIn Enabled_XM_ContractV2_5AdvancedOptions Enabled_Express_AlwaysSendWaitlistEmail Enabled_APISupport_Bug195433_NeedExtraCheckingBeforeFillingMultiLocationsField Enabled_Salon_W_ApplyPaymentFix_195473 Enabled_APISupport_Bug195433_ReturnWhetherUserCanLoginMultiLocations Enabled_UseNewLanguageSettingsPage Enabled_DCA_MailPopover Enabled_TPH_RollingWindowTwoAndFive Enabled_APISupport_Feature216343_AdditionalResultsForGetStaff Enabled_FTU_UseConnectEarlyOptIn Enabled_Buzz_SplashPageLeadAssignment Enabled_Buzz_Bug217562_FixMarketingSidebarLink Enabled_CR_Bug129130_FixMainSignInHiccups Enabled_SKI_MessageTypeRegionId Enabled_APISupport_EmptySOAPUserHasAccessLevelNone Enabled_XM_ContractV2_5AllowDepositForMonthToMonth Enabled_APISupport_Bug218192_AddOrUpdateClientsRSSIDCollision Enabled_CR_PopulateConsumerMasterList Enabled_FTU_globalStyles Enabled_XM_Bug213035_ContractPriceIsInScientificNotation Enabled_MAP_SubmitOwnerAsShareHolderInApi Enabled_XM_AddBannerToClassicContracts Enabled_Buzz_KiwiTimestampModifications Enabled_APISupport_Bug148518_LateCancellingCreatesBadCancellationData Enabled_SKI_RegionIdInMessages Enabled_MAP_AddChargebackSepaToApp Enabled_FTU_BundleMultiDayClassSchedules Enabled_SKI_CorpDashNewSkinReports Enabled_FTU_Bugfix_222877 Enabled_AnalyticsYoyChanges Enabled_SKI_Corp_W_NotificationsUXR1 Enabled_FTU_BusinessLocationsRedesignUpdates Enabled_Buzz_PurchaseSoloLevel Enabled_XM_ContractV2_5Refactor Enabled_Salon_W_DynamicallyChangeRetailOnClicksToTouchForIOSSafari Enabled_SKI_RemoveApiUserGroupsFromAudiences Enabled_SKI_RefactorRepoGetUserGroupUserIds Enabled_SKI_RemoveCorpMessagesFromAdmin Enabled_FTU_ServicesAndPricingDataTracking Enabled_XM_ContractV2_5MediaRooms Enabled_APISupport_Bug218316_GrabTrainerDefaultRateInsteadOfApptWhenSubbingClassTeacher Enabled_FTU_FixForConnectCoordinates Enabled_API_Bug78562_FilterActivityLogSearchByColumn Enabled_SKI_ReturnMessageIdFromCreateMessageForCorporation Enabled_APISupport_DC220354_has_been_run Enabled_DCA_AddConnectEnrollmentReviews Enabled_MAP_UpdateMerchantAppFeeDisplay Enabled_SKI_CorporateRebrandToEnterpriseSolutions Enabled_XM_Bug188735_ChangesToToDash Enabled_WriteLanguageResourcesDualEntry Enabled_UseMBLanguageInCreateSite Enabled_FTU_Bug227017 Enabled_SKI_Bug227403_FixIsSelectedBoolForUserGroups Enabled_Buzz_FixScheduleHeaderFormat Enabled_SKI_PopulateCorpMessageIcons Enabled_FTU_WelcomeCallInformation Enabled_XM_Bug189831_DateLocalizationFixForClientAlertMessage Enabled_APISupport_Task224356_AddClientServiceIDForAddClientsToClasses Enabled_APISupport_Task226132_DefaultPayRateTo1 Enabled_APISupport_Bug214184_Receive2EmailsWhenAddingFromWaitlistToClass Enabled_XM_Bug207800_Bug192742_ExportingExcelReportFix Enabled_APISupport_Bug228138_ValidateLoginFailsToValidateUserCredentials Enabled_FTU_Bug207906 Enabled_XM_Bug214079_PreserveRoomChangesWhenCancelingAClassInstance Enabled_DCA_Bug228445_AddMediaAnalyticsEventLabel Enabled_XM_Bug42752_TerminatedMembershipReportFix Enabled_XM_Bug153288_CheckRoomConflictsWhileDoubleBooking Enabled_DCA_Bug56420_DefaultStateSettingRemovesStateMenu Enabled_WaitlistRestriction220523 Enabled_XM_Bug161199_CheckStaffScheduleOnClassUnCancel Enabled_MBLanguageInQueryAllSites Enabled_MAP_Bug228407 Enabled_SKI_Corp_W_NotificationsButtonText_227567 Enabled_MAP_DisableRewardsForAdyenClients Enabled_APISupport_AdminTool_SecurityOptIn Enabled_DCA_Bug217278_SafariEmailValidationLoop Enabled_FTU_ClassEnrollmentLinkUpdates Enabled_DCA_RemoveAB1034 Enabled_APISupport_Bug186416_GetClientScheduleReturnDuplicateEntries Enabled_XM_Bug212061_EmptyRecordSetCheck Enabled_UseNewLanguageLibraryForTours Enabled_Buzz_MBFDumpFile Enabled_UseDualEntryForMerchantAccountLocalization Enabled_MAP_Bug_231228 Enabled_MAP_iDealSupportForContracts Enabled_XM_RemoveClassicContractToolsMenuOptionOnContractsTab Enabled_DCA_AddProviderIDsToReceipts Enabled_LanguageProviderIsoName Enabled_Buzz_AutoPublishInConnect Enabled_APISupport_Bug223750_ReceiptAutoEmailShowLocalCurrency Enabled_FTU_Bug221865 Enabled_Buzz_Bug193566_SpacesAreOK Enabled_SKI_Corp_W_AddNotificationToList Enabled_FTU_BusinessLocationsRedesignMoreUpdates Enabled_NewRoyaltyRegion Enabled_FTU_GoogleAnalyticsLinkTargetTest Enabled_XM_Bug232568_HandleFloatingPointPrecisionInBankersRounding Enabled_APISupport_Bug229752_SubstituteClassTeacherAutoEmailBeingSentToOptedOutClient Enabled_APISupport_Feature232475_ValidateStaffLogin Enabled_Buzz_HandleTwilioPurchaseFailures Enabled_BadApples_UndoClassCancellationHideClassColumnReset Enabled_XM_Bug228496_DisplayEditInDepositLightbox Enabled_APISupport_Bug217200_SubstituteClassTeacherShouldNotAllowInactiveTeachersToSubForClass Enabled_Buzz_CreateSectionsLESSfile Enabled_FTU_FixBug213667 Enabled_APISupport_Bug217197_SubtituteClassTeacherShouldNotAllowNonTeacherStaffToSubForClass Enabled_GDayPI_tblWaitlist_RESTSource_Fix_224403 Enabled_APISupport_Bug233905_ResultsCountNotAccurate Enabled_MAP_OnboardingApplicationPermissions Enabled_FTU_Bug217312 Enabled_XM_Bug209072_Bug233707_LeadingZerosInNumbersCutOffByExcel Enabled_XM_Bug227202_Bug232976_HideLightboxBeforeReopen Enabled_MAP_Bug_212128 Enabled_MAP_Bug_232799 Enabled_MAP_Bug_187013 Enabled_XM_bugfix_199979 Enabled_FTU_Bug211502 Enabled_XM_fixLabelAlignment Enabled_XM_Bug208866_AP_ChargingCreditPriceInContract Enabled_DCA_Bug196025_FixForReferralSources Enabled_APISupport_Bug226635_SubstituteClassTeacherCanSubTBDClass Enabled_Buzz_Bug231591_PromoCodesWithPerSessionPricing Enabled_XM_Bug226770_AllowNegativeZeroPrice Enabled_Salon_W_EditUnavailabilityWithPermission_211536 Enabled_ClsListProductId Enabled_Cybersec_235469_getsatisfactionname Enabled_MAP_SofortAndGiroPayForConsumerMode Enabled_SKI_Corp_W_NotificationCenterLightboxes Enabled_Buzz_DisableSMSForUnsupportedCountries Enabled_CYBERSECURITY_AccessPrivAttribute_LogicalOrPrivileges Enabled_Buzz_MapLocPermBug Enabled_Buzz_Bug182900_FixMissingGiftCardIDOnReport Enabled_API_Bug_GetBookableItemsMultiCapsMultiStaffStartTimeFix Enabled_APISupport_Bug229325_CannotCancelClassWhenSMSPackageFeatureIsDisabled Enabled_DCA_Bug222771_EditingStaffPermissionsGroupsTab Enabled_DCA_Bug57690_AutoEmailTeacherWhenEmptyClassCancelled Enabled_FTU_Bug228575 Enabled_XM_Bug225635_POSummaryNotPullingHotwordsForServiceTypes Enabled_APISupport_Bug231764_GetClientScheduleNotDisplayingLateCancelledBitCorrectly Enabled_DCA_Bug211458_FixForBeingAbleToEditReceiptMessages Enabled_DCA_Bug25029_AttendanceAnalysisShowsLateCancels Enabled_DCA_Bug194792_SoloCanReactivateOtherStaff Enabled_APiSupport_Bug238320_CurrentUserIsNullInGCAB Enabled_MAP_FixRefundAuthCodeTooLong Enabled_CyberSec_237924_302dev_list Enabled_Buzz_WsTrust_Clients Enabled_CYBERSEC_234838_DeleteSiteNewView Enabled_APISupport_Bug239461_GetCLientAccountBalanceReturningZero Enabled_Salon_W_GenderFilterHotwordFix_238732 Enabled_DCA_Bug217402_SendEmailToTeachersClients Enabled_MAP_DisableEZIVoids Enabled_DCA_Bug239983_SaaGWidgetNotShowingClassesPastStartTime Enabled_BestPicture2015 Enabled_XM_Bug189284_FixesHiccupWhenAddingFromWaitlist Enabled_APISupport_Bug233906_UpdatePayRateForSubstituteTeacher Enabled_Buzz_CommentOutMAPOpportunityCode Enabled_AllowExpressSingleSignOn Enabled_CYBERSEC_234791_FindSiteNewView Enabled_FTU_CheckServicesAndPricingPermission Enabled_APISupport_Task240743_ConnectUserAccessToSOAP Enabled_Buzz_Bug243480DefaultZuora Enabled_APISupport_Bug243055_CartTotalCanBeNegative Enabled_NoNbspOnExport Enabled_MAP_RefactorIdealBankCall Enabled_APISupport_Bug227047_StaffWithNoPermissionToBookAppointmentsForAllStaff Enabled_Buzz_FlyingNimbus2000 Enabled_MAP_UpdateAutoPayDateCheckForAUS Enabled_XM_Bug221805_TwoItemMonthToMonthContracts Enabled_API_Bug226941_GetClientsDoesNotRespectAbilityToViewAllClients Enabled_MAP_Bug_53168 Enabled_DCA_Bug238749_BlankWelcomeEmailSentBizMode Enabled_MAP_FixSessionDataForIdeal Enabled_XM_Bug88310_SendOneBirthdayEmail Enabled_DCA_Bug217377_SuppressSaagStaffFilterError Enabled_FTU_ActiveOwnerOnSiteCreation Enabled_Buzz_SubscriberBillingInvoicesAndPDF Enabled_WaitlistAddToClassName Enabled_DCA_Bug243857_FormatClientPhoneCorrectly Enabled_DCA_Bug238182_MBPopoverFixForScaledRoomSchedulePDF Enabled_DCA_Bug238164_MBPopoverFixForEmailReceipt Enabled_DCA_Bug224191_InventoryLevelDoubleOnReportUpdate Enabled_StaffManagementDescriptionPhrase Enabled_DCA_Bug194135_ApptsAndRatingsPermisNotExpanding Enabled_XM_Bug195572_FixIEContractOnlineDescriptionIssue Enabled_RI_229654_IE9ClientProfile Enabled_Buzz_Bug231408TwilioErrorLog Enabled_DCA_MBPopoverMoveLoadingIntoJs Enabled_DCA_MBPopoverFixForMailOnNonEnvelopeLinks Enabled_APISupport_Bug248497_GetBookableAvailabilityThrowsExceptionDueToFacebookWidget Enabled_MAP_ReportFixesForEURedirects Enabled_MergeDuplicateFilename Enabled_ScheduleHolidayChanges Enabled_Buzz_PurchaseCCExpDate Enabled_NewClientEmailPasswordChangeKey Enabled_Buzz_PurchaseServiceTypeRadioButtons Enabled_MAP_AdyenMerchantAppShopperInteraction Enabled_Buzz_ReachDashboardSQLEnhancement Enabled_MAP_Bug245535_FixGSO Enabled_APISupport_Bug249086_StaffLoginReturnsStaffAccessLevelForGrowOwner Enabled_MAP_Bug246909_OptimalRBCReportFix Enabled_DCA_Bug249386FixASPFormatIntlNumber Enabled_APISupport_Bug58806_NoShowEmail Enabled_APISupport_Bug249171_GetStaffReturnsErrorWithGrowOwnerCredentials Enabled_Buzz_Bug242506_ImproveLocalization Enabled_FTU_OneMonthPricingOptionDuration Enabled_MAP_Bug248662_CashDrawerReport Enabled_DCA_LinksConnectButtonCopyChange Enabled_APISupport_Bug250455_FailsToAddClientDueToDuplicationOfClientID Enabled_MAP_Bug250162_AddLoggingForIdeal Enabled_APISupport_Bug249838_ClassesIsAvailableThrowingNullException Enabled_APISupport_Task249916_GetClientsReturnClientStatus Enabled_Buzz_NimbusLoco Enabled_API_Bug154171_UnLateCancelNotAllowingOverCapacity Enabled_Buzz_AutoZIN Enabled_FTU_UseNameAsLine1WhenGeocodingLandmarks Enabled_APISupport_Bug222482_LiveEditIgnorePricingOptionPriority Enabled_MAP_Bug252808 Enabled_MAP_Bug252807_SettledACHLast4Search Enabled_MAP_Bug247128 Enabled_MAP_Bug245530 Enabled_MAP_Bug251801 Enabled_MAP_Bug250454 Enabled_DCA_Bug250282_FailedSMSCreatesContactLog Enabled_FTU_Bug187296 Enabled_Buzz_L360Logging Enabled_Buzz_AddSubscriberBillingFilterForInvoices Enabled_Buzz_Bug161065EnforceHttpsInProd Enabled_XM_Bug246566_CancelClassTagHoverText Enabled_XM_Bug250668_ContractsXSS Enabled_APISupport_Bug256352_GetClientAccountBalanceUsingIncorrectDate Enabled_Buzz_Bug251928TemplateTransmogError Enabled_FTU_UpdateSessionForResourcesResv Enabled_DCA_Bug250988_ErrorWithOtherReferralType Enabled_DCA_ChangeWelcomeSMSCopy Enabled_MAP_Bug258479_CopyUpdateForRedirectPurchPage Enabled_DCA_Bug258881_ICDIconIsWeird Enabled_DTT_162934_ChromeAutoCompleteBugFix">
+<div id="pageWrapper">
+
+<div id="fixedTop">
+<link rel="stylesheet" type="text/css" href="https://static.mindbodyonline.com/v76979/styles/SimpleLightBox.css"  />
+<script type="text/javascript" src="https://static.mindbodyonline.com/v76979/scripts/plugins/jquery.SimpleLightBox.js" ></script>
+
+<style type="text/css">
+    .logo-table {
+        color: #E56B00;
+    }
+
+        .logo-table a:hover {
+            text-decoration: underline;
+        }
+
+    .siteDeactivatedMsg {
+        color: red;
+        font-size: 20px;
+        font-weight: bold;
+    }
+</style>
+<div id="topSectionBG">
+    <div id="topWrap">
+        <table id="top-section-table" cellspacing="0" style='max-width: 960px; margin: 0 auto;'>
+            <tr>
+                <td class="top-section-table-ends">
+                    <div id="top-logo-container">
+                        
+    <a href="javascript:gotoStudioSite('http://www.pjcc.org');">
+		<img 
+id="studioLogoConsumer"
+ style="max-width:300px; max-height:58px;" src="/studios/PeninsulaJewishCommunityCenter/logo.gif?imageversion=331"  title="Click here to return to the PJCC homepage." />
+	</a>
+
+                    </div>
+                    
+                </td>
+                <td>
+                    
+                    <div id="top-bb-container">
+                        
+<script type="text/javascript">
+				$(function() { ticker.init(); }); 
+				var ticker = {
+					position: 0,
+					contents: ["<p> <p>Are you a member of JCC Rewards? "],
+					init: function() {
+						ticker.next();
+						if (ticker.contents.length > 1) {
+							var intervalID = setInterval(ticker.next, 5000);
+						}
+					},
+					next: function() {
+						var position = ticker.position;
+						$('#memoryticker').fadeOut(500,function() {
+							var $this = $(this);
+							$this.html(ticker.contents[position]);
+							$this.fadeIn(500);
+						})
+						ticker.position = (position + 1) % ticker.contents.length;
+					}
+				}
+				</script>
+				<div id="memoryticker" style="max-width:482px;max-height:64px;"></div>
+
+                    </div>
+                    
+                </td>
+                <td id="top-login-container-td" class="top-section-table-ends">
+                    <div id="top-login-container">
+                        
+<style type="text/css">
+    .top-login-field-container
+    {
+        padding-left: 5px;
+    }
+    .top-login-field-container a:hover
+    {
+        text-decoration:underline;
+    }
+    #requiredtxtUserName, #requiredtxtPassword
+    {
+        width: 100px;
+    }
+    #top-wel-sp
+    {
+        -moz-border-radius: 5px 5px 5px 5px;
+        border-radius: 5px 5px 5px 5px;
+        padding: 0px 5px;
+    }
+    #last-login-sp
+    {
+        -moz-border-radius: 5px 5px 5px 5px;
+        border-radius: 5px 5px 5px 5px;
+        padding: 0px 5px;
+        font-size: 10px;
+        float:right;
+    }
+    .logo-table{
+        color:#E56B00;
+    }
+    #btnLogin
+    {
+        text-transform:capitalize;
+    }
+</style>
+
+<script type="text/javascript">
+    function logOut() {
+        parent.document.location.href = '/ASP/logout.asp?studioid=41273';
+    }
+</script>
+<div class="logo-div">
+    <table class="logo-table">
+        <tr>
+
+        <td><img src="https://static.mindbodyonline.com/v76979/asp/images/enso-20px.png"></td>
+
+        <td style="white-space: nowrap;">
+<span id="top-wel-sp">Welcome&nbsp;<span class="bold">Danny&nbsp;Nguyen
+<img src="https://static.mindbodyonline.com/v76979/asp/adm/images/mem-3.png" title="Center Membership with Adult Add-On from 10/1/2014 to 7/1/2015"
+	align="absmiddle">
+</span>,&nbsp;You are Logged In</span><br />
+            <span id="last-login-sp">Last login:&nbsp;9/11/2015 12:32:16 AM</span>
+        </td>
+        <td>	
+            <input id="btnLogout" type="button" class="logoutButton" value="Log Out" onclick="parent.document.location.href='/ASP/logout.asp?studioid=41273';" />
+        </td>
+        </tr>
+    </table>
+</div>
+
+                    </div>
+                    <div style="clear: both;"></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+<!---  7 -->
+
+    <div id="tab-scroll-l" class="tab-scroll-l">&nbsp;</div>
+    <div id="tab-scroll-r" class="tab-scroll-r">&nbsp;</div>
+    <div id="tab-bar" class="tab-bar">
+    <div id="tab-padding">
+    <div id="tab-bar-padding-cm">
+  
+        <table id="tab-table" class="tab-table"><tr>
+		<td class="tab tab-sel tabclass" id="tabTD7" onclick="document.location.href='/classic/mainclass?fl=true&tabID=7'">
+		<table class="tabItem"><tr>
+				<td class="tab-l-sel tab-l-sel-middleTab"><div></div></td> 
+				<td class="tab-c-sel tab-c-sel-middleTab"><a id="tabA7">GROUP EXERCISE</a></td>
+				<td class="tab-r-sel tab-r-sel-middleTab"><div></div></td>
+		</tr></table>
+		</td>
+		<td class="tab tab-nosel tabappts" id="tabTD9" onclick="document.location.href='/asp/main_appts.asp?fl=true&tabID=9'">
+		<table class="tabItem"><tr>
+				<td class="tab-l tab-l-firstAfterSel tab-l-middleTab"><div></div></td>
+				<td class="tab-c tab-c-firstAfterSel tab-c-middleTab"><a id="tabA9" >SPA SERVICES</a></td>
+				<td class="tab-r tab-r-firstAfterSel tab-r-middleTab"><div></div></td> 
+		</tr></table>
+		</td>
+		<td class="tab tab-nosel tabclass" id="tabTD101" onclick="document.location.href='/classic/mainclass?fl=true&tabID=101'">
+		<table class="tabItem"><tr>
+				<td class="tab-l tab-l tab-l-middleTab"><div></div></td>
+				<td class="tab-c tab-c tab-c-middleTab"><a id="tabA101" >PILATES CLASSES</a></td>
+				<td class="tab-r tab-r tab-r-middleTab"><div></div></td> 
+		</tr></table>
+		</td>
+		<td class="tab tab-nosel tabappts" id="tabTD102" onclick="document.location.href='/asp/main_appts.asp?fl=true&tabID=102'">
+		<table class="tabItem"><tr>
+				<td class="tab-l tab-l tab-l-middleTab"><div></div></td>
+				<td class="tab-c tab-c tab-c-middleTab"><a id="tabA102" >PRIVATE PILATES</a></td>
+				<td class="tab-r tab-r tab-r-middleTab"><div></div></td> 
+		</tr></table>
+		</td>
+		<td class="tab tab-nosel tabclass" id="tabTD107" onclick="document.location.href='/classic/mainclass?fl=true&tabID=107'">
+		<table class="tabItem"><tr>
+				<td class="tab-l tab-l tab-l-middleTab"><div></div></td>
+				<td class="tab-c tab-c tab-c-middleTab"><a id="tabA107" >GROUP TRAINING/TRX</a></td>
+				<td class="tab-r tab-r tab-r-middleTab"><div></div></td> 
+		</tr></table>
+		</td>
+		<td class="tab tab-nosel tabenroll" id="tabTD109" onclick="document.location.href='/asp/main_enroll.asp?fl=true&tabID=109'">
+		<table class="tabItem"><tr>
+				<td class="tab-l tab-l tab-l-middleTab"><div></div></td>
+				<td class="tab-c tab-c tab-c-middleTab"><a id="tabA109" >WEIGHT LOSS YOUR WAY</a></td>
+				<td class="tab-r tab-r tab-r-middleTab"><div></div></td> 
+		</tr></table>
+		</td>
+		<td class="tab tab-nosel tabinfo" id="tabTD2" onclick="document.location.href='/asp/main_info.asp?fl=true&tabID=2'">
+		<table class="tabItem"><tr>
+				<td class="tab-l tab-l tab-l-middleTab"><div></div></td>
+				<td class="tab-c tab-c tab-c-middleTab"><a id="tabA2" >MY INFO</a></td>
+				<td class="tab-r tab-r tab-r-middleTab"><div></div></td> 
+		</tr></table>
+		</td>
+		<td class="tab tab-nosel tabshop" id="tabTD3" onclick="document.location.href='/asp/main_shop.asp?fl=true&tabID=3'">
+		<table class="tabItem"><tr>
+				<td class="tab-l tab-l tab-l-middleTab"><div></div></td>
+				<td class="tab-c tab-c tab-c-middleTab"><a id="tabA3" >SHOP</a></td>
+				<td class="tab-r tab-r tab-r-middleTab"><div></div></td> 
+		</tr></table>
+		</td>
+		<td class="tab tab-nosel tabhttp://www.pjcc.org" id="tabTD10" onclick="window.open('http://www.pjcc.org')">
+		<table class="tabItem"><tr>
+				<td class="tab-l tab-l tab-l-middleTab"><div></div></td>
+				<td class="tab-c tab-c tab-c-middleTab"><a id="tabA10" >WWW.PJCC.ORG</a></td>
+				<td class="tab-r tab-r tab-r-middleTab"><div></div></td> 
+		</tr></table>
+		</td>
+		<td class="tab tab-nosel tabhelp" id="tabTD6" onclick="document.location.href='/help/?fl=true&tabID=6'">
+		<table class="tabItem"><tr>
+				<td class="tab-l tab-l tab-l-middleTab"><div></div></td>
+				<td class="tab-c tab-c tab-c-middleTab"><a id="tabA6" >HELP</a></td>
+				<td class="tab-r tab-r tab-r-middleTab"><div></div></td> 
+		</tr></table>
+		</td>
+
+        </tr></table>
+    </div>
+    </div>
+    </div>
+
+</div>
+
+<div id="tabBottomBorder"></div>
+<div class="menu">
+    
+    <div class="menu-right">
+        <a href="javascript:printWindow();" style="float: right; margin-top: 2px; margin-right: 17px;">
+            <img src="https://static.mindbodyonline.com/v76979/asp/images/printer-20px.png" title="Click here to print"></a>
+    </div>
+    
+</div>
+
+
+</div>
+<div id="fixedTopShim"></div>
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- IRV-WEB-CLI-038 -->
+
+
+
+
+
+
+
+
+        
+
+    
+<style type="text/css">
+	.userHTML ul {list-style: disc outside none !important;}
+	.userHTML ol {list-style: decimal  !important;}
+	.userHTML li {margin-left:30px;}
+	.userHTML em {font-style: italic;}
+	.userHTML blockquote
+	{
+		display: block;
+		margin: 1em 40px;
+	}
+	.userHTML big 
+	{
+		font-size: larger;
+	}
+	.userHTML small
+	{
+		font-size: smaller;
+	}
+	.userHTML kbd, .userHTML code
+	{
+		font-family: monospace;
+	}
+	.userHTML pre
+	{
+		margin: 1em 0px;
+		display: block;
+		white-space: pre;
+	}
+	.userHTML sup
+	{
+		vertical-align: super;
+		font-size: smaller;
+	}
+	.userHTML sub
+	{
+		vertical-align: sub;
+		font-size: smaller;
+	}
+</style>
+<script type="text/javascript">
+	if (typeof ($) != "undefined") {
+		$(function () {
+			// Puts focus inside a tinyMCE box when it's corresponding <label> tag is clicked
+			$(".for-tinymce").live("click", function (e) {
+				if (typeof (tinyMCE) != "undefined") {
+					e.preventDefault();
+					tinyMCE.get($(this).prop('for')).focus();
+				}
+			});
+			var $userTables = $(".userHTML table");
+			
+			if ($userTables.attr("border") != "") {
+				$userTables.find("td, th").css("border", "1px solid black");
+			}
+		});
+	}
+</script>
+
+    
+    
+    
+
+<script type="text/javascript">
+function autoSubmitDateTo(dayWeekOrMonth, addOrSub) {
+	//strange way to get a "month advance" in here without breaking all kinds of stuff
+	//because this func was originally built to accept T/F to indicate day or week,
+	//we're now also allowing you to also pass strings "day"/"week"/"month". 
+	//passing true will still equate to "day", and false will equate to "week"
+    var tmpDate;
+	
+	if (dayWeekOrMonth == true && dayWeekOrMonth != "month" ) {
+		if (addOrSub)	{
+			tmpDate = "9/12/2015";
+		} else {
+			tmpDate = "9/10/2015";
+		}
+	} else if (dayWeekOrMonth == false || dayWeekOrMonth == "week") {
+		if (addOrSub)	{
+			tmpDate = "9/18/2015";
+		} else {
+			tmpDate = "9/4/2015";
+		}
+	} else { //month
+		if (addOrSub)	{
+			tmpDate = "10/11/2015";
+		} else {
+			tmpDate = "8/11/2015";
+		}	
+	}
+	
+	//parent.frames['topFrame'].document.search2.txtDate.value = tmpDate;
+	//parent.frames['topFrame'].document.search2.pageNum.value = 1;
+	//parent.frames['topFrame'].document.search2.submit();
+	document.search2.txtDate.value = tmpDate;
+	document.search2.pageNum.value = 1;
+	document.search2.submit();
+}
+function autoSubmitToToday() {
+	//parent.frames['mainFrame'].document.search2.txtDate.value = "9/11/2015";
+	//parent.frames['mainFrame'].document.search2.pageNum.value = 1;
+	//parent.frames['mainFrame'].document.search2.submit();
+	document.search2.txtDate.value = "9/11/2015";
+	document.search2.pageNum.value = 1;
+	document.search2.submit();
+}
+</script>
+    <script type="text/javascript" src="https://static.mindbodyonline.com/v76979/scripts/inc_fixed_bar.js" ></script><script type="text/javascript" src="https://static.mindbodyonline.com/v76979/scripts/plugins/jquery.inlineEdit.js" ></script><script type="text/javascript" src="https://static.mindbodyonline.com/v76979/scripts/plugins/jquery.autoResize.js" ></script>
+<style type="text/css">
+    /* fixed-spacer gets css height at the same time fixed-bar gets fixed position in JS */
+    .fixed-bar-table {
+        width: 100%;
+        background-color: white;
+        font-family: Trebuchet MS, Helvetica, Arial, Sans-Serif;
+        z-index: 10;
+    }
+
+    td.fixed-bar-table-l {
+        vertical-align: top;
+        width: 40%;
+        padding-left: 20px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+
+    td.fixed-bar-table-c {
+        vertical-align: top;
+        width: 20%;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+
+    td.fixed-bar-table-r {
+        vertical-align: top;
+        width: 40%;
+        text-align: right;
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+
+    .date-arrow-l, .date-arrow-r, .date-tog-l, .date-tog-r {
+        background: url('https://static.mindbodyonline.com/v76979/images/dates_s.png') no-repeat top left;
+        width: 19px;
+        height: 19px;
+        cursor: pointer;
+        background-repeat: no-repeat;
+        color: #555;
+    }
+
+    #day-arrow-r, #week-arrow-r, #today-button {
+        padding-right: 5px;
+    }
+
+    .today-button {
+        background: #ffffff;
+        color: #333333;
+        border: solid 1px rgb(0, 63, 135);
+        border: solid 1px rgba(0, 63, 135,0.4);
+        height: 18px;
+        padding-top: 3px;
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxsaW5lYXJHcmFkaWVudCBpZD0idG9kYXktYnV0dG9uIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMwMDNGODciIHN0b3Atb3BhY2l0eT0iMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwM0Y4NyIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI3RvZGF5LWJ1dHRvbikiIC8+PC9zdmc+);
+background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 63, 135,0.25)), to(rgba(0, 63, 135,0)));
+background-image: -moz-linear-gradient(center bottom, rgba(0, 63, 135,0.25) 0%, rgba(0, 63, 135,0) 100%);
+;
+    }
+
+        .today-button.is-today {
+            background: #003F87 !important;
+            color: #FFFFFF;
+            border: solid 1px rgb(0, 57, 122);
+            -ms-text-shadow: 0 -1px 1px rgb(0, 50, 108);
+            text-shadow: 0 -1px 1px rgb(0, 50, 108);
+            font-weight: bold;
+            -webkit-filter: none !important;
+            -moz-filter: none !important;
+            -o-filter: none !important;
+            filter: none !important;
+        }
+
+    .date-arrow-l {
+        background-position: 0 -222px;
+    }
+
+        .date-arrow-l:hover {
+            background-position: 0 -148px;
+        }
+
+        .date-arrow-l.no-arrow {
+            background-position: 0 -370px !important;
+        }
+
+    .date-arrow-r {
+        background-position: 0 -74px;
+    }
+
+        .date-arrow-r:hover {
+            background-position: 0 0;
+        }
+
+        .date-arrow-r.no-arrow {
+            background-position: 0 -296px !important;
+        }
+    /*.cur-date { font-family: Trebuchet MS,Helvetica,Arial,Sans-Serif; color: #5C5C60; font-size: 16px; vertical-align: middle; margin-right: 4px;}
+.today { color: #003F87; font-weight: bold; }*/
+    .cur-date {
+        font-family: "Helvetica Neue","Helvetica","Lucida Grande","Lucida Sans Unicode","Lucida Sans","Arial,sans-serif";
+        vertical-align: middle;
+        margin-right: 4px;
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    #curDateWrapper {
+        height: 24px;
+        width: 350px; /*longest ones are kyrgyz/ Tamil(India)*/
+    }
+
+    .cur-date-long {
+        font-size: 12px;
+        vertical-align: middle;
+    }
+
+    #txtDate, #cur-date-long-edit {
+        margin-left: 0;
+        margin-top: -2px;
+        font-size: 12px;
+        padding: 2px;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        -moz-min-width: 120px;
+        -ms-min-width: 120px;
+        -o-min-width: 120px;
+        -webkit-min-width: 120px;
+        min-width: 120px;
+    }
+
+    #cur-date-long-edit {
+        border: 1px solid #FFF;
+        -webkit-box-shadow: none;
+        -ms-box-shadow: none;
+        box-shadow: none;
+    }
+
+        #cur-date-long-edit:hover {
+            border: solid 1px #9E9FA0;
+            background-color: #F4F4F4;
+        }
+
+    .today td {
+        background-color: #003F87;
+        font-weight: bold;
+    }
+
+    .day-tog, .week-tog, .month-tog {
+        cursor: default;
+    }
+
+    .selectable {
+        cursor: pointer !important;
+    }
+
+    .selectable-hover {
+        background-image: url(https://static.mindbodyonline.com/v76979/images/date-span-bg-hover.png) !important;
+        background-repeat: repeat-x;
+    }
+    /* .today-button{background-image: url(https://static.mindbodyonline.com/v76979/images/date-span-bg.png); background-repeat:repeat-x;} */
+    /* .today-button-hover{background-image: url(https://static.mindbodyonline.com/v76979/images/date-span-bg-hover.png) !important; background-repeat:repeat-x;} */
+    .date-tog-l {
+        background-position: 0 -280px;
+        width: 6px;
+        height: 20px;
+        display: none;
+    }
+
+    .date-tog-r {
+        background-position: 0 -350px;
+        width: 6px;
+        height: 20px;
+        display: none;
+    }
+
+    .cur-date-long .inlineEditInput {
+        font-size: 12px;
+        margin-right: 0 !important;
+        padding-bottom: 2px !important;
+        background-color: #F4F4F4;
+        height: 16px !important;
+    }
+
+    #tcalico_dayInfo {
+        margin: 0;
+    }
+
+    .cur-date-long {
+        padding-top: 3px;
+    }
+
+    #cur-date-long-edit {
+        margin-right: 15px;
+        white-space: nowrap;
+    }
+
+    .date-tog-c {
+        background-image: url(https://static.mindbodyonline.com/v76979/images/date-span-bg.png);
+        background-repeat: repeat-x;
+        height: 24px;
+        text-align: center;
+        padding: 0 5px 0 5px;
+        line-height: 22px;
+        color: #555;
+    }
+
+    #ifbDayWeekMonthControls .date-tog-sel-c {
+        color: #003F87;
+        cursor: default !important;
+        font-weight: bold;
+    }
+</style>
+<script type="text/javascript">
+    var isCalendarOpen = false;
+    var dateChanged = false;
+    $(document).ready(function () {
+
+        $(".day-tog").click(function () { toggleDateType("day"); });
+        $(".week-tog").click(function () { toggleDateType("week"); });
+        $(".month-tog").click(function () { toggleDateType("month"); });
+        $(".dayNavigation-dayLabel").click(function () { toggleDateType("day"); });
+        $(".weekNavigation-weekLabel").click(function () { toggleDateType("week"); });
+        
+        // bind arrow click, only show on day/week views
+
+        $("#day-arrow-l").click(function () { window.autoSubmitDateTo(true, false); });
+        $("#day-arrow-r").click(function () { window.autoSubmitDateTo(true, true); });
+        $("#dayNavigation-prevDayButton").click(function () { window.autoSubmitDateTo(true, false); });
+        $("#dayNavigation-nextDayButton").click(function () { window.autoSubmitDateTo(true, true); });
+        $("#week-arrow-l").click(function () { window.autoSubmitDateTo(false, false); });
+        $("#week-arrow-r").click(function () { window.autoSubmitDateTo(false, true); });
+
+        $("#month-arrow-l").click(function () { window.autoSubmitDateTo("month", false); });
+        $("#month-arrow-r").click(function () { window.autoSubmitDateTo("month", true); });
+
+        $("#weekNavigation-prevWeekButton").click(function () { window.autoSubmitDateTo(false, false); });
+        $("#weekNavigation-nextWeekButton").click(function () { window.autoSubmitDateTo(false, true); });
+        $("#txtDate").change(function () {
+            dateChanged = true;
+            subForm();
+        });
+
+        $("#txtDate").click(function () {
+            calendarOpen();
+        });
+
+
+        if (isMobileBrowser()) {
+            $('#cur-date-long-edit').hide();
+            $('#txtDate').show();
+            $("#txtDate").click(function () {
+                calendarOpen();
+            });
+        } else {
+            var $inlineEditInput = $('#cur-date-long-edit'),
+            $inlineEditInputTemp = $("<span/>").appendTo("body").css({
+                fontSize: $inlineEditInput.css("font-size"),
+                padding: $inlineEditInput.css("padding"),
+                border: $inlineEditInput.css("border")
+            }).text($inlineEditInput.val());
+            //append span with same attributes as cur-date-long-edit to body, put in the localized date and grab the spans width
+            //set cur-date-long-edit's width to the same as the span we created above
+            $inlineEditInput.width($inlineEditInputTemp.width());
+            //get rid of unnecessary span when done and proceed.
+            $inlineEditInputTemp.remove();
+        }
+        function calendarOpen() {
+            if (!isCalendarOpen) {
+
+                A_TCALS['dayInfo'].f_toggle();
+                isCalendarOpen = true;
+                $('body').unbind("calendarOpen").bind("click.calendarOpen", function (event) {
+                    if (!$(event.target).closest("#tcal").length &&
+                        !$(event.target).closest(".inlineEditInput").length &&
+                        !$(event.target).closest("#txtDate").length &&
+                        !$(event.target).closest(".ctrl").length &&
+                        !$(event.target).closest("img").length &&
+                        !$(event.target).closest("td[title='Previous Year']").length &&
+                        !$(event.target).closest("td[title='Previous Month']").length &&
+                        !$(event.target).closest("td[title='Next Month']").length &&
+                        !$(event.target).closest("td[title='Next Year']").length) {
+                        calendarClose();
+                    }
+                });
+            }
+        }
+        function calendarClose() {
+            if (isCalendarOpen) {
+                A_TCALS['dayInfo'].f_toggle();
+                isCalendarOpen = false;
+
+
+                $('body').unbind("calendarOpen");
+            }
+        }
+        /*$("#cur-date-long-edit").inlineEdit({
+            onStartEditing: function(e){
+                $(this).hide();
+                calendarOpen();				
+                e.stopPropagation();
+            },
+            spellCheckOn: false
+        });*/
+        $("#cur-date-long-edit").focus(function () {
+            $(this).blur();
+            //$("#txtDate").show().focus();
+            $(this).hide();
+            calendarOpen();
+        });
+        var $curDateLong = $('.cur-date-long');
+        $curDateLong.css('width', $curDateLong.outerWidth());
+        $('#tcalico_dayInfo').click(function () {
+            if (isCalendarOpen) {
+                calendarClose();
+            }
+            else {
+                calendarOpen();
+            }
+        });
+    });
+</script>
+
+    
+
+<script type="text/javascript" src="https://static.mindbodyonline.com/v76979/scripts/mb.js" ></script><script type="text/javascript" src="https://static.mindbodyonline.com/v76979/scripts/MBS.js" ></script>
+    <!-- begin client alerts --><script type="text/javascript" src="https://static.mindbodyonline.com/v76979/scripts/inc_ajax.js" ></script>
+
+    
+    <!-- end client alerts  --><script type="text/javascript" src="https://static.mindbodyonline.com/v76979/scripts/calendar2.js" ></script><script type="text/javascript" src="https://static.mindbodyonline.com/v76979/scripts/plugins/jquery.selectBox.js" ></script><script type="text/javascript" src="https://static.mindbodyonline.com/v76979/scripts/VCC2.js" ></script><script type="text/javascript" src="https://static.mindbodyonline.com/v76979/scripts/main_class.js" ></script>
+<link rel="stylesheet" type="text/css" href="https://static.mindbodyonline.com/v76979/styles/main_class.css"  /><link rel="stylesheet" type="text/css" href="https://static.mindbodyonline.com/v76979/styles/day_week_navigator.css"  /><link rel="stylesheet" type="text/css" href="https://static.mindbodyonline.com/v76979/styles/jquery.selectBox.css"  />
+    <style type="text/css">
+        #classSchedule-mainTable tr.headerRow td.header
+        {
+            color: #003F87;
+        }
+    </style>
+
+<script type="text/javascript">
+        $(function() {
+            
+            window.scrollToDay = function() {
+                // anchor to the date
+                if ($('#an6').offset() != null) {
+                    var scrollValue = $('#an6').offset().top - $('#classSchedule-header').offset().top - 30;
+                    
+                    $(document).scrollTop(scrollValue);
+                    
+                }
+            }
+            window.scrollToDay();
+
+        });
+    </script>
+    
+
+
+
+<script type="text/javascript">
+        function updateView() {
+            document.search2.action = "/classic/mainclass";
+            document.search2.submit();
+
+                parent.mainFrame.focus();
+
+        }
+    </script>
+      
+    <form id="ClassScheduleSearch2Form" name="search2" method="post" action="/classic/mainclass">
+      <input type="hidden" name="pageNum" value="1" />
+      <input type="hidden" name="requiredtxtUserName" value="" />
+      <input type="hidden" name="requiredtxtPassword" value="" />
+      <input type="hidden" name="optForwardingLink" value="" />
+      <input type="hidden" name="optRememberMe" value="" />
+      <input type="hidden" name="tabID" value="7" />
+      <input type="hidden" id="optView" name="optView" class="bf-filter" value="week" />
+      <input type="hidden" id="useClassLogic" name="useClassLogic" value="" />
+      <input type="hidden" id="filterByClsSch" name="filterByClsSch" value="" />
+      <input type="hidden" id="prevFilterByClsSch" name="prevFilterByClsSch" value="-1" />
+      <input type="hidden" id="prevFilterByClsSch2" name="prevFilterByClsSch2" value="-2" />
+    <div class="wrapperTop">
+      <div class="wrapperTopInner">
+        <div class="pageTop">
+            <div class="pageTopLeft">
+                &nbsp; 
+            </div>
+            <div class="pageTopRight">
+                &nbsp; 
+            </div>
+            <h1 class="classScheduleHeader">Class Schedule</h1> 
+            <div id="dateControls">
+                <div class="leftSide">
+	<table class="date-control-table">
+		<tr>
+			<td>
+				<table id="ifbDayWeekMonthControls" style="padding: 0px; vertical-align: middle;">
+					<tr>
+                        
+							<td id="today-button">
+								<a class="simple-round-button inline today-button  is-today">
+Today								</a>
+							</td>
+						
+							<td id="day-arrow-l" class="date-arrow-l ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+								<td id="day-tog-c" class="day-tog date-tog-c  selectable">Day</td>
+							<td id="day-arrow-r" class="date-arrow-r ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+						<td id="week-arrow-l" class="date-arrow-l ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+							<td id="week-tog-c" class="week-tog date-tog-c  date-tog-sel-c selectable">Week</td>
+						<td id="week-arrow-r" class="date-arrow-r ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+					</tr>
+				</table>
+			</td>
+			
+		</tr>
+    </table>
+
+                </div>
+                <div class="rightSide">
+                    <input id="txtDate" type="text" name="txtDate" size="10" maxlength="14" value="9/11/2015" class="date bf-filter" />
+                    &nbsp;
+<script type="text/javascript">
+                        var cal1 = new tcal({'id': 'dayInfo', 'formname':'search2', 'controlname':'txtDate'});
+                        cal1.a_tpl.yearscroll = true;
+                        $('#txtDate').change(subForm
+);
+                        $('#tcalico_dayInfo').attr('onclick', '$("#txtDate").focus()');
+                    </script>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="fixedHeader">
+        <div class="topFilters group">
+            <div class="topFiltersInner group">
+                <div class="filterList">
+
+                        <select name="optTG" id="optTG" class="bf-filter" onChange="filterClasses(this);">
+                          <option value="0">All service categories</option>
+
+                          <option value="33" title="" 
+>
+Bollywood Dance
+                                                    </option>
+
+                          <option value="29" title="Friday Night Knockout" 
+>
+Friday Night Knock...
+                                                    </option>
+
+                          <option value="23" title="" 
+>
+Group Exercise
+                                                    </option>
+
+                          <option value="35" title="Jewish Wellness Free Member" 
+>
+Jewish Wellness Fr...
+                                                    </option>
+
+                          <option value="39" title="Jewish Wellness Paid Member" 
+>
+Jewish Wellness Pa...
+                                                    </option>
+
+                          <option value="37" title="" 
+>
+Thai Yoga
+                                                    </option>
+
+                          <option value="40" title="Yoga Workshop Series" 
+>
+Yoga Workshop Seri...
+                                                    </option>
+
+                          <option value="32" title="" 
+>
+Yoga Workshops
+                                                    </option>
+
+                            
+                        </select>
+
+                            
+                        <select name="optVT" id="optVT" class="bf-filter" onChange="filterClasses(this);">
+                          <option value="0">All class types</option>
+
+                                <option value="Dance Fitness" title="" 
+>
+Dance Fitness
+                                                                </option>
+
+                                <option value="Group Exercise" title="" 
+>
+Group Exercise
+                                                                </option>
+
+                                <option value="Indoor Cycling" title="" 
+>
+Indoor Cycling
+                                                                </option>
+
+                                <option value="Jewish Yoga" title="" 
+>
+Jewish Yoga
+                                                                </option>
+
+                                <option value="Jewish Yoga" title="" 
+>
+Jewish Yoga
+                                                                </option>
+
+                                <option value="Pilates Mat" title="" 
+>
+Pilates Mat
+                                                                </option>
+
+                                <option value="Specialty Group Ex" title="" 
+>
+Specialty Group Ex
+                                                                </option>
+
+                                <option value="Specialty Group Ex" title="" 
+>
+Specialty Group Ex
+                                                                </option>
+
+                                <option value="Specialty Yoga" title="" 
+>
+Specialty Yoga
+                                                                </option>
+
+                                <option value="Specialty Yoga" title="" 
+>
+Specialty Yoga
+                                                                </option>
+
+                                <option value="Specialty Yoga" title="" 
+>
+Specialty Yoga
+                                                                </option>
+
+                                <option value="Yoga" title="" 
+>
+Yoga
+                                                                </option>
+
+                        </select>
+
+            <select name="optInstructor" id="optInstructor" class="bf-filter" onChange="filterClasses(this);">
+                <option value="0">All teachers</option>
+
+                  <option value="100000233" title="" 
+>
+Amy
+                                    </option>
+
+                  <option value="100000175" title="" 
+>
+Annetta
+                                    </option>
+
+                  <option value="100000112" title="" 
+>
+Carol A.
+                                    </option>
+
+                  <option value="100000140" title="" 
+>
+Carol W.
+                                    </option>
+
+                  <option value="100000238" title="" 
+>
+Carole
+                                    </option>
+
+                  <option value="100000088" title="" 
+>
+Cher
+                                    </option>
+
+                  <option value="100000017" title="" 
+>
+Chris L
+                                    </option>
+
+                  <option value="100000074" title="" 
+>
+Courtney
+                                    </option>
+
+                  <option value="100000091" title="" 
+>
+Debbie
+                                    </option>
+
+                  <option value="100000098" title="" 
+>
+Diane
+                                    </option>
+
+                  <option value="100000037" title="" 
+>
+Dina
+                                    </option>
+
+                  <option value="100000103" title="" 
+>
+Edwina
+                                    </option>
+
+                  <option value="100000099" title="" 
+>
+Eileen
+                                    </option>
+
+                  <option value="100000040" title="" 
+>
+Ernie
+                                    </option>
+
+                  <option value="100000033" title="" 
+>
+Ginger
+                                    </option>
+
+                  <option value="100000104" title="" 
+>
+Gloria
+                                    </option>
+
+                  <option value="100000106" title="" 
+>
+Jason
+                                    </option>
+
+                  <option value="100000075" title="" 
+>
+Jory
+                                    </option>
+
+                  <option value="100000038" title="" 
+>
+Joyce
+                                    </option>
+
+                  <option value="100000092" title="" 
+>
+Judy
+                                    </option>
+
+                  <option value="100000228" title="" 
+>
+Julie
+                                    </option>
+
+                  <option value="100000116" title="" 
+>
+Karen
+                                    </option>
+
+                  <option value="100000249" title="" 
+>
+Kelly N
+                                    </option>
+
+                  <option value="100000217" title="" 
+>
+Kelly S
+                                    </option>
+
+                  <option value="100000039" title="" 
+>
+Kimberly
+                                    </option>
+
+                  <option value="100000117" title="" 
+>
+Kristi
+                                    </option>
+
+                  <option value="100000035" title="" 
+>
+Lauren K
+                                    </option>
+
+                  <option value="100000086" title="" 
+>
+Laurie G.
+                                    </option>
+
+                  <option value="100000170" title="" 
+>
+Liz
+                                    </option>
+
+                  <option value="100000223" title="" 
+>
+Lynette
+                                    </option>
+
+                  <option value="100000041" title="" 
+>
+Marilyn
+                                    </option>
+
+                  <option value="100000171" title="" 
+>
+Mark
+                                    </option>
+
+                  <option value="100000108" title="" 
+>
+Megan S
+                                    </option>
+
+                  <option value="100000236" title="" 
+>
+Melissa R
+                                    </option>
+
+                  <option value="100000190" title="" 
+>
+Michael
+                                    </option>
+
+                  <option value="100000184" title="" 
+>
+Michelle K
+                                    </option>
+
+                  <option value="100000247" title="" 
+>
+Michelle M
+                                    </option>
+
+                  <option value="100000222" title="" 
+>
+Molly
+                                    </option>
+
+                  <option value="3" title="" 
+>
+Monique
+                                    </option>
+
+                  <option value="4" title="" 
+>
+Pam
+                                    </option>
+
+                  <option value="100000095" title="" 
+>
+Ram
+                                    </option>
+
+                  <option value="100000080" title="" 
+>
+Revelle
+                                    </option>
+
+                  <option value="100000180" title="" 
+>
+Rhonda 
+                                    </option>
+
+                  <option value="100000189" title="" 
+>
+Robin
+                                    </option>
+
+                  <option value="100000002" title="" 
+>
+Rosalie
+                                    </option>
+
+                  <option value="100000132" title="" 
+>
+Sandra
+                                    </option>
+
+                  <option value="100000227" title="" 
+>
+Sarah C.
+                                    </option>
+
+                  <option value="100000003" title="" 
+>
+Sarah P.
+                                    </option>
+
+                  <option value="100000077" title="" 
+>
+Scott
+                                    </option>
+
+                  <option value="100000101" title="" 
+>
+Serena
+                                    </option>
+
+                  <option value="100000183" title="" 
+>
+Suky
+                                    </option>
+
+                  <option value="100000034" title="" 
+>
+Tina
+                                    </option>
+
+                  <option value="100000120" title="" 
+>
+Torre
+                                    </option>
+
+                  <option value="100000093" title="" 
+>
+Toshie
+                                    </option>
+
+                  <option value="100000097" title="" 
+>
+Tracey
+                                    </option>
+
+                  <option value="100000178" title="" 
+>
+Vince
+                                    </option>
+
+                  <option value="100000113" title="" 
+>
+Walter
+                                    </option>
+
+                  <option value="100000250" title="" 
+>
+Wendy S
+                                    </option>
+
+                  <option value="100000096" title="" 
+>
+Yuko
+                                    </option>
+
+                  <option value="100000036" title="" 
+>
+Yvonne
+                                    </option>
+
+                </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+    <div style="clear:both"></div>
+	<div id="wrapper-frame" style="position:relative;">
+	<div id="wrapper-minheight">
+	<div id="wrapper-bottompad">
+	<div style="display:block;height:0;clear:both;">&nbsp;</div>
+	<div class="wrapper">
+	<div id="main-content">
+    <table height="100%" width="100%" cellspacing="0" id="classSchedule">
+           
+<!-- @fix @todo consumer mode redesign
+
+  <tr> 
+    <td colspan="2" class="textSmall" align="left" height="8" valign="bottom"></td>
+  </tr>
+
+-->
+
+<!-- @todo cs remove  
+
+-->
+  <tr> 
+    <td class="" nowrap colspan="2">
+    <div id="fixedTableHeader">
+        <div id="fixedTableHeaderInner">
+            <table id="classSchedule-header" cellspacing="0">
+               <tbody>
+
+            </tbody>
+        </table>
+    </div>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<table id="classSchedule-mainTable" class="" cellspacing="0">
+<thead><tr class="floatingHeaderRow"><th id="startTimeHeader" class="floatingHeader" style="padding-left:10px;" >Start time</th><th id="signUpNowHeader" class="floatingHeader" style="cursor:auto;">&nbsp;</th><th id="classNameHeader" valign="bottom" class="floatingHeader" >Classes</th><th id="trainerNameHeader" valign="bottom" class="floatingHeader">Teacher</th><th id="durationHeader" class="floatingHeader" >Duration</th></tr> </thead><tr><td colspan="100%" class="header"id="an2"><b>&nbsp;<span class="headText">Mon&nbsp;</span>September 07, 2015&nbsp;</b></td></tr><tr class="evenRow"><td>&nbsp;&nbsp;&nbsp;8:30&nbsp;am </td><td></td><td><a href="javascript:;" name="cid26" class="modalClassDesc">Aqua Fitness</a></td><td><a href="javascript:;" name="bio100000088" class="modalBio" >Cher</a></td><td >&nbsp;1&nbsp;hour&nbsp;&&nbsp;25&nbsp;minutes</td></tr>
+<tr class="oddRow"><td>&nbsp;&nbsp;&nbsp;8:30&nbsp;am </td><td></td><td><a href="javascript:;" name="cid120" class="modalClassDesc">Indoor Cycling - Registration Required</a></td><td><a href="javascript:;" name="bio100000074" class="modalBio" >Courtney</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="evenRow"><td>&nbsp;&nbsp;&nbsp;9:00&nbsp;am </td><td></td><td><a href="javascript:;" name="cid34" class="modalClassDesc">Tae Bo Fitness</a></td><td><a href="javascript:;" name="bio100000092" class="modalBio" >Judy</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="oddRow"><td>&nbsp;&nbsp;&nbsp;9:00&nbsp;am </td><td></td><td><a href="javascript:;" name="cid45" class="modalClassDesc">Vinyasa Yoga</a></td><td>Kelly S</td><td >&nbsp;1&nbsp;hour&nbsp;&&nbsp;15&nbsp;minutes</td></tr>
+<tr class="evenRow"><td>&nbsp;&nbsp;&nbsp;9:30&nbsp;am </td><td></td><td><a href="javascript:;" name="cid120" class="modalClassDesc">Indoor Cycling - Registration Required</a></td><td><a href="javascript:;" name="bio100000074" class="modalBio" >Courtney</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="oddRow"><td>&nbsp;&nbsp;&nbsp;10:00&nbsp;am </td><td></td><td><a href="javascript:;" name="cid64" class="modalClassDesc">Zumba/U-Jam Fitness</a></td><td><a href="javascript:;" name="bio100000096" class="modalBio" >Yuko</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="evenRow"><td>&nbsp;&nbsp;&nbsp;11:30&nbsp;am </td><td></td><td><a href="javascript:;" name="cid122" class="modalClassDesc">Back Care Yoga - Registration Required</a></td><td><a href="javascript:;" name="bio100000098" class="modalBio" >Diane</a></td><td >&nbsp;1&nbsp;hour&nbsp;&&nbsp;10&nbsp;minutes</td></tr>
+<tr><td colspan="100%" class="header"id="an3"><b>&nbsp;<span class="headText">Tue&nbsp;</span>September 08, 2015&nbsp;</b></td></tr><tr class="evenRow"><td>&nbsp;&nbsp;&nbsp;7:45&nbsp;am </td><td></td><td><a href="javascript:;" name="cid12" class="modalClassDesc">Vinyasa Yoga Int./Adv.</a></td><td><a href="javascript:;" name="bio100000035" class="modalBio" >Lauren K</a></td><td >&nbsp;1&nbsp;hour&nbsp;&&nbsp;30&nbsp;minutes</td></tr>
+<tr class="oddRow"><td>&nbsp;&nbsp;&nbsp;8:00&nbsp;am </td><td></td><td><a href="javascript:;" name="cid100" class="modalClassDesc">WATERinMOTION ®</a></td><td>Kelly N</td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="evenRow"><td>&nbsp;&nbsp;&nbsp;9:00&nbsp;am </td><td></td><td><a href="javascript:;" name="cid26" class="modalClassDesc">Aqua Fitness</a></td><td><a href="javascript:;" name="bio100000086" class="modalBio" >Laurie G.</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="oddRow"><td>&nbsp;&nbsp;&nbsp;9:15&nbsp;am </td><td></td><td><a href="javascript:;" name="cid7" class="modalClassDesc">Athletic Conditioning </a></td><td><a href="javascript:;" name="bio100000034" class="modalBio" >Tina</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="evenRow"><td>&nbsp;&nbsp;&nbsp;9:15&nbsp;am </td><td></td><td><a href="javascript:;" name="cid20" class="modalClassDesc">Indoor Cycling</a></td><td>Lynette</td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="oddRow"><td>&nbsp;&nbsp;&nbsp;9:30&nbsp;am </td><td></td><td><a href="javascript:;" name="cid45" class="modalClassDesc">Vinyasa Yoga</a></td><td><a href="javascript:;" name="bio100000035" class="modalBio" >Lauren K</a></td><td >&nbsp;1&nbsp;hour&nbsp;&&nbsp;25&nbsp;minutes</td></tr>
+<tr class="evenRow"><td>&nbsp;&nbsp;&nbsp;10:30&nbsp;am </td><td></td><td><a href="javascript:;" name="cid30" class="modalClassDesc">Light & Easy</a></td><td><a href="javascript:;" name="bio100000033" class="modalBio" >Ginger</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="oddRow"><td>&nbsp;&nbsp;&nbsp;11:15&nbsp;am </td><td></td><td><a href="javascript:;" name="cid44" class="modalClassDesc">Restorative Yoga</a></td><td><a href="javascript:;" name="bio100000183" class="modalBio" >Suky</a></td><td >&nbsp;1&nbsp;hour&nbsp;&&nbsp;30&nbsp;minutes</td></tr>
+<tr class="evenRow"><td>&nbsp;&nbsp;&nbsp;2:00&nbsp;pm </td><td></td><td><a href="javascript:;" name="cid33" class="modalClassDesc">Stretch & Move</a></td><td><a href="javascript:;" name="bio100000091" class="modalBio" >Debbie</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="oddRow"><td>&nbsp;&nbsp;&nbsp;5:30&nbsp;pm </td><td></td><td><a href="javascript:;" name="cid24" class="modalClassDesc">Above the Barre</a></td><td><a href="javascript:;" name="bio100000033" class="modalBio" >Ginger</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="evenRow"><td>&nbsp;&nbsp;&nbsp;5:30&nbsp;pm </td><td></td><td><a href="javascript:;" name="cid20" class="modalClassDesc">Indoor Cycling</a></td><td><a href="javascript:;" name="bio100000075" class="modalBio" >Jory</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="oddRow"><td>&nbsp;&nbsp;&nbsp;6:00&nbsp;pm </td><td></td><td><a href="javascript:;" name="cid45" class="modalClassDesc">Vinyasa Yoga</a></td><td><a href="javascript:;" name="bio100000183" class="modalBio" >Suky</a></td><td >&nbsp;1&nbsp;hour&nbsp;&&nbsp;15&nbsp;minutes</td></tr>
+<tr class="evenRow"><td>&nbsp;&nbsp;&nbsp;6:30&nbsp;pm </td><td></td><td><a href="javascript:;" name="cid8" class="modalClassDesc">Body Sculpt - Registration Required</a></td><td><a href="javascript:;" name="bio100000092" class="modalBio" >Judy</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="oddRow"><td>&nbsp;&nbsp;&nbsp;7:30&nbsp;pm </td><td></td><td><a href="javascript:;" name="cid45" class="modalClassDesc">Vinyasa Yoga</a></td><td><a href="javascript:;" name="bio100000178" class="modalBio" >Vince</a></td><td >&nbsp;1&nbsp;hour&nbsp;&&nbsp;15&nbsp;minutes</td></tr>
+<tr class="evenRow"><td>&nbsp;&nbsp;&nbsp;7:35&nbsp;pm </td><td></td><td><a href="javascript:;" name="cid15" class="modalClassDesc">U-Jam Fitness</a></td><td>Katie </td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr><td colspan="100%" class="header"id="an4"><b>&nbsp;<span class="headText">Wed&nbsp;</span>September 09, 2015&nbsp;</b></td></tr><tr class="evenRow"><td>&nbsp;&nbsp;&nbsp;6:00&nbsp;am </td><td></td><td><a href="javascript:;" name="cid20" class="modalClassDesc">Indoor Cycling</a></td><td><a href="javascript:;" name="bio100000034" class="modalBio" >Tina</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="oddRow"><td>&nbsp;&nbsp;&nbsp;7:30&nbsp;am </td><td></td><td><a href="javascript:;" name="cid23" class="modalClassDesc">Tai Chi & Qigong</a></td><td><a href="javascript:;" name="bio100000106" class="modalBio" >Jason</a></td><td >&nbsp;1&nbsp;hour&nbsp;&&nbsp;30&nbsp;minutes</td></tr>
+<tr class="evenRow"><td>&nbsp;&nbsp;&nbsp;8:00&nbsp;am </td><td></td><td><a href="javascript:;" name="cid26" class="modalClassDesc">Aqua Fitness</a></td><td><a href="javascript:;" name="bio100000086" class="modalBio" >Laurie G.</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="oddRow"><td>&nbsp;&nbsp;&nbsp;9:00&nbsp;am </td><td></td><td><a href="javascript:;" name="cid26" class="modalClassDesc">Aqua Fitness</a></td><td>Carole</td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="evenRow"><td>&nbsp;&nbsp;&nbsp;9:15&nbsp;am </td><td></td><td><a href="javascript:;" name="cid20" class="modalClassDesc">Indoor Cycling</a></td><td><a href="javascript:;" name="bio100000074" class="modalBio" >Courtney</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="oddRow"><td>&nbsp;&nbsp;&nbsp;9:15&nbsp;am </td><td></td><td><a href="javascript:;" name="cid32" class="modalClassDesc">Mat Pilates</a></td><td><a href="javascript:;" name="bio100000003" class="modalBio" >Sarah P.</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="evenRow"><td>&nbsp;&nbsp;&nbsp;9:30&nbsp;am </td><td></td><td><a href="javascript:;" name="cid12" class="modalClassDesc">Vinyasa Yoga Int./Adv.</a></td><td><a href="javascript:;" name="bio100000097" class="modalBio" >Tracey</a></td><td >&nbsp;1&nbsp;hour&nbsp;&&nbsp;30&nbsp;minutes</td></tr>
+<tr class="oddRow"><td>&nbsp;&nbsp;&nbsp;11:00&nbsp;am </td><td></td><td><a href="javascript:;" name="cid31" class="modalClassDesc">Beginning Mat Pilates</a></td><td><a href="javascript:;" name="bio4" class="modalBio" >Pam</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="evenRow"><td>&nbsp;&nbsp;&nbsp;11:15&nbsp;am </td><td></td><td><a href="javascript:;" name="cid40" class="modalClassDesc">Gentle Yoga</a></td><td><a href="javascript:;" name="bio100000091" class="modalBio" >Debbie</a></td><td >&nbsp;1&nbsp;hour&nbsp;&&nbsp;10&nbsp;minutes</td></tr>
+<tr class="oddRow"><td>&nbsp;&nbsp;&nbsp;12:00&nbsp;pm </td><td></td><td><a href="javascript:;" name="cid121" class="modalClassDesc">Zumba - Registration Required</a></td><td><a href="javascript:;" name="bio100000039" class="modalBio" >Kimberly</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="evenRow"><td>&nbsp;&nbsp;&nbsp;1:00&nbsp;pm </td><td></td><td><a href="javascript:;" name="cid50" class="modalClassDesc">Light Cardio & Sculpt</a></td><td><a href="javascript:;" name="bio100000033" class="modalBio" >Ginger</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="oddRow"><td>&nbsp;&nbsp;&nbsp;5:30&nbsp;pm </td><td>&nbsp;<a href="/asp/my_sch.asp"><strong><span style="color:#009900;">Registered!</a></span></strong></td><td><a href="javascript:;" name="cid8" class="modalClassDesc">Body Sculpt - Registration Required</a></td><td><a href="javascript:;" name="bio100000017" class="modalBio" >Chris L</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="evenRow"><td>&nbsp;&nbsp;&nbsp;5:30&nbsp;pm </td><td></td><td><a href="javascript:;" name="cid39" class="modalClassDesc">Deep Stretch Yoga</a></td><td><a href="javascript:;" name="bio100000103" class="modalBio" >Edwina</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="oddRow"><td>&nbsp;&nbsp;&nbsp;6:00&nbsp;pm </td><td></td><td><a href="javascript:;" name="cid20" class="modalClassDesc">Indoor Cycling</a></td><td><a href="javascript:;" name="bio100000075" class="modalBio" >Jory</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="evenRow"><td>&nbsp;&nbsp;&nbsp;6:30&nbsp;pm </td><td></td><td><a href="javascript:;" name="cid26" class="modalClassDesc">Aqua Fitness</a></td><td><a href="javascript:;" name="bio100000088" class="modalBio" >Cher</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="oddRow"><td>&nbsp;&nbsp;&nbsp;6:30&nbsp;pm </td><td></td><td><a href="javascript:;" name="cid34" class="modalClassDesc">Tae Bo Fitness</a></td><td><a href="javascript:;" name="bio100000092" class="modalBio" >Judy</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="evenRow"><td>&nbsp;&nbsp;&nbsp;6:30&nbsp;pm </td><td></td><td><a href="javascript:;" name="cid45" class="modalClassDesc">Vinyasa Yoga</a></td><td><a href="javascript:;" name="bio100000116" class="modalBio" >Karen</a></td><td >&nbsp;1&nbsp;hour&nbsp;&&nbsp;10&nbsp;minutes</td></tr>
+<tr class="oddRow"><td>&nbsp;&nbsp;&nbsp;7:35&nbsp;pm </td><td></td><td><a href="javascript:;" name="cid10" class="modalClassDesc">Zumba</a></td><td><a href="javascript:;" name="bio100000096" class="modalBio" >Yuko</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="evenRow"><td>&nbsp;&nbsp;&nbsp;7:45&nbsp;pm </td><td></td><td><a href="javascript:;" name="cid36" class="modalClassDesc">Active/Restorative Yoga Blend</a></td><td><a href="javascript:;" name="bio100000101" class="modalBio" >Serena</a></td><td >&nbsp;1&nbsp;hour&nbsp;&&nbsp;15&nbsp;minutes</td></tr>
+<tr><td colspan="100%" class="header"id="an5"><b>&nbsp;<span class="headText">Thu&nbsp;</span>September 10, 2015&nbsp;</b></td></tr><tr class="evenRow"><td>&nbsp;&nbsp;&nbsp;6:00&nbsp;am </td><td></td><td><a href="javascript:;" name="cid32" class="modalClassDesc">Mat Pilates</a></td><td><a href="javascript:;" name="bio100000002" class="modalBio" >Rosalie</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="oddRow"><td>&nbsp;&nbsp;&nbsp;7:45&nbsp;am </td><td></td><td><a href="javascript:;" name="cid12" class="modalClassDesc">Vinyasa Yoga Int./Adv.</a></td><td><a href="javascript:;" name="bio100000035" class="modalBio" >Lauren K</a></td><td >&nbsp;1&nbsp;hour&nbsp;&&nbsp;30&nbsp;minutes</td></tr>
+<tr class="evenRow"><td>&nbsp;&nbsp;&nbsp;9:00&nbsp;am </td><td></td><td><a href="javascript:;" name="cid26" class="modalClassDesc">Aqua Fitness</a></td><td><a href="javascript:;" name="bio100000086" class="modalBio" >Laurie G.</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="oddRow"><td>&nbsp;&nbsp;&nbsp;9:15&nbsp;am </td><td></td><td><a href="javascript:;" name="cid7" class="modalClassDesc">Athletic Conditioning </a></td><td><a href="javascript:;" name="bio100000080" class="modalBio" >Revelle</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="evenRow"><td>&nbsp;&nbsp;&nbsp;9:15&nbsp;am </td><td></td><td><a href="javascript:;" name="cid20" class="modalClassDesc">Indoor Cycling</a></td><td><a href="javascript:;" name="bio100000108" class="modalBio" >Megan S</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="oddRow"><td>&nbsp;&nbsp;&nbsp;9:30&nbsp;am </td><td></td><td><a href="javascript:;" name="cid45" class="modalClassDesc">Vinyasa Yoga</a></td><td><a href="javascript:;" name="bio100000035" class="modalBio" >Lauren K</a></td><td >&nbsp;1&nbsp;hour&nbsp;&&nbsp;25&nbsp;minutes</td></tr>
+<tr class="evenRow"><td>&nbsp;&nbsp;&nbsp;10:30&nbsp;am </td><td></td><td><a href="javascript:;" name="cid30" class="modalClassDesc">Light & Easy</a></td><td><a href="javascript:;" name="bio100000033" class="modalBio" >Ginger</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="oddRow"><td>&nbsp;&nbsp;&nbsp;12:00&nbsp;pm </td><td></td><td><a href="javascript:;" name="cid10" class="modalClassDesc">Zumba</a></td><td><a href="javascript:;" name="bio100000132" class="modalBio" >Sandra</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="evenRow"><td>&nbsp;&nbsp;&nbsp;12:15&nbsp;pm </td><td></td><td><a href="javascript:;" name="cid37" class="modalClassDesc">Back Care Yoga</a></td><td><a href="javascript:;" name="bio100000098" class="modalBio" >Diane</a></td><td >&nbsp;1&nbsp;hour&nbsp;&&nbsp;15&nbsp;minutes</td></tr>
+<tr class="oddRow"><td>&nbsp;&nbsp;&nbsp;5:30&nbsp;pm </td><td></td><td><a href="javascript:;" name="cid72" class="modalClassDesc">Tae Bo & Sculpt</a></td><td><a href="javascript:;" name="bio100000092" class="modalBio" >Judy</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="evenRow"><td>&nbsp;&nbsp;&nbsp;6:00&nbsp;pm </td><td></td><td><a href="javascript:;" name="cid20" class="modalClassDesc">Indoor Cycling</a></td><td>Sarah C.</td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="oddRow"><td>&nbsp;&nbsp;&nbsp;6:00&nbsp;pm </td><td></td><td><a href="javascript:;" name="cid45" class="modalClassDesc">Vinyasa Yoga</a></td><td><a href="javascript:;" name="bio100000104" class="modalBio" >Gloria</a></td><td >&nbsp;1&nbsp;hour&nbsp;&&nbsp;15&nbsp;minutes</td></tr>
+<tr class="evenRow"><td>&nbsp;&nbsp;&nbsp;6:30&nbsp;pm </td><td></td><td><a href="javascript:;" name="cid24" class="modalClassDesc">Above the Barre</a></td><td><a href="javascript:;" name="bio100000034" class="modalBio" >Tina</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="oddRow"><td>&nbsp;&nbsp;&nbsp;7:30&nbsp;pm </td><td></td><td><a href="javascript:;" name="cid41" class="modalClassDesc">Hatha Yoga</a></td><td>Kelly S</td><td >&nbsp;1&nbsp;hour&nbsp;&&nbsp;15&nbsp;minutes</td></tr>
+<tr class="evenRow"><td>&nbsp;&nbsp;&nbsp;7:35&nbsp;pm </td><td></td><td><a href="javascript:;" name="cid121" class="modalClassDesc">Zumba - Registration Required</a></td><td><a href="javascript:;" name="bio100000037" class="modalBio" >Dina</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr><td colspan="100%" class="header"id="an6"><b>&nbsp;<span class="headText">Fri&nbsp;</span>September 11, 2015&nbsp;</b></td></tr><tr class="evenRow"><td>&nbsp;&nbsp;&nbsp;6:00&nbsp;am </td><td></td><td><a href="javascript:;" name="cid20" class="modalClassDesc">Indoor Cycling</a></td><td><a href="javascript:;" name="bio100000075" class="modalBio" >Jory</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="oddRow"><td>&nbsp;&nbsp;&nbsp;6:00&nbsp;am </td><td></td><td><a href="javascript:;" name="cid45" class="modalClassDesc">Vinyasa Yoga</a></td><td><a href="javascript:;" name="bio100000034" class="modalBio" >Tina</a></td><td >&nbsp;1&nbsp;hour&nbsp;&&nbsp;15&nbsp;minutes</td></tr>
+<tr class="evenRow"><td>&nbsp;&nbsp;&nbsp;8:00&nbsp;am </td><td></td><td><a href="javascript:;" name="cid26" class="modalClassDesc">Aqua Fitness</a></td><td><a href="javascript:;" name="bio100000140" class="modalBio" >Carol W.</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="oddRow"><td>&nbsp;&nbsp;&nbsp;8:30&nbsp;am </td><td></td><td><a href="javascript:;" name="cid10" class="modalClassDesc">Zumba</a></td><td><a href="javascript:;" name="bio100000040" class="modalBio" >Ernie</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="evenRow"><td>&nbsp;&nbsp;&nbsp;9:00&nbsp;am </td><td></td><td><a href="javascript:;" name="cid47" class="modalClassDesc">Aqua Zumba</a></td><td><a href="javascript:;" name="bio100000132" class="modalBio" >Sandra</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="oddRow"><td>&nbsp;&nbsp;&nbsp;9:15&nbsp;am </td><td><input type="button" name="but669" class="SignupButton" onClick="_gaq.push(['_trackEvent', 'Class_Schedule', 'click', 'Sign_Up_Now_button']);document.location='/ASP/res_a.asp?tg=23&classId=669&classDate=9/11/2015&clsLoc=1';" value="Sign Up Now"/><br />&nbsp;(24&nbsp;Reserved,&nbsp;0&nbsp;Open)</td><td><a href="javascript:;" name="cid120" class="modalClassDesc">Indoor Cycling - Registration Required</a></td><td><a href="javascript:;" name="bio100000074" class="modalBio" >Courtney</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="evenRow"><td>&nbsp;&nbsp;&nbsp;9:30&nbsp;am </td><td></td><td><a href="javascript:;" name="cid32" class="modalClassDesc">Mat Pilates</a></td><td><a href="javascript:;" name="bio3" class="modalBio" >Monique</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="oddRow"><td>&nbsp;&nbsp;&nbsp;9:30&nbsp;am </td><td></td><td><a href="javascript:;" name="cid12" class="modalClassDesc">Vinyasa Yoga Int./Adv.</a></td><td><a href="javascript:;" name="bio100000097" class="modalBio" >Tracey</a></td><td >&nbsp;1&nbsp;hour&nbsp;&&nbsp;30&nbsp;minutes</td></tr>
+<tr class="evenRow"><td>&nbsp;&nbsp;&nbsp;10:30&nbsp;am </td><td></td><td><a href="javascript:;" name="cid33" class="modalClassDesc">Stretch & Move</a></td><td><a href="javascript:;" name="bio100000091" class="modalBio" >Debbie</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="oddRow"><td>&nbsp;&nbsp;&nbsp;11:15&nbsp;am </td><td></td><td><a href="javascript:;" name="cid44" class="modalClassDesc">Restorative Yoga</a></td><td><a href="javascript:;" name="bio100000183" class="modalBio" >Suky</a></td><td >&nbsp;1&nbsp;hour&nbsp;&&nbsp;30&nbsp;minutes</td></tr>
+<tr class="evenRow"><td>&nbsp;&nbsp;&nbsp;1:30&nbsp;pm </td><td></td><td><a href="javascript:;" name="cid48" class="modalClassDesc">Healing Yoga for Cancer Patients</a></td><td><a href="javascript:;" name="bio100000101" class="modalBio" >Serena</a></td><td >&nbsp;1&nbsp;hour&nbsp;&&nbsp;15&nbsp;minutes</td></tr>
+<tr class="oddRow"><td>&nbsp;&nbsp;&nbsp;5:30&nbsp;pm </td><td>&nbsp;<a href="/asp/my_sch.asp"><strong><span style="color:#009900;">Registered!</a></span></strong><br />&nbsp;(44&nbsp;Reserved,&nbsp;0&nbsp;Open)</td><td><a href="javascript:;" name="cid9" class="modalClassDesc">Power Fitness - Registration Required</a></td><td><a href="javascript:;" name="bio100000017" class="modalBio" >Chris L</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="evenRow"><td>&nbsp;&nbsp;&nbsp;6:00&nbsp;pm </td><td></td><td><a href="javascript:;" name="cid41" class="modalClassDesc">Hatha Yoga</a></td><td><a href="javascript:;" name="bio100000113" class="modalBio" >Walter</a></td><td >&nbsp;1&nbsp;hour&nbsp;&&nbsp;30&nbsp;minutes</td></tr>
+<tr class="oddRow"><td>&nbsp;&nbsp;&nbsp;6:30&nbsp;pm </td><td><input type="button" name="but495" class="SignupButton" onClick="_gaq.push(['_trackEvent', 'Class_Schedule', 'click', 'Sign_Up_Now_button']);document.location='/ASP/res_a.asp?tg=29&classId=495&classDate=9/11/2015&clsLoc=1';" value="Sign Up Now"/><br />&nbsp;(12&nbsp;Reserved,&nbsp;0&nbsp;Open)</td><td><a href="javascript:;" name="cid75" class="modalClassDesc">Friday Night Knockout! $</a></td><td><a href="javascript:;" name="bio100000092" class="modalBio" >Judy</a></td><td >&nbsp;1&nbsp;hour&nbsp;&&nbsp;30&nbsp;minutes</td></tr>
+<tr><td colspan="100%" class="header"id="an7"><b>&nbsp;<span class="headText">Sat&nbsp;</span>September 12, 2015&nbsp;</b></td></tr><tr class="evenRow"><td>&nbsp;&nbsp;&nbsp;8:00&nbsp;am </td><td></td><td><a href="javascript:;" name="cid124" class="modalClassDesc">Body Sculpt</a></td><td><a href="javascript:;" name="bio100000092" class="modalBio" >Judy</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="oddRow"><td>&nbsp;&nbsp;&nbsp;8:00&nbsp;am </td><td><input type="button" name="but673" class="SignupButton" onClick="_gaq.push(['_trackEvent', 'Class_Schedule', 'click', 'Sign_Up_Now_button']);document.location='/ASP/res_a.asp?tg=23&classId=673&classDate=9/12/2015&clsLoc=1';" value="Sign Up Now"/><br />&nbsp;(24&nbsp;Reserved,&nbsp;0&nbsp;Open)</td><td><a href="javascript:;" name="cid120" class="modalClassDesc">Indoor Cycling - Registration Required</a></td><td><a href="javascript:;" name="bio100000077" class="modalBio" >Scott</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="evenRow"><td>&nbsp;&nbsp;&nbsp;8:05&nbsp;am </td><td></td><td><a href="javascript:;" name="cid32" class="modalClassDesc">Mat Pilates</a></td><td><a href="javascript:;" name="bio100000002" class="modalBio" >Rosalie</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="oddRow"><td>&nbsp;&nbsp;&nbsp;8:25&nbsp;am </td><td></td><td><a href="javascript:;" name="cid26" class="modalClassDesc">Aqua Fitness</a></td><td><a href="javascript:;" name="bio100000033" class="modalBio" >Ginger</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="evenRow"><td>&nbsp;&nbsp;&nbsp;9:00&nbsp;am </td><td></td><td><a href="javascript:;" name="cid7" class="modalClassDesc">Athletic Conditioning </a></td><td><a href="javascript:;" name="bio100000120" class="modalBio" >Torre</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="oddRow"><td>&nbsp;&nbsp;&nbsp;9:00&nbsp;am </td><td><input type="button" name="but674" class="SignupButton" onClick="_gaq.push(['_trackEvent', 'Class_Schedule', 'click', 'Sign_Up_Now_button']);document.location='/ASP/res_a.asp?tg=23&classId=674&classDate=9/12/2015&clsLoc=1';" value="Sign Up Now"/><br />&nbsp;(16&nbsp;Reserved,&nbsp;8&nbsp;Open)</td><td><a href="javascript:;" name="cid120" class="modalClassDesc">Indoor Cycling - Registration Required</a></td><td><a href="javascript:;" name="bio100000077" class="modalBio" >Scott</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="evenRow"><td>&nbsp;&nbsp;&nbsp;9:05&nbsp;am </td><td></td><td><a href="javascript:;" name="cid12" class="modalClassDesc">Vinyasa Yoga Int./Adv.</a></td><td><a href="javascript:;" name="bio100000034" class="modalBio" >Tina</a></td><td >&nbsp;1&nbsp;hour&nbsp;&&nbsp;25&nbsp;minutes</td></tr>
+<tr class="oddRow"><td>&nbsp;&nbsp;&nbsp;10:00&nbsp;am </td><td></td><td><a href="javascript:;" name="cid15" class="modalClassDesc">U-Jam Fitness</a></td><td><a href="javascript:;" name="bio100000096" class="modalBio" >Yuko</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="evenRow"><td>&nbsp;&nbsp;&nbsp;10:35&nbsp;am </td><td></td><td><a href="javascript:;" name="cid41" class="modalClassDesc">Hatha Yoga</a></td><td><a href="javascript:;" name="bio100000034" class="modalBio" >Tina</a></td><td >&nbsp;1&nbsp;hour&nbsp;&&nbsp;30&nbsp;minutes</td></tr>
+<tr class="oddRow"><td>&nbsp;&nbsp;&nbsp;11:00&nbsp;am </td><td><input type="button" name="but535" class="SignupButton" onClick="_gaq.push(['_trackEvent', 'Class_Schedule', 'click', 'Sign_Up_Now_button']);document.location='/ASP/res_a.asp?tg=33&classId=535&classDate=9/12/2015&clsLoc=1';" value="Sign Up Now"/><br />&nbsp;(10&nbsp;Reserved,&nbsp;30&nbsp;Open)</td><td><a href="javascript:;" name="cid81" class="modalClassDesc">Bollywood Dance $</a></td><td><a href="javascript:;" name="bio100000095" class="modalBio" >Ram</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="evenRow"><td>&nbsp;&nbsp;&nbsp;12:05&nbsp;pm </td><td></td><td><a href="javascript:;" name="cid70" class="modalClassDesc">Mind Body Movement</a></td><td><a href="javascript:;" name="bio100000101" class="modalBio" >Serena</a></td><td >&nbsp;1&nbsp;hour&nbsp;&&nbsp;15&nbsp;minutes</td></tr>
+<tr class="oddRow"><td>&nbsp;&nbsp;&nbsp;4:00&nbsp;pm </td><td></td><td><a href="javascript:;" name="cid10" class="modalClassDesc">Zumba</a></td><td>Wendy S</td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr><td colspan="100%" class="header"id="an1"><b>&nbsp;<span class="headText">Sun&nbsp;</span>September 13, 2015&nbsp;</b></td></tr><tr class="evenRow"><td>&nbsp;&nbsp;&nbsp;7:45&nbsp;am </td><td></td><td><a href="javascript:;" name="cid41" class="modalClassDesc">Hatha Yoga</a></td><td><a href="javascript:;" name="bio100000097" class="modalBio" >Tracey</a></td><td >&nbsp;1&nbsp;hour&nbsp;&&nbsp;10&nbsp;minutes</td></tr>
+<tr class="oddRow"><td>&nbsp;&nbsp;&nbsp;8:00&nbsp;am </td><td><input type="button" name="but670" class="SignupButton" onClick="_gaq.push(['_trackEvent', 'Class_Schedule', 'click', 'Sign_Up_Now_button']);document.location='/ASP/res_a.asp?tg=23&classId=670&classDate=9/13/2015&clsLoc=1';" value="Sign Up Now"/><br />&nbsp;(0&nbsp;Reserved,&nbsp;24&nbsp;Open)</td><td><a href="javascript:;" name="cid120" class="modalClassDesc">Indoor Cycling - Registration Required</a></td><td><a href="javascript:;" name="bio100000108" class="modalBio" >Megan S</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="evenRow"><td>&nbsp;&nbsp;&nbsp;8:00&nbsp;am </td><td></td><td><a href="javascript:;" name="cid32" class="modalClassDesc">Mat Pilates</a></td><td><a href="javascript:;" name="bio100000002" class="modalBio" >Rosalie</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="oddRow"><td>&nbsp;&nbsp;&nbsp;9:00&nbsp;am </td><td><input type="button" name="but609" class="SignupButton" onClick="_gaq.push(['_trackEvent', 'Class_Schedule', 'click', 'Sign_Up_Now_button']);document.location='/ASP/res_a.asp?tg=23&classId=609&classDate=9/13/2015&clsLoc=1';" value="Sign Up Now"/><br />&nbsp;(17&nbsp;Reserved,&nbsp;29&nbsp;Open)</td><td><a href="javascript:;" name="cid19" class="modalClassDesc">Cardio Kickboxing & Sculpt - Registration Required</a></td><td><a href="javascript:;" name="bio100000092" class="modalBio" >Judy</a></td><td >&nbsp;1&nbsp;hour&nbsp;&&nbsp;10&nbsp;minutes</td></tr>
+<tr class="evenRow"><td>&nbsp;&nbsp;&nbsp;9:00&nbsp;am </td><td><input type="button" name="but671" class="SignupButton" onClick="_gaq.push(['_trackEvent', 'Class_Schedule', 'click', 'Sign_Up_Now_button']);document.location='/ASP/res_a.asp?tg=23&classId=671&classDate=9/13/2015&clsLoc=1';" value="Sign Up Now"/><br />&nbsp;(0&nbsp;Reserved,&nbsp;24&nbsp;Open)</td><td><a href="javascript:;" name="cid120" class="modalClassDesc">Indoor Cycling - Registration Required</a></td><td><a href="javascript:;" name="bio100000108" class="modalBio" >Megan S</a></td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="oddRow"><td>&nbsp;&nbsp;&nbsp;9:00&nbsp;am </td><td></td><td><a href="javascript:;" name="cid44" class="modalClassDesc">Restorative Yoga</a></td><td>Michelle M</td><td >&nbsp;1&nbsp;hour&nbsp;&&nbsp;25&nbsp;minutes</td></tr>
+<tr class="evenRow"><td>&nbsp;&nbsp;&nbsp;10:15&nbsp;am </td><td></td><td><a href="javascript:;" name="cid27" class="modalClassDesc">Core Conditioning</a></td><td><a href="javascript:;" name="bio100000092" class="modalBio" >Judy</a></td><td >&nbsp;25&nbsp;minutes</td></tr>
+<tr class="oddRow"><td>&nbsp;&nbsp;&nbsp;10:30&nbsp;am </td><td></td><td><a href="javascript:;" name="cid41" class="modalClassDesc">Hatha Yoga</a></td><td>Michelle M</td><td >&nbsp;1&nbsp;hour&nbsp;&&nbsp;15&nbsp;minutes</td></tr>
+<tr class="evenRow"><td>&nbsp;&nbsp;&nbsp;11:00&nbsp;am </td><td></td><td><a href="javascript:;" name="cid10" class="modalClassDesc">Zumba</a></td><td>Yvonne</td><td >&nbsp;55&nbsp;minutes</td></tr>
+<tr class="oddRow"><td>&nbsp;&nbsp;&nbsp;<s>4:00&nbsp;pm </td><td></td><td><a href="javascript:;" name="cid38" class="modalClassDesc"><s>Beginning Yoga</a></td><td><span style="color:#990000;">Cancelled Today</span><td >&nbsp;1&nbsp;hour&nbsp;&&nbsp;15&nbsp;minutes</td></tr>
+<tr class="evenRow"><td>&nbsp;&nbsp;&nbsp;<s>4:00&nbsp;pm </td><td></td><td><a href="javascript:;" name="cid111" class="modalClassDesc"><s>Cardio Sculpt</a></td><td><span style="color:#990000;">Cancelled Today</span><td >&nbsp;55&nbsp;minutes</td></tr>
+</table></td></tr>
+<tr>
+<td>
+<link rel="stylesheet" type="text/css" href="https://static.mindbodyonline.com/v76979/styles/inc_login_content.css"  />
+<script type="text/javascript" src="https://static.mindbodyonline.com/v76979/scripts/plugins/jquery.placeholder.js" ></script><script type="text/javascript" src="https://static.mindbodyonline.com/v76979/scripts/plugins/jquery.lightboxLib.js" ></script><script type="text/javascript" src="https://static.mindbodyonline.com/v76979/scripts/plugins/jquery.validate.js" ></script>
+
+<script type="text/javascript">
+ function subSUForm(boolSubtype) {
+	if (boolSubtype==1) {
+		if (checkrequired(document.frmReg)) {
+			document.frmReg.lkupType.value = "name";
+			document.frmReg.submit();
+		}
+	} else if (boolSubtype==2) {
+		if (document.frmReg.txtCustomerID.value=="") {
+			alert("Please enter your PJCC ID");
+			document.frmReg.txtCustomerID.focus();
+		} else {
+			document.frmReg.lkupType.value = "id";
+			document.frmReg.submit();
+		}
+	} else {	//required f/lname & ID
+		if (checkrequired(document.frmReg)) {
+			if (document.frmReg.txtCustomerID.value=="") {
+				alert("Please enter your PJCC ID");
+				document.frmReg.txtCustomerID.focus();
+			} else {
+				document.frmReg.submit();
+			}
+		}
+	}	
+}
+ // This function hides the generic login message and replaces with the specific one.
+function showSpecificLogin()
+{
+	mbfb.getFBUserInfo(function (user)
+	{
+		var notHw = "Not";
+		var $facebook = $('#FacebookHeader');
+		var logInAs = 'Log in as <FACEBOOKNAME>';
+	    logInAs = logInAs.replace("<FACEBOOKNAME>", user.name);
+		
+		// Need to create the text for the specific message
+		$('#SpecificMessage', $facebook).empty()
+			.append(mbfb.getFBUserImage())
+			.append($("<div id=\"LoginAs\"><div class=\"fb-lg-as-txt ellipsis\">" + logInAs + "</div><div class=\"fb-lg-as-txt fb-login-as-bttm ellipsis\"></div></div>"));
+		$("#LoginAs .fb-lg-as-txt").prop("title", logInAs);
+		$("#LoginAs .fb-lg-as-txt fb-login-as-bttm").prop("title", logInAs);
+		
+		var notUser = 'Not A023F08D32F040CA885DC08A4A2707CD?';
+	    notUser = notUser.replace("A023F08D32F040CA885DC08A4A2707CD", user.first_name);
+		$("#NotMeName").html(notUser);
+		$("#NotMeName").prop("title", notUser);
+		var $GenericMessage = $('#GenericMessage', $facebook);
+		$GenericMessage.fadeOut(400, function ()
+		{
+			$GenericMessage.hide();
+			$("#FacebookLoginButton").css("top", "14px");
+			$('#SpecificMessage', $facebook).show().css("display", "inline-block");
+			$('#fbHeaderRightContainer', $facebook).show().css("display", "inline-block");
+		});
+		//'Alternative' Login/VerifyStep Related
+		var $VerifyYourLoginFacebook = $('#VerifyYourLogin');
+		var $generalMessageVerify = $('#AlternativeLoginGenericMessage', $VerifyYourLoginFacebook);
+		$generalMessageVerify.empty()
+				.append(mbfb.getFBUserImage())
+				.append($("<span class=\"pp-c-lg-b ellipsis\">Before you can log in using Facebook...</span>"));
+	});
+}
+function facebookAutoLoginFromPortal()
+{
+
+	
+}
+ </script>
+<script type="text/javascript" src="https://static.mindbodyonline.com/v76979/scripts/Facebook/mb.facebook.js" ></script>
+<div id="fb-root"></div>
+<script type="text/javascript">
+	(function (d) {
+		var js, id = 'facebook-jssdk'; if (d.getElementById(id)) { return; }
+		js = d.createElement('script'); js.id = id; js.async = true;
+		js.src = "//connect.facebook.net/en_US/sdk.js";
+	    
+	    d.getElementsByTagName('head')[0].appendChild(js);
+	} (document));
+</script>
+
+
+<div id="LoginContent" class="LoginContent su1-specific-centering"
+	style="display: none;">
+	<div id="DefaultLogin">
+		<div id="TopInfo">
+			<div id="CloseButton"></div>
+			<h2 class="LoginHeader" style="display:none"><span id="BookingInfoText1" style=""></span> <span id="BookingInfoText2" style=""></span></h2>
+			<br />
+			<div style="clear:both"></div>
+		</div>
+
+		<div id="FacebookHeader" class="FacebookLogin">
+			<span id="GenericMessage">
+				<img class="gen-m-fb-image" src="https://static.mindbodyonline.com/v76979/asp/images/facebooklogo.png" alt="" />
+				<span class="lg-w-fb-pp" title="Log in with Facebook">
+Log in with Facebook
+				</span> 
+			</span>
+			<div id="SpecificMessage">
+			</div>
+			<div id="fbHeaderRightContainer">
+				<a id="NotTroyLink" onclick="mbfb.logOutOfFacebook();"><span id="NotMeName">&nbsp;</span><span
+					class="not-me-q-mk">?</span></a>
+			</div>
+			<img id="FacebookLoginButton" src="https://static.mindbodyonline.com/v76979/asp/images/facebookloginbutton.png" alt="Click here to log in with Facebook!"
+				title="Click here to log in with Facebook!" />
+			<img id="FacebookAjaxSpinner" src="https://static.mindbodyonline.com/v76979/asp/adm/images/ajax-loader-gray.gif" />
+		</div>
+
+		<div id="LoginPanesGroup">
+
+				<input type="hidden" name="PleaseCompleteAllFields" id="PleaseCompleteAllFields" value="You&#39;ve provided incomplete information. Please try again, or contact us for help." />
+ 			<div class="LoginPane group" id="ExistingUserPane">
+				<form name="frmLogon"  method="Post" action="/ASP/login_p.asp">
+					<div class="LoginPaneInnerContent">
+						<div class="GreetingAndInstructionsGroup">
+							<h1 id="ExistingUsersHeader">Been here before?</h1>
+							<div id="ExistingUserInstructions">If you&#39;ve already created a personal login, then please enter your information below to continue.</div>
+						</div>
+						<div class="InputsAndButtonsGroup">
+							<input class="" id="su1UserName" type="email" spellcheck="false" name="requiredtxtUserName" placeholder=" email / username"
+								autocomplete="off"  maxlength="100"/><br />
+							<input class="" id="su1Password" type="password" name="requiredtxtPassword" placeholder=" password" 
+								autocomplete="off" maxlength="30"/>
+						
+							<div class="LoginErrorDiv" id="LoginError"></div>
+							<div class="LoginBottomGroup" id="ExistingUserLoginBottomGroup group">
+
+							<input class="loginButton" type="button" value="Log in" name="btnSignUp2" id="btnSu1Login" />
+<div style="width:100px; float:left; overflow-x: hidden" class="forgotPasswordPane"> <a id="forgotPassword" href="/PasswordReset/">Forgot password?</a></div>
+ 
+							
+							</div>
+						</div>    
+				
+					</div>
+<input type="hidden" name="tg" value="" /> <input type="hidden" name="vt" value="" /> <input type="hidden" name="lvl" value="" /> <input type="hidden" name="stype" value="" /> <input type="hidden" name="qParam" value="" /> <input type="hidden" name="view" value="" /> <input type="hidden" name="trn" value="0" /> <input type="hidden" name="page" value="" /> <input type="hidden" name="catid" value="" /> <input type="hidden" name="prodid" value="" /> <input type="hidden" name="prodGroupId" value="" /> <input type="hidden" name="date" value="9/11/2015" /> <input type="hidden" name="classid" value="0" /> <input type="hidden" name="sSU" value="" /> <input type="hidden" name="optForwardingLink" value="" /> 
+					<input type="hidden" name="isAsync" value="false" />
+				</form>
+			</div>
+
+					<div id="PaneDivider">or</div>
+
+			<div class="LoginPane group" id="NewUserPane">
+		
+
+				<input type="hidden" name="ss_CltAddLoginMatchRequirement" id="ss_CltAddLoginMatchRequirement" value="1"/>
+				<input type="hidden" name="StudioName" id="hidStudioName" value="PJCC"  />
+			
+				<form name="frmReg" action="/ASP/su1_p.asp" method="post">
+					<div class="LoginPaneInnerContent">
+						<div class="GreetingAndInstructionsGroup">
+							<h1 id="NewUsersHeader">New to our site?</h1>
+							<div id="NewUserInstructions">Please enter your first and last names, then click the button below to continue.</div>
+						</div>
+						<div class="InputsAndButtonsGroup">
+							<input type="hidden" name="lkupType" id="lkupType" value="name"/>
+							<input class="" type="text" id="requiredtxtFirst_Name" autocomplete="off" spellcheck="false"
+									name="requiredtxtFirst_Name" placeholder=" first name" 
+									value="" maxlength="48"/>
+							<br />
+							<input class="" type="text" id="requiredtxtLast_Name" autocomplete="off" spellcheck="false"
+									name="requiredtxtLast_Name" placeholder=" last name"
+									value="" maxlength="48"/>
+						
+
+							<div class="LoginErrorDiv" id="SignUpError"></div>
+						
+							<div class="LoginBottomGroup">
+<input id="btnNext" type="button" value=" Next &#155;" name="btnNext" class="loginButton btnNext-disabled"/>
+							</div>
+						</div>
+						 <input type="hidden" name="optForwardingLink" id="optForwardingLink2" value="" />
+					</div>
+				</form>
+			</div>
+
+			<div style="clear: both;"></div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="https://static.mindbodyonline.com/v76979/scripts/inc_fb_confirm_login_lb.js" ></script>
+<link rel="stylesheet" type="text/css" href="https://static.mindbodyonline.com/v76979/styles/inc_fb_confirm_login_lb.css"  />
+<div id="FacebookConfirmation"  style="display: none;"  class="AlternateLoginContent" >  
+	
+	<div id="VerifyYourLogin" >
+		<div id="fbLoginPanesGroup" >			
+			<div id="fbTopInfo">
+				<div id="fbCloseButton"> </div>
+				<div style="clear:both"></div>
+			</div>
+
+			<input type="hidden" name="fbPleaseCompleteAllFields" id="fbPleaseCompleteAllFields" value="You&#39;ve provided incomplete information. Please try again, or contact us for help." />
+			
+ 			<div class="LoginPane group " id="fbExistingUserPane">
+				<div id="FacebookHeader" class="FacebookLoginAlternateHeader">
+					<span id="AlternativeLoginGenericMessage"><img src="https://static.mindbodyonline.com/v76979/asp/images/facebooklogo.png" alt="Facebook"/>Log in with Facebook</span>
+				</div>
+				<form name="frmFbLogon"  method="post" action="/asp/login_p.asp">
+					<input type="hidden" name="fbid" value="" />
+					<input type="hidden" name="fbAccessToken" value="" />
+				<div class="LoginPaneInnerContent">						
+						<div class="GreetingAndInstructionsGroup">
+
+							<h1 id="greetingText">Please verify your PJCC login.</h1>
+							<div id="instructionText">Enter your username and password one last time so we can link your account to Facebook.</div>
+<div class="fbDontHaveLoginPane"> <a id="fbDontHaveLogin" href="">I don&#39;t have a PJCC login</a></div>
+						</div>
+						<div class="InputsAndButtonsGroup">
+							<input class="" id="requiredtxtUserName" type="email" spellcheck="false" name="requiredtxtUserName" placeholder=" email / username"
+								autocomplete="off" maxlength="100"/><br />
+							<input class="" id="requiredtxtPassword" type="password" name="requiredtxtPassword" placeholder=" password" 
+								autocomplete="off" maxlength="15"/>
+						
+							<div class="LoginErrorDiv" id="fbLoginError"></div>
+							<div class="LoginBottomGroup" id="fbExistingUserLoginBottomGroup group">
+
+								<input class="loginButton site-action-button" type="button" value="Log in" name="btnFBVerifyLogin" id="btnFBVerifyLogin" />
+<div style="width:120px; float:left" class="forgotPasswordPane"> <a id="forgotPassword" href="/PasswordRecovery/">Forgot password?</a></div>
+								 <input type="hidden" name="optForwardingLink" id="optForwardingLink" value="" />
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<form id="fbFrmReg" name="fbFrmReg" action="/ASP/su1_p.asp" method="post">
+				<input type="hidden" name="ss_CltAddLoginMatchRequirement" value="1"/>
+				<input type="hidden" name="StudioName" value="PJCC"  />
+				<input type="hidden" name="fbid" value=""  />
+				<input type="hidden" name="fbAccessToken" value=""  />
+				<input type="hidden" name="lkupType" value="name"/>
+				<input type="hidden" name="requiredtxtEmail_Address" value="" />
+				<input type="hidden" name="requiredtxtFirst_Name" value=""/>
+				<input type="hidden" name="requiredtxtLast_Name" value="" />				
+				<input type="hidden" name="optForwardingLink" value="" />
+			</form>	
+
+			<div style="clear: both;"></div>
+		</div>
+	</div>
+</div>  
+
+<style type="text/css">
+	#descDivWrapper
+	{
+	    width: auto;
+	    max-width:440px;
+        max-height:400px;
+        z-index: 5;
+	}
+	#descDivWrapper img
+	{
+	    float:left;
+	    display:inline;
+	    margin: 10px 20px 10px 0;
+	}
+	#removeModal
+	{
+	    margin: 0 -18px -30px 0;
+	    width:auto;
+	    float:right;
+	    cursor:pointer;
+	    position: relative;
+	}
+	
+	.DescDivInfo {
+	    background-color: #FFFFFF;
+        clear: both;
+        overflow:auto;
+        float: left;
+        background-color: White;
+	    border: 1px solid #ccc;
+	    -moz-border-radius: 5px 5px 5px 5px;
+	    -ms-border-radius: 5px 5px 5px 5px;
+	    border-radius: 5px 5px 5px 5px;
+	    padding-bottom: 15px;
+	    padding-top: 0;
+        z-index: 5;
+        display: block;
+        font-family: inherit;
+	    -moz-box-shadow: 2px 2px 3px rgba(0,0,0,0.3); /* FF3.5+ */
+        -webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.3); /* Saf3.0+, Chrome */
+	    -ms-box-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+	    box-shadow: 2px 2px 3px rgba(0,0,0,0.3); /* Opera 10.5, IE9, Chrome 10+ */
+        width: 300px;
+	}
+
+	.DescDivInfo p
+    {
+        font-size: 1em;
+        line-height: normal;
+        margin: 7px 20px;
+		word-wrap: break-word;
+		white-space: normal;
+		width:260px;
+    }
+    .bioImg, .classInfoImg
+    {
+    	max-width:150px;
+    	max-height: 107px;
+    }
+    .DescDivInfo p, .DescDivInfo h3 
+    {
+        color: #555;
+    }
+    .DescDivInfo h2
+    {
+        font-size: 15px;
+        font-weight: normal;
+        margin-top: -5px;
+        border-bottom: 1px solid #DDDDDD;
+        width: 260px;
+        padding-bottom: 8px;
+        text-align: left;
+    }
+    
+    .DescDivInfo h3
+    {
+        font-size: 12px;
+        font-weight: bold;
+        margin-top: 0;
+        border: none;
+        padding-bottom: 5px;
+        text-align: left;
+        padding-bottom: 0;
+        margin-bottom: -4px;
+    }
+    
+    .hrWithImage
+    {
+        margin-left: 0;
+    }
+    
+    #descDivWrapper  .LBCloseButton
+    {
+        position: absolute;
+        top: 5px;
+        right: 25px;
+        float:none;
+        margin: 0;
+        padding: 0;
+    }
+    #triangle
+    {
+        background: url('https://static.mindbodyonline.com/v76979/asp/adm/images/overlay_arrow_r.png') no-repeat scroll left top transparent;
+        border: medium none;
+        display: block;
+        height: 24px;
+        width: 15px;
+        position: absolute;
+    }
+    #descDivWrapper .triangleUp
+    {
+        background: url('https://static.mindbodyonline.com/v76979/asp/images/overlay_arrow_top.png') no-repeat scroll left top transparent !important;
+        margin: 0;
+        height: 15px;
+        width: 24px;
+        top: -12px;
+        left: 0;
+    }
+    #descDivWrapper .triangleDown
+    {
+        background: url('https://static.mindbodyonline.com/v76979/asp/images/overlay_arrow_bottom.png') no-repeat scroll left top transparent !important;
+        margin: 0;
+        height: 15px;
+        width: 24px;
+        top: -12px;
+        left: 0;
+    }
+	.DescDivInfoInner
+	{
+		margin: 10px 20px;
+	}
+	.userHTML {
+		line-height: normal;        
+		word-wrap:break-word;
+		white-space:normal;
+		padding-top:10px;	
+	}
+	.userHTML ul {
+	    overflow:hidden;
+	}
+	.userHTML ol {
+		overflow:hidden;
+	}
+</style>
+<script type="text/javascript">
+	$(function () {
+		// will contain the lightbox content
+		$('body').append('<div id="descDivWrapper" class="" style="position:absolute;display:none;z-index:1001;"></div>');
+		// trainer bio
+		$('.modalBio, .modalClassDesc, .modalLocationInfo').click(function (e) {
+			var ajaxUrl = "",
+			    arrowUp = true,
+			    params = "",
+			    $this = $(this);
+			if ($this.hasClass("modalBio")) {
+				ajaxUrl = "/Ajax/QuickStaffBio/";
+				params = "trnid=" + $(this).attr("name").replace("bio", "");
+			}
+			else if ($this.hasClass("modalClassDesc")) {
+				ajaxUrl = "/Ajax/ClassInfo/";
+				params = "classid=" + $(this).attr("name").replace("cid", "");
+			}
+			else if ($this.hasClass("modalLocationInfo")) {
+				ajaxUrl = "/Ajax/LocationInfo/";
+				params = "locid=" + $(this).attr("name").replace("loc", "");
+				$('#descDivWrapper').css({ 'width': 'auto' });
+			}
+			else {
+			    ajaxUrl = "";
+				params = "";
+			}
+			$('#descDivWrapper').html('<div id="removeModal"><img class="LBCloseButton" alt="close" src="https://static.mindbodyonline.com/v76979/asp/images/close_button.png"/></div><div class="DescDivInfo"><img src="https://static.mindbodyonline.com/v76979/asp/images/loading-gray-scale_100px.gif" style="display:block;margin-left:auto;margin-right:auto;float:none;"/> </div>');
+			var offset = $('#main-content').offset();
+			e.offsetX = e.pageX - offset.left;
+			e.offsetY = e.pageY - offset.top;
+			var leftX = e.pageX - $('#descDivWrapper').width() / 2;
+			var topY = e.pageY;
+			// position for loading
+			if (e.offsetY > ($(window).height() + 200)) {
+				topY = e.pageY - $('#descDivWrapper').height() * 2 - 15;
+				arrowUp = false;
+			} else {
+				topY = e.pageY + 20;
+				arrowUp = true;
+			}
+			$('#descDivWrapper').css({ 'top': topY + "px", 'left': leftX + "px" });
+			// IE 7 reposition dialog and close button
+			if ($.browser.msie && ($.browser.version).indexOf("7.0") != -1) {
+				$('#removeModal').css({ 'top': 0 + "px", 'right': 120 + "px" });
+				$('#descDivWrapper').css({ 'top': topY + "px", 'left': leftX + 70 + "px" });
+			}
+			$('#descDivWrapper').show();
+			// get content
+			$.ajax({
+				type: "GET",
+				url: ajaxUrl,
+				dataType: "html",
+				data: params,
+				success: function (j) {
+					if (j != null && j != "") {
+						if (j.indexOf("http:") != 0) {
+							$('#descDivWrapper').html('<div id="removeModal" ><img class="LBCloseButton" alt="close" src="https://static.mindbodyonline.com/v76979/asp/images/close_button.png"/></div>');
+							var $descDivInfo = $('<div class="DescDivInfo" style="xdisplay: none"></div>');
+							var $descDivInfoInner = $('<div class="DescDivInfoInner" style="xvisibility: hidden"></div>');
+							$descDivInfoInner.css('opacity', 0);
+							$('#descDivWrapper').append($descDivInfo);
+							$descDivInfo.append($descDivInfoInner);
+							$descDivInfo.css("min-height", "80px");
+							$descDivInfoInner.html(j);
+							$descDivInfoInner.css('opacity', 0).animate({ opacity: 1 }, 500, function () {
+								//remove opacity for IE... otherwise fonts still show up ugly
+								$(this).css('opacity', '');
+							});
+							// position with content
+							if (e.offsetY > ($(window).height() + 800)) {
+								topY = e.pageY - $('#descDivWrapper').height() - 10;
+								arrowUp = false;
+							} else {
+								topY = e.pageY + 20;
+								arrowUp = true;
+							}
+							$('#descDivWrapper').css({ 'top': topY + "px", 'left': e.pageX - $('#descDivWrapper').width() / 2 + "px" });
+							// IE 7
+							if ($.browser.msie && ($.browser.version).indexOf("7.0") != -1) {
+								$('#descDivWrapper').css({ 'top': topY + "px", 'left': e.pageX - $('#descDivWrapper').width() / 2 + 70 + "px" });
+							}
+							// position the arrow
+							if (arrowUp) {
+								$('#descDivWrapper').append('<div id="triangle" class="triangleUp"></div>');
+								$('#triangle').css({ 'margin-left': ($('#descDivWrapper').width() / 2) - 6 + "px" });
+								// IE
+								if ($.browser.msie) {
+									if (($.browser.version).indexOf("7.0") != -1) {
+										$('#triangle').css({ 'margin-left': ($('#descDivWrapper').width() / 2) - 80 + "px" });
+									} else {
+										// $('#triangle').css({ 'margin-top': 8 + "px" });
+									}
+								}
+							} else {
+								$('#descDivWrapper').append('<span id="triangle" class="triangleDown"></span>');
+								$('#triangle').css({ 'margin-top': $('#descDivWrapper').height() - 6 + "px", 'margin-left': ($('#descDivWrapper').width() / 2) - 6 + "px" });
+								// IE blows
+								if ($.browser.msie) {
+									if (($.browser.version).indexOf("7.0") != -1) {
+										$('#triangle').css({ 'margin-top': $('#descDivWrapper').height() - 6 + "px", 'margin-left': ($('#descDivWrapper').width() / 2) - 80 + "px" });
+									} else {
+										// $('#triangle').css({ 'margin-top': $('#descDivWrapper').height() - 2 + "px" });
+									}
+								}
+							}
+							// IE 7 reposition close button
+							if ($.browser.msie && ($.browser.version).indexOf("7.0") != -1) {
+								$('#removeModal').css({ 'top': 0 + "px", 'right': 120 + "px" });
+							}
+						} else {
+							window.open(j);
+						}
+					}
+				}
+			});
+		});
+		// remove button
+		$('#removeModal').live('click', function () {
+			$('#descDivWrapper').html("");
+			$('#descDivWrapper').hide();
+		});
+	});
+</script>
+
+</td>
+</tr>
+</table>
+
+    </table>
+
+</div> <!--  main-content -->
+</div> <!--  wrapper -->
+</div> <!--  wrapper-bottompad -->
+</div> <!--  wrapper-minheight -->
+	
+	
+	
+	</div><!-- wrapper-frame --> 
+	
+	
+
+	<script type="text/javascript">
+        loginFocus();
+
+	    makeContentScrollable(true, false, false);
+	    $(window).bind('GlobalMakeContentScrollable', function() {
+	        makeContentScrollable(true, false, false);
+	    });
+	    $(window).bind('resize', triggerMakeContentScrollable);
+	</script>
+	
+</div><!-- Closes pageWrapper, which is opened in Pre -->
+	<div id="footer" class="bt4">
+		<div id="ftLeft"  class="frmLabel">
+		    <p>
+<span>9/11/2015 12:32:39 AM in California</span>
+
+		    </p>
+			<p>
+			    <a href="http://www.mindbodyonline.com/privacy-policy" target="_mbswPrivacy">Privacy Policy</a>
+				<span>&copy;2015 MINDBODY Inc.</span>		
+			</p>
+		</div>
+		<div id="ftRight">
+							<a href="http://getmindbodyconnect.com/" target="_mbsw">
+								<img src="https://static.mindbodyonline.com/v76979/Images/mbclogo-footer-.png" alt="MINDBODY Inc." style="border: 0px; padding: 0px 10px 0px 0px;" /></a>
+		</div>
+	</div>
+
+
+
+
+
+	</body>
+</html>

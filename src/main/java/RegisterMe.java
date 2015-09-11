@@ -1,3 +1,4 @@
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.http.Consts;
 import org.apache.http.HttpEntity;
@@ -28,6 +29,7 @@ import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
 import java.io.ByteArrayInputStream;
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -78,11 +80,11 @@ public class RegisterMe {
                 if (desc.contains("Cardio Kickboxing")
                         || desc.contains("Body Sculpt")
                         || desc.contains("Power Fitness")
-                        || desc.contains("Cardio Kickboxing & Sculpt")
+                        || desc.contains("& Sculpt")
 //                        || desc.contains("Indoor Cycling")
                         ) {
 
-                    LOGGER.info(String.format("sign up for %s", link));
+                    LOGGER.info(String.format("sign up for %s for class %s", username, link));
                     String confirmPage = signup(link.link, httpclient);
                     submitConfirmationPage(confirmPage, httpclient);
                 }
@@ -110,10 +112,10 @@ public class RegisterMe {
         CookieStore cookieStore = new BasicCookieStore();
 
         // Populate cookies if needed
-        BasicClientCookie cookie = new BasicClientCookie("CMBMID", "41273");
-        cookie.setDomain("clients.mindbodyonline.com");
-        cookie.setPath("/");
-        cookieStore.addCookie(cookie);
+//        BasicClientCookie cookie = new BasicClientCookie("CMBMID", "41273");
+//        cookie.setDomain("clients.mindbodyonline.com");
+//        cookie.setPath("/");
+//        cookieStore.addCookie(cookie);
 
         // Set the store
         return HttpClients.custom()
@@ -155,29 +157,32 @@ public class RegisterMe {
 
     private static List<SignupLink> getClassSchedule(CloseableHttpClient httpclient) throws IOException, SAXException, TikaException, InstantiationException, IllegalAccessException {
 
-        String classSchedule = "https://clients.mindbodyonline.com/classic/mainclass";
-        String dateString = getCurrentDateString();
+//        String classSchedule = "https://clients.mindbodyonline.com/classic/mainclass";
+//        String dateString = getCurrentDateString();
+//
+//        List<NameValuePair> formparams;
+//        formparams = new ArrayList<NameValuePair>();
+//        formparams.add(new BasicNameValuePair("pageNum", "1"));
+//        formparams.add(new BasicNameValuePair("requiredtxtUserName", ""));
+//        formparams.add(new BasicNameValuePair("requiredtxtPassword", ""));
+//        formparams.add(new BasicNameValuePair("optForwardingLink", ""));
+//        formparams.add(new BasicNameValuePair("optRememberMe", ""));
+//        formparams.add(new BasicNameValuePair("tabID", "7"));
+//        formparams.add(new BasicNameValuePair("optView", "week"));
+//        formparams.add(new BasicNameValuePair("useClassLogic", ""));
+//        formparams.add(new BasicNameValuePair("filterByClsSch", ""));
+//        formparams.add(new BasicNameValuePair("prevFilterByClsSch", "-1"));
+//        formparams.add(new BasicNameValuePair("prevFilterByClsSch2", "-2"));
+//        formparams.add(new BasicNameValuePair("txtDate", dateString));
+//        formparams.add(new BasicNameValuePair("optTG", "0"));
+//        formparams.add(new BasicNameValuePair("optVT", "0"));
+//        formparams.add(new BasicNameValuePair("optInstructor", "0"));
+//        String html = post(classSchedule, formparams, httpclient);
+//        //        FileUtils.writeStringToFile(new File("/tmp/a.html"), body);
+//        //        List<SignupLink> links = parseHtml(FileUtils.readFileToString(new File("/tmp/a.html")));
+//        return parseHtml(html);
 
-        List<NameValuePair> formparams;
-        formparams = new ArrayList<NameValuePair>();
-        formparams.add(new BasicNameValuePair("pageNum", "1"));
-        formparams.add(new BasicNameValuePair("requiredtxtUserName", ""));
-        formparams.add(new BasicNameValuePair("requiredtxtPassword", ""));
-        formparams.add(new BasicNameValuePair("optForwardingLink", ""));
-        formparams.add(new BasicNameValuePair("optRememberMe", ""));
-        formparams.add(new BasicNameValuePair("tabID", "7"));
-        formparams.add(new BasicNameValuePair("optView", "week"));
-        formparams.add(new BasicNameValuePair("useClassLogic", ""));
-        formparams.add(new BasicNameValuePair("filterByClsSch", ""));
-        formparams.add(new BasicNameValuePair("prevFilterByClsSch", "-1"));
-        formparams.add(new BasicNameValuePair("prevFilterByClsSch2", "-2"));
-        formparams.add(new BasicNameValuePair("txtDate", dateString));
-        formparams.add(new BasicNameValuePair("optTG", "0"));
-        formparams.add(new BasicNameValuePair("optVT", "0"));
-        formparams.add(new BasicNameValuePair("optInstructor", "0"));
-        String html = post(classSchedule, formparams, httpclient);
-        //        FileUtils.writeStringToFile(new File("/tmp/a.html"), body);
-        //        List<SignupLink> links = parseHtml(FileUtils.readFileToString(new File("/tmp/a.html")));
+        String html = get("https://clients.mindbodyonline.com/classic/mainclass?fl=true&tabID=7", httpclient);
         return parseHtml(html);
     }
 
