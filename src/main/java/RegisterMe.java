@@ -1,5 +1,4 @@
 import org.apache.commons.io.FileUtils;
-import org.apache.commons.lang.StringUtils;
 import org.apache.http.Consts;
 import org.apache.http.HttpEntity;
 import org.apache.http.NameValuePair;
@@ -11,7 +10,6 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.BasicCookieStore;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
-import org.apache.http.impl.cookie.BasicClientCookie;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 import org.apache.log4j.Logger;
@@ -77,11 +75,11 @@ public class RegisterMe {
             String desc = link.desc;
             boolean requiresPayment = desc.endsWith("$");
             if (!requiresPayment) {
-                if (desc.contains("Cardio Kickboxing")
-                        || desc.contains("Body Sculpt")
-                        || desc.contains("Power Fitness")
-                        || desc.contains("& Sculpt")
-//                        || desc.contains("Indoor Cycling")
+                if (desc.startsWith("Cardio Kickboxing")
+                        || desc.startsWith("Body Sculpt")
+                        || desc.startsWith("Power Fitness")
+//                        || desc.startsWith("Cardio Kickboxing & Sculpt")
+//                        || desc.startsWith("Indoor Cycling")
                         ) {
 
                     LOGGER.info(String.format("sign up for %s for class %s", username, link));
@@ -236,88 +234,88 @@ public class RegisterMe {
     }
 
     static class PageHandler extends DefaultHandler {
-        boolean inSignupButton;
-        boolean inATag;
-        StringBuilder sb = new StringBuilder();
-        List<SignupLink> links = new ArrayList<SignupLink>();
+
+        boolean inTable;
+        boolean inTr;
         boolean inTd;
-        boolean inReservedCount;
+        int col;
+
+        String link;
         String reservedCount = "";
+        String desc = "";
+        String teacher = "";
 
-        static final String host = "https://clients.mindbodyonline.com";
+        List<SignupLink> links = new ArrayList<SignupLink>();
 
+        static final String HOST = "https://clients.mindbodyonline.com";
 
         @Override
         public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
             if (XHTML.equals(uri)) {
-                if (qName.equals("input")
-                        && "button".equals(attributes.getValue("type"))
-                        && "SignupButton".equals(attributes.getValue("class"))
-                        && "Sign Up Now".equals(attributes.getValue("value"))
-                        ) {
-                    inSignupButton = true;
-                    String jsBlock = attributes.getValue("onclick");
-                    String[] stmts = jsBlock.split(";");
-                    for (String stmt : stmts) {
-                        String key = "document.location='";
-                        if (stmt.startsWith(key)) {
-                            links.add(new SignupLink(host + stmt.substring(key.length(), stmt.length() - 1)));
+                if (qName.equals("table") && "classSchedule-mainTable".equals(attributes.getValue("id"))) {
+                    inTable = true;
+                }
+                if (inTable && qName.equals("tr")) {
+                    inTr = true;
+                }
+                if (inTable && inTr && qName.equals("td")) {
+                    inTd = true;
+                    col++;
+                }
+
+                if (inTd && col == 2) {
+                    if (qName.equals("input")
+                            && "button".equals(attributes.getValue("type"))
+                            && "SignupButton".equals(attributes.getValue("class"))
+                            && "Sign Up Now".equals(attributes.getValue("value"))
+                            ) {
+                        String jsBlock = attributes.getValue("onclick");
+                        String[] stmts = jsBlock.split(";");
+                        for (String stmt : stmts) {
+                            String key = "document.location='";
+                            if (stmt.startsWith(key)) {
+                                link = HOST + stmt.substring(key.length(), stmt.length() - 1);
+                            }
                         }
                     }
-                }
-                if (inSignupButton && qName.equals("a") && "modalClassDesc".equals(attributes.getValue("class"))) {
-                    inATag = true;
-                }
-                if (qName.equals("td")) {
-                    inTd = true;
                 }
             }
         }
 
         @Override
         public void characters(char[] ch, int start, int length) throws SAXException {
-            if (inSignupButton && inATag) {
-                String text = new String(ch, start, length);
-                String[] fields = text.split(" ");
-                List<String> words = new ArrayList<String>();
-                for (String field : fields) {
-                    field = field.trim();
-                    if (StringUtils.isNotBlank(field)) {
-                        words.add(field);
-                    }
+            if (inTd) {
+                if (col == 2) {
+                    reservedCount += new String(ch, start, length);
                 }
-                String nomalized = StringUtils.join(words, " ");
-                links.get(links.size() - 1).desc = nomalized;
-            }
-            if (inTd && inSignupButton) {
-                String s = new String(ch, start, length);
-                if (s.length() > 1 && s.charAt(1) == '(') {
-                    inReservedCount = true;
+                if (col == 3) {
+                    desc += new String(ch, start, length);
                 }
-                if (inReservedCount) {
-                    reservedCount += s;
-                    if (s.endsWith(")")) {
-                        inReservedCount = false;
-                    }
+                if (col == 4) {
+                    teacher += new String(ch, start, length);
                 }
             }
         }
 
         @Override
         public void endElement(String uri, String localName, String qName) throws SAXException {
-            if (inSignupButton && qName.equals("tr")) {
-                inSignupButton = false;
-                links.get(links.size() - 1).reservedCount = reservedCount;
-                if (reservedCount.endsWith("0 Open)")) {
-                    links.remove(links.size() - 1);
-                }
-                reservedCount = "";
+            if (qName.equals("table")) {
+                inTable = false;
             }
-            if (qName.equals("a")) {
-                inATag = false;
-            }
-            if (qName.equals("td")) {
+
+            if (inTable && qName.equals("tr")) {
+                inTr = false;
                 inTd = false;
+                col = 0;
+
+                if (link != null && !reservedCount.endsWith("0 Open)")) {
+                    links.add(new SignupLink(link, desc, teacher, reservedCount));
+                }
+
+                link = null;
+                reservedCount = "";
+                desc = "";
+                teacher = "";
             }
         }
     }
@@ -325,10 +323,14 @@ public class RegisterMe {
     static class SignupLink {
         String link;
         String desc;
+        String teacher;
         String reservedCount;
 
-        public SignupLink(String link) {
+        public SignupLink(String link, String desc, String teacher, String reservedCount) {
             this.link = link;
+            this.desc = desc;
+            this.teacher = teacher;
+            this.reservedCount = reservedCount;
         }
 
         @Override
@@ -336,6 +338,7 @@ public class RegisterMe {
             return "SignupLink{" +
                     "link='" + link + '\'' +
                     ", desc='" + desc + '\'' +
+                    ", teacher='" + teacher + '\'' +
                     ", reservedCount='" + reservedCount + '\'' +
                     '}';
         }
