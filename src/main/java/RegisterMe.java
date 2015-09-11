@@ -1,6 +1,3 @@
-import com.sun.tools.doclets.internal.toolkit.util.links.LinkInfo;
-import com.sun.xml.internal.ws.api.addressing.WSEndpointReference;
-import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.http.Consts;
 import org.apache.http.HttpEntity;
@@ -16,19 +13,12 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.impl.cookie.BasicClientCookie;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
-
-import java.io.ByteArrayInputStream;
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-
+import org.apache.log4j.Logger;
 import org.apache.tika.exception.TikaException;
 import org.apache.tika.metadata.Metadata;
 import org.apache.tika.parser.ParseContext;
-import org.apache.tika.parser.html.HtmlMapper;
 import org.apache.tika.parser.Parser;
+import org.apache.tika.parser.html.HtmlMapper;
 import org.apache.tika.parser.html.HtmlParser;
 import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
@@ -37,12 +27,20 @@ import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
 import static org.apache.tika.sax.XHTMLContentHandler.XHTML;
 
 
 public class RegisterMe {
 
     static final String USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.85 Safari/537.36";
+
+    static final Logger LOGGER = Logger.getLogger(RegisterMe.class);
 
     public static void main(String[] args) throws Exception {
         for (String arg : args) {
@@ -64,6 +62,8 @@ public class RegisterMe {
 
     private static void register(String username, String password) throws IOException, SAXException, TikaException, InstantiationException, IllegalAccessException {
 
+        LOGGER.info(String.format("RegisterMe started for %s ", username));
+
         CloseableHttpClient httpclient = createHttpClient();
 
         initializeCookies(httpclient);
@@ -81,12 +81,15 @@ public class RegisterMe {
                         || desc.contains("Cardio Kickboxing & Sculpt")
 //                        || desc.contains("Indoor Cycling")
                         ) {
+
+                    LOGGER.info(String.format("sign up for %s", link));
                     String confirmPage = signup(link.link, httpclient);
                     submitConfirmationPage(confirmPage, httpclient);
-                    System.out.println(link);
                 }
             }
         }
+
+        LOGGER.info(String.format("RegisterMe finished for %s",username));
     }
 
     private static String getCurrentDateString() {
@@ -98,6 +101,7 @@ public class RegisterMe {
         ConfirmationPageHandler handler = new ConfirmationPageHandler();
         parse(confirmPage, handler);
 
+        LOGGER.info(String.format("making a reservation for %s with params %s", handler.link, handler.params));
         String response = post(handler.link, handler.params, client);
     }
 
@@ -252,7 +256,7 @@ public class RegisterMe {
                     for (String stmt : stmts) {
                         String key = "document.location='";
                         if (stmt.startsWith(key)) {
-                            links.add(new SignupLink(host + stmt.substring(key.length(), stmt.length()-1)));
+                            links.add(new SignupLink(host + stmt.substring(key.length(), stmt.length() - 1)));
                         }
                     }
                 }
