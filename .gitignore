@@ -1,4 +1,4 @@
 target/
 .idea/
 *.iml
-*.log4j
+log4j.log
