@@ -302,6 +302,7 @@ public class RegisterMe {
         public void endElement(String uri, String localName, String qName) throws SAXException {
             if (inSignupButton && qName.equals("tr")) {
                 inSignupButton = false;
+                links.get(links.size() - 1).reservedCount = reservedCount;
                 if (reservedCount.endsWith("0 Open)")) {
                     links.remove(links.size() - 1);
                 }
@@ -319,6 +320,7 @@ public class RegisterMe {
     static class SignupLink {
         String link;
         String desc;
+        String reservedCount;
 
         public SignupLink(String link) {
             this.link = link;
@@ -329,6 +331,7 @@ public class RegisterMe {
             return "SignupLink{" +
                     "link='" + link + '\'' +
                     ", desc='" + desc + '\'' +
+                    ", reservedCount='" + reservedCount + '\'' +
                     '}';
         }
     }
