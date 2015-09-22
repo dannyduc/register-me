@@ -1,4 +1,3 @@
-import org.apache.commons.io.FileUtils;
 import org.apache.http.Consts;
 import org.apache.http.HttpEntity;
 import org.apache.http.NameValuePair;
@@ -27,7 +26,6 @@ import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
 import java.io.ByteArrayInputStream;
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -43,6 +41,7 @@ public class RegisterMe {
     static final Logger LOGGER = Logger.getLogger(RegisterMe.class);
 
     public static void main(String[] args) throws Exception {
+        sleep(10);
         for (String arg : args) {
             String[] parts = arg.split("/");
             final String username = parts[0];
@@ -57,6 +56,14 @@ public class RegisterMe {
                 }
             });
             t.start();
+        }
+    }
+
+    static void sleep(int seconds) {
+        try {
+            Thread.sleep(seconds * 1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
 
