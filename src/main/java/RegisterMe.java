@@ -41,7 +41,7 @@ public class RegisterMe {
     static final Logger LOGGER = Logger.getLogger(RegisterMe.class);
 
     public static void main(String[] args) throws Exception {
-        sleep(10);
+        sleep(5);
         for (String arg : args) {
             String[] parts = arg.split("/");
             final String username = parts[0];
