@@ -86,6 +86,7 @@ public class RegisterMe {
                         || desc.contains("Body Sculpt")
                         || desc.contains("Power Fitness")
                         || desc.contains("Cardio Kickboxing & Sculpt")
+                        || desc.contains("Total Body Conditioning")
 //                        || desc.startsWith("Indoor Cycling")
                         ) {
 
